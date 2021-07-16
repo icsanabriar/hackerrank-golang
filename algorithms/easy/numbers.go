@@ -88,8 +88,8 @@ func pickingNumbers(a []int32) int32 {
 //
 //	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 //	checkError(err)
-//
 //	n := int32(nTemp)
+//
 //	aTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 //
 //	var a []int32
@@ -97,7 +97,6 @@ func pickingNumbers(a []int32) int32 {
 //	for i := 0; i < int(n); i++ {
 //		aItemTemp, err := strconv.ParseInt(aTemp[i], 10, 64)
 //		checkError(err)
-//
 //		aItem := int32(aItemTemp)
 //		a = append(a, aItem)
 //	}

@@ -72,7 +72,6 @@ func cutTheSticks(arr []int32) []int32 {
 //	for i := 0; i < int(n); i++ {
 //		arrItemTemp, err := strconv.ParseInt(arrTemp[i], 10, 64)
 //		checkError(err)
-//
 //		arrItem := int32(arrItemTemp)
 //		arr = append(arr, arrItem)
 //	}

@@ -28,7 +28,7 @@ func TestSticksFirstGivenCase(t *testing.T) {
 	result := cutTheSticks(input)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Cut the sticks first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Cut the sticks first case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }
 
@@ -41,6 +41,6 @@ func TestSticksSecondGivenCase(t *testing.T) {
 	result := cutTheSticks(input)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Cut the sticks second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Cut the sticks second case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }

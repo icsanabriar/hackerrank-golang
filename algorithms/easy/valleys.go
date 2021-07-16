@@ -55,8 +55,8 @@ func countingValleys(s string) int32 {
 //
 //	nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
 //	checkError(err)
-//
 //	_ = int32(nTemp)
+//
 //	s := readLine(reader)
 //
 //	result := countingValleys(s)

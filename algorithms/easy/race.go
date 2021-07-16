@@ -65,7 +65,6 @@ func hurdleRace(k int32, height []int32) int32 {
 //	for i := 0; i < int(n); i++ {
 //		heightItemTemp, err := strconv.ParseInt(heightTemp[i], 10, 64)
 //		checkError(err)
-//
 //		heightItem := int32(heightItemTemp)
 //		height = append(height, heightItem)
 //	}

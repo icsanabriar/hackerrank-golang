@@ -64,14 +64,13 @@ func findDigits(n int32) int {
 //
 //	tTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
 //	checkError(err)
-//
 //	t := int32(tTemp)
 //
 //	for tItr := 0; tItr < int(t); tItr++ {
 //		nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
 //		checkError(err)
-//
 //		n := int32(nTemp)
+//
 //		result := findDigits(n)
 //
 //		_, _ = fmt.Fprintf(writer, "%d\n", result)

@@ -58,7 +58,6 @@ func permutationEquation(p []int32) []int32 {
 //	for i := 0; i < int(n); i++ {
 //		pItemTemp, err := strconv.ParseInt(pTemp[i], 10, 64)
 //		checkError(err)
-//
 //		pItem := int32(pItemTemp)
 //		p = append(p, pItem)
 //	}
