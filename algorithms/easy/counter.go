@@ -16,6 +16,7 @@ package main
 
 // strangeCounter returns the value displayed at time t of the counter.
 func strangeCounter(t int64) int64 {
+
 	seed := int64(3)
 
 	for t > seed {
