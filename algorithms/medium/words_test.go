@@ -44,7 +44,7 @@ func TestWordsSecondGivenCase(t *testing.T) {
 	}
 }
 
-// TestWordsThirdGivenCase implements the test given as second example on hackerrank.
+// TestWordsThirdGivenCase implements the test given as third example on hackerrank.
 func TestWordsThirdGivenCase(t *testing.T) {
 
 	h := int32(1)

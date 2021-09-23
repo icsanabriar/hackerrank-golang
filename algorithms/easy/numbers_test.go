@@ -42,7 +42,7 @@ func TestNumbersSecondGivenCase(t *testing.T) {
 	}
 }
 
-// TestNumbersBasicGivenCase implements the test given as second example on hackerrank.
+// TestNumbersBasicGivenCase implements the test given as basic example on hackerrank.
 func TestNumbersBasicGivenCase(t *testing.T) {
 
 	input := []int32{100}

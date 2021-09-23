@@ -44,7 +44,7 @@ func TestRectangleSecondGivenCase(t *testing.T) {
 	}
 }
 
-// TestRectangleThirdGivenCase implements the test given as second example on hackerrank.
+// TestRectangleThirdGivenCase implements the test given as third example on hackerrank.
 func TestRectangleThirdGivenCase(t *testing.T) {
 
 	input := []int32{11, 11, 10, 10, 10}

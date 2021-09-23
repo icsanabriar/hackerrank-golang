@@ -46,7 +46,7 @@ func TestRepeatedSecondGivenCase(t *testing.T) {
 	}
 }
 
-// TestRepeatedThirdGivenCase implements the test given as second example on hackerrank.
+// TestRepeatedThirdGivenCase implements the test given as third example on hackerrank.
 func TestRepeatedThirdGivenCase(t *testing.T) {
 
 	input := "epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq"
