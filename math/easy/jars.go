@@ -24,7 +24,7 @@ func estimate(n int64, operations [][]int64) int64 {
 		b := operations[i][1]
 		k := operations[i][2]
 
-		result += (b - a + 1) * int64(k)
+		result += (b - a + 1) * k
 	}
 
 	return result / n
@@ -37,7 +37,12 @@ func estimate(n int64, operations [][]int64) int64 {
 //	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 //	checkError(err)
 //
-//	defer stdout.Close()
+//	defer func(stdout *os.File) {
+//		err := stdout.Close()
+//		if err != nil {
+//			fmt.Println("Error reading output path file.")
+//		}
+//	}(stdout)
 //
 //	writer := bufio.NewWriterSize(stdout, 1024*1024)
 //
@@ -60,7 +65,7 @@ func estimate(n int64, operations [][]int64) int64 {
 //			operationsRow = append(operationsRow, operationsItem)
 //		}
 //
-//		if len(operationsRow) != int(3) {
+//		if len(operationsRow) != 3 {
 //			panic("Bad input")
 //		}
 //
@@ -69,7 +74,7 @@ func estimate(n int64, operations [][]int64) int64 {
 //
 //	result := estimate(n, operations)
 //
-//	fmt.Fprintf(writer, "%d\n", result)
+//	_, _ = fmt.Fprintf(writer, "%d\n", result)
 //
-//	writer.Flush()
+//	_ = writer.Flush()
 //}

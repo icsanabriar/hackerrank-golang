@@ -14,19 +14,16 @@
 
 package main
 
-// gcd calculate the great common divisor of given a,b.
-func gcd(a int32, b int32) int32 {
-	if b == 0 {
-		return a
-	} else {
-		return gcd(b, a%b)
-	}
-}
+// module is the value to simplify the result.
+const module = 1000000007
 
-// restaurant calculates the number of squares that could be build using the given l and b.
-func restaurant(l int32, b int32) int32 {
-	g := gcd(l, b)
-	return (l * b) / (g * g)
+// summingSeries calculates the sum of specific series when the nth term is n2 - (n-1)2.
+// Simplifying the expression it is the sum of nth odd numbers which is equal a n2.
+func summingSeries(n int64) int64 {
+
+	n %= module
+
+	return n * n % module
 }
 
 // main function provided by hacker rank to execute the code on platform.
@@ -50,17 +47,10 @@ func restaurant(l int32, b int32) int32 {
 //	t := int32(tTemp)
 //
 //	for tItr := 0; tItr < int(t); tItr++ {
-//		lb := strings.Split(readLine(reader), " ")
-//
-//		lTemp, err := strconv.ParseInt(lb[0], 10, 64)
+//		n, err := strconv.ParseInt(readLine(reader), 10, 64)
 //		checkError(err)
-//		l := int32(lTemp)
 //
-//		bTemp, err := strconv.ParseInt(lb[1], 10, 64)
-//		checkError(err)
-//		b := int32(bTemp)
-//
-//		result := restaurant(l, b)
+//		result := summingSeries(n)
 //
 //		_, _ = fmt.Fprintf(writer, "%d\n", result)
 //	}

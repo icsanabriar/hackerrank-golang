@@ -89,7 +89,12 @@ func solve(coordinates [][]int32) float64 {
 //	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 //	checkError(err)
 //
-//	defer stdout.Close()
+//	defer func(stdout *os.File) {
+//		err := stdout.Close()
+//		if err != nil {
+//			fmt.Println("Error reading output path file.")
+//		}
+//	}(stdout)
 //
 //	writer := bufio.NewWriterSize(stdout, 1024*1024)
 //
@@ -109,7 +114,7 @@ func solve(coordinates [][]int32) float64 {
 //			coordinatesRow = append(coordinatesRow, coordinatesItem)
 //		}
 //
-//		if len(coordinatesRow) != int(2) {
+//		if len(coordinatesRow) != 2 {
 //			panic("Bad input")
 //		}
 //
@@ -118,7 +123,7 @@ func solve(coordinates [][]int32) float64 {
 //
 //	result := solve(coordinates)
 //
-//	fmt.Fprintf(writer, "%f\n", result)
+//	_, _ = fmt.Fprintf(writer, "%f\n", result)
 //
-//	writer.Flush()
+//	_ = writer.Flush()
 //}

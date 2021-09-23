@@ -14,19 +14,42 @@
 
 package main
 
-// gcd calculate the great common divisor of given a,b.
-func gcd(a int32, b int32) int32 {
-	if b == 0 {
-		return a
-	} else {
-		return gcd(b, a%b)
+// fibonacci return the sequence of Fibonacci with the given length n. Cache is map used to memorize the sequence
+// that is already estimated on previous loops of recursion in order to increase performance of the function.
+func fibonacci(n int64, cache []int64) int64 {
+
+	if n == 0 || n == 1 {
+		return n
 	}
+
+	if cache[n] == -1 {
+		cache[n] = fibonacci(n-1, cache) + fibonacci(n-2, cache)
+	}
+
+	return cache[n]
 }
 
-// restaurant calculates the number of squares that could be build using the given l and b.
-func restaurant(l int32, b int32) int32 {
-	g := gcd(l, b)
-	return (l * b) / (g * g)
+// solveIsFibo defines if the given n is a number part of Fibonacci sequence or not.
+func solveIsFibo(n int64, cache []int64) string {
+
+	// Memorize first 99 fibonacci numbers.
+	_ = fibonacci(99, cache)
+
+	// Iterate in order to optimize search.
+	for _, fib := range cache {
+
+		// Current Fibonacci value is higher than given number then break.
+		if n < fib {
+			break
+		}
+
+		// Is Fibonacci return value.
+		if n == fib {
+			return "IsFibo"
+		}
+	}
+
+	return "IsNotFibo"
 }
 
 // main function provided by hacker rank to execute the code on platform.
@@ -49,20 +72,20 @@ func restaurant(l int32, b int32) int32 {
 //	checkError(err)
 //	t := int32(tTemp)
 //
+//	// Build cache to increase performance.
+//	cache := make([]int64, 100)
+//
+//	for i := range cache {
+//		cache[i] = -1
+//	}
+//
 //	for tItr := 0; tItr < int(t); tItr++ {
-//		lb := strings.Split(readLine(reader), " ")
-//
-//		lTemp, err := strconv.ParseInt(lb[0], 10, 64)
+//		n, err := strconv.ParseInt(readLine(reader), 10, 64)
 //		checkError(err)
-//		l := int32(lTemp)
 //
-//		bTemp, err := strconv.ParseInt(lb[1], 10, 64)
-//		checkError(err)
-//		b := int32(bTemp)
+//		result := solveIsFibo(n, cache)
 //
-//		result := restaurant(l, b)
-//
-//		_, _ = fmt.Fprintf(writer, "%d\n", result)
+//		_, _ = fmt.Fprintf(writer, "%s\n", result)
 //	}
 //
 //	_ = writer.Flush()

@@ -14,19 +14,19 @@
 
 package main
 
-// gcd calculate the great common divisor of given a,b.
-func gcd(a int32, b int32) int32 {
-	if b == 0 {
-		return a
-	} else {
-		return gcd(b, a%b)
-	}
-}
+// modulus is the value to simplify the result.
+const modulus = int32(100000)
 
-// restaurant calculates the number of squares that could be build using the given l and b.
-func restaurant(l int32, b int32) int32 {
-	g := gcd(l, b)
-	return (l * b) / (g * g)
+// lights calculate the total number of patterns that could be made using the given N serial light bulbs modulo 10e5.
+func lights(n int32) int32 {
+	total := int32(1)
+
+	for i := int32(0); i < n; i++ {
+		total = 2 * total % modulus
+	}
+
+	// Total - 1 to complete the series, then add the modulus to get original value and apply module to obtain result.
+	return (total - 1 + modulus) % modulus
 }
 
 // main function provided by hacker rank to execute the code on platform.
@@ -50,17 +50,11 @@ func restaurant(l int32, b int32) int32 {
 //	t := int32(tTemp)
 //
 //	for tItr := 0; tItr < int(t); tItr++ {
-//		lb := strings.Split(readLine(reader), " ")
-//
-//		lTemp, err := strconv.ParseInt(lb[0], 10, 64)
+//		nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
 //		checkError(err)
-//		l := int32(lTemp)
+//		n := int32(nTemp)
 //
-//		bTemp, err := strconv.ParseInt(lb[1], 10, 64)
-//		checkError(err)
-//		b := int32(bTemp)
-//
-//		result := restaurant(l, b)
+//		result := lights(n)
 //
 //		_, _ = fmt.Fprintf(writer, "%d\n", result)
 //	}
