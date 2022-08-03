@@ -16,3 +16,7 @@ clean: ## Remove the executable modules of the project.
 
 sonar: test ## Run the sonar scanner to generate quality report.
 	sonar-scanner -Dsonar.projectVersion="$(version)" -Dsonar.login="$(token)"
+
+licenses: ## Execute the commands to generate license report.
+	go install github.com/google/go-licenses@latest
+	go-licenses csv ./...
