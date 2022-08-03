@@ -9,10 +9,10 @@ build: ## Build the executable modules project.
 	GOARCH=amd64 GOOS=linux go build -o bin ./...
 
 test: build ## Execute the test of the different modules of the project.
-	go test ./... -coverprofile=coverage.out
+	go test ./... -coverprofile=bin/coverage.out
 
 clean: ## Remove the executable modules of the project.
 	rm -rf ./bin
 
 sonar: test ## Run the sonar scanner to generate quality report.
-	sonar-scanner -Dsonar.projectVersion="$(version)"
+	sonar-scanner -Dsonar.projectVersion="$(version)" -Dsonar.login="$(token)"
