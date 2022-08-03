@@ -13,9 +13,7 @@
 // limitations under the License.
 package main
 
-import (
-	"sort"
-)
+import "sort"
 
 // pickingNumbers return the maximum number of integers you can select from the array that the absolute difference
 // between any two of the chosen integers is less than or equal to 1.

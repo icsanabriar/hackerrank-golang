@@ -13,9 +13,7 @@
 // limitations under the License.
 package main
 
-import (
-	"math"
-)
+import "math"
 
 // movingTiles calculates the area of intersection square between two tiles.
 func movingTiles(l int32, s1 int32, s2 int32, queries []int64) []float64 {

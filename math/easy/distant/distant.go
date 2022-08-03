@@ -13,9 +13,7 @@
 // limitations under the License.
 package main
 
-import (
-	"math"
-)
+import "math"
 
 // findMaxDistance calculates distances using the min and max points over X and Y axes to return the maximum value.
 func findMaxDistance(minX, maxX, minY, maxY int32) float64 {

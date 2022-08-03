@@ -13,9 +13,7 @@
 // limitations under the License.
 package main
 
-import (
-	"sort"
-)
+import "sort"
 
 // repeatedString return an integer representing the number of occurrences of 'a' in the length n.
 func repeatedString(s string, n int64) int64 {

@@ -13,12 +13,7 @@
 // limitations under the License.
 package main
 
-import (
-	"bufio"
-	"io"
-	"math"
-	"strings"
-)
+import "math"
 
 // gcd calculate the great common divisor of given a,b.
 func gcd(a int64, b int64) int64 {
@@ -54,21 +49,4 @@ func normalize(a []int64, queries []int32) []int64 {
 	}
 
 	return result
-}
-
-// readLine function provided by hacker rank to execute the code on platform.
-func readLine(reader *bufio.Reader) string {
-	str, _, err := reader.ReadLine()
-	if err == io.EOF {
-		return ""
-	}
-
-	return strings.TrimRight(string(str), "\r\n")
-}
-
-// checkError function provided by hacker rank to execute the code on platform.
-func checkError(err error) {
-	if err != nil {
-		panic(err)
-	}
 }

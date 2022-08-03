@@ -16,6 +16,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -77,4 +78,21 @@ func main() {
 	_, _ = fmt.Fprintf(writer, "\n")
 
 	_ = writer.Flush()
+}
+
+// readLine function provided by hacker rank to execute the code on platform.
+func readLine(reader *bufio.Reader) string {
+	str, _, err := reader.ReadLine()
+	if err == io.EOF {
+		return ""
+	}
+
+	return strings.TrimRight(string(str), "\r\n")
+}
+
+// checkError function provided by hacker rank to execute the code on platform.
+func checkError(err error) {
+	if err != nil {
+		panic(err)
+	}
 }
