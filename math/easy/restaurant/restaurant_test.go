@@ -29,7 +29,7 @@ func TestRestaurantFirstGivenCase(t *testing.T) {
 	}
 }
 
-// TestRestaurantSecondGivenCase implements the test given as first example on hackerrank.
+// TestRestaurantSecondGivenCase implements the test given as second example on hackerrank.
 func TestRestaurantSecondGivenCase(t *testing.T) {
 
 	l := int32(6)

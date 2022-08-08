@@ -15,8 +15,8 @@ package main
 
 import "testing"
 
-// TestFizzBuzzFirstGivenCase implements the test given as first example on hackerrank.
-func TestFizzBuzzFirstGivenCase(t *testing.T) {
+// TestFizzBuzzGivenCase implements the test given as first example on hackerrank.
+func TestFizzBuzzGivenCase(t *testing.T) {
 	input := int32(15)
 	result := fizzBuzz(input)
 	expected := "1\n2\nfizz\n4\nbuzz\nfizz\n7\n8\nfizz\nbuzz\n11\nfizz\n13\n14\nfizzbuzz\n"

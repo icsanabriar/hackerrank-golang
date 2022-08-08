@@ -28,7 +28,7 @@ func TestSalesByMatchFirstGivenCase(t *testing.T) {
 	}
 }
 
-// TestSalesByMatchSecondGivenCase implements the test given as first example on hackerrank.
+// TestSalesByMatchSecondGivenCase implements the test given as second example on hackerrank.
 func TestSalesByMatchSecondGivenCase(t *testing.T) {
 	n := int32(9)
 	input := []int32{10, 20, 20, 10, 10, 30, 50, 10, 20}

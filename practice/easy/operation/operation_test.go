@@ -15,8 +15,8 @@ package main
 
 import "testing"
 
-// TestOperationFirstGivenCase implements the test given as first example on hackerrank.
-func TestOperationFirstGivenCase(t *testing.T) {
+// TestOperationGivenCase implements the test given as first example on hackerrank.
+func TestOperationGivenCase(t *testing.T) {
 	input := "     !o23l4leH"
 	expected := "Hello!"
 

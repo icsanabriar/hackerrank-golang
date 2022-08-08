@@ -27,7 +27,7 @@ func TestBubbleSortFirstGivenCase(t *testing.T) {
 	}
 }
 
-// TestBubbleSortSecondGivenCase implements the test given as first example on hackerrank.
+// TestBubbleSortSecondGivenCase implements the test given as second example on hackerrank.
 func TestBubbleSortSecondGivenCase(t *testing.T) {
 	input := []int32{3, 2, 1}
 	expected := "Array is sorted in 3 swaps.\nFirst Element: 1\nLast Element: 3\n"

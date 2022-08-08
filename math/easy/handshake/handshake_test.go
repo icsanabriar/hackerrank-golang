@@ -28,7 +28,7 @@ func TestHandshakeFirstGivenCase(t *testing.T) {
 	}
 }
 
-// TestHandshakeSecondGivenCase implements the test given as first example on hackerrank.
+// TestHandshakeSecondGivenCase implements the test given as second example on hackerrank.
 func TestHandshakeSecondGivenCase(t *testing.T) {
 
 	input := int32(2)
