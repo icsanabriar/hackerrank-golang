@@ -22,7 +22,7 @@ import (
 	"strings"
 )
 
-// main function provided by hacker rank to execute the code on platform. To run locally uncomment the function.
+// main function provided by hacker rank to execute the code on platform.
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 

@@ -1,4 +1,4 @@
-// Copyright 2020 Iván Camilo Sanabria
+// Copyright 2022 Iván Camilo Sanabria
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
@@ -24,7 +25,7 @@ import (
 
 // main function provided by hacker rank to execute the code on platform.
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
+	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -36,21 +37,41 @@ func main() {
 		}
 	}(stdout)
 
-	writer := bufio.NewWriterSize(stdout, 1024*1024)
+	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	tTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
-	checkError(err)
-	t := int32(tTemp)
+	manager := &Manager{}
 
-	for tItr := 0; tItr < int(t); tItr++ {
-		nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
-		checkError(err)
-		n := int32(nTemp)
-
-		result := findDigits(n)
-
-		_, _ = fmt.Fprintf(writer, "%d\n", result)
+	fullName := readLine(reader)
+	if fullName != "" {
+		manager.FullName = fullName
 	}
+
+	position := readLine(reader)
+	if position != "" {
+		manager.Position = position
+	}
+
+	ageTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	checkError(err)
+	age := int32(ageTemp)
+	if age != 0 {
+		manager.Age = age
+	}
+
+	yearsInCompanyTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	checkError(err)
+	yearsInCompany := int32(yearsInCompanyTemp)
+	if yearsInCompany != 0 {
+		manager.YearsInCompany = yearsInCompany
+	}
+
+	resultReader, err := EncodeManager(manager)
+	checkError(err)
+
+	result, err := ioutil.ReadAll(resultReader)
+	checkError(err)
+
+	_, _ = fmt.Fprintf(writer, "%s\n", string(result))
 
 	_ = writer.Flush()
 }
