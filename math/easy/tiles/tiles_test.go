@@ -31,7 +31,7 @@ func TestSherlockMovingTilesFirstGivenCase(t *testing.T) {
 	result := movingTiles(l, s1, s2, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Sherlock Moving Tiles first case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Sherlock moving tiles first case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }
 
@@ -48,6 +48,6 @@ func TestSherlockMovingTilesHiddenGivenCase(t *testing.T) {
 	result := movingTiles(l, s1, s2, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Sherlock Moving Tiles hidden case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Sherlock moving tiles hidden case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }

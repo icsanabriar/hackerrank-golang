@@ -56,6 +56,6 @@ func TestRepeatedThirdGivenCase(t *testing.T) {
 	result := repeatedString(input, n)
 
 	if result != expected {
-		t.Errorf("Repeated string second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Repeated string third case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

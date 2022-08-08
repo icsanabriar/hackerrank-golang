@@ -28,7 +28,7 @@ func TestSalaryBluesFirstGivenCase(t *testing.T) {
 	result := normalize(a, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Salary Blues first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Salary blues first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -42,6 +42,6 @@ func TestSalaryBluesEdgeGivenCase(t *testing.T) {
 	result := normalize(a, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Salary Blues edge case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Salary blues edge case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

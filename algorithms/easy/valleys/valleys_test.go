@@ -24,7 +24,7 @@ func TestValleysFirstGivenCase(t *testing.T) {
 	result := countingValleys(input)
 
 	if result != expected {
-		t.Errorf("Counting Valleys first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Counting valleys first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -37,6 +37,6 @@ func TestValleysSecondGivenCase(t *testing.T) {
 	result := countingValleys(input)
 
 	if result != expected {
-		t.Errorf("Counting Valleys second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Counting valleys second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

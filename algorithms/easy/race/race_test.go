@@ -25,7 +25,7 @@ func TestRaceFirstGivenCase(t *testing.T) {
 	result := hurdleRace(k, h)
 
 	if result != expected {
-		t.Errorf("The Hurdle Race first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("The Hurdle race first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -39,6 +39,6 @@ func TestRaceSecondGivenCase(t *testing.T) {
 	result := hurdleRace(k, h)
 
 	if result != expected {
-		t.Errorf("The Hurdle Race second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("The Hurdle race second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

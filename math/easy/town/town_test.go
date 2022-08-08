@@ -25,7 +25,7 @@ func TestConnectingTownsFirstGivenCase(t *testing.T) {
 	result := connectingTowns(n, routes)
 
 	if result != expected {
-		t.Errorf("Connecting Towns first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Connecting towns first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -39,6 +39,6 @@ func TestConnectingTownsSecondGivenCase(t *testing.T) {
 	result := connectingTowns(n, routes)
 
 	if result != expected {
-		t.Errorf("Connecting Towns second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Connecting towns second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

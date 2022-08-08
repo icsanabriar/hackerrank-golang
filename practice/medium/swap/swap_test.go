@@ -15,28 +15,26 @@ package main
 
 import "testing"
 
-// TestSalesByMatchFirstGivenCase implements the test given as first example on hackerrank.
-func TestSalesByMatchFirstGivenCase(t *testing.T) {
-	n := int32(7)
-	input := []int32{1, 2, 1, 2, 1, 3, 2}
-	expected := int32(2)
+// TestMinimumSwapsFirstGivenCase implements the test given as first example on hackerrank.
+func TestMinimumSwapsFirstGivenCase(t *testing.T) {
+	input := []int32{7, 1, 3, 2, 4, 5, 6}
+	expected := int32(5)
 
-	result := sockMerchant(n, input)
+	result := minimumSwaps(input)
 
 	if result != expected {
-		t.Errorf("Sales by match first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Minimum swaps first case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }
 
-// TestSalesByMatchSecondGivenCase implements the test given as first example on hackerrank.
-func TestSalesByMatchSecondGivenCase(t *testing.T) {
-	n := int32(9)
-	input := []int32{10, 20, 20, 10, 10, 30, 50, 10, 20}
+// TestMinimumSwapsSecondGivenCase implements the test given as first example on hackerrank.
+func TestMinimumSwapsSecondGivenCase(t *testing.T) {
+	input := []int32{4, 3, 1, 2}
 	expected := int32(3)
 
-	result := sockMerchant(n, input)
+	result := minimumSwaps(input)
 
 	if result != expected {
-		t.Errorf("Sales by match second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Minimum swaps second case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }

@@ -29,7 +29,7 @@ func TestSparseFirstGivenCase(t *testing.T) {
 	result := matchingStrings(strings, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Sparse Arrays first case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Sparse arrays first case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }
 
@@ -44,6 +44,6 @@ func TestSparseSecondGivenCase(t *testing.T) {
 	result := matchingStrings(strings, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Sparse Arrays second case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Sparse arrays second case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }

@@ -25,7 +25,7 @@ func TestCuttingPaperSquaresGivenCase(t *testing.T) {
 	result := cutPaper(n, m)
 
 	if result != expected {
-		t.Errorf("Cutting Paper Squares first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Cutting paper squares first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -39,7 +39,7 @@ func TestCuttingPaperSquaresEdgeCase(t *testing.T) {
 	result := cutPaper(n, m)
 
 	if result != expected {
-		t.Errorf("Cutting Paper Squares edge case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Cutting paper squares edge case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -53,6 +53,6 @@ func TestCuttingPaperSquaresHiddenCase(t *testing.T) {
 	result := cutPaper(n, m)
 
 	if result != expected {
-		t.Errorf("Cutting Paper Squares edge case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Cutting paper squares hidden case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

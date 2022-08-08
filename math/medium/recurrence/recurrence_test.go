@@ -28,7 +28,7 @@ func TestMutualRecurrenceFirstGivenCase(t *testing.T) {
 	result := recurrence(input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], n)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Mutual Recurrence first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Mutual recurrence first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -42,7 +42,7 @@ func TestMutualRecurrenceSecondGivenCase(t *testing.T) {
 	result := recurrence(input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], n)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Mutual Recurrence second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Mutual recurrence second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -56,6 +56,6 @@ func TestMutualRecurrenceThirdGivenCase(t *testing.T) {
 	result := recurrence(input[0], input[1], input[2], input[3], input[4], input[5], input[6], input[7], n)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Mutual Recurrence third case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Mutual recurrence third case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

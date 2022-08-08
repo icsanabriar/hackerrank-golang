@@ -50,6 +50,6 @@ func TestNumbersBasicGivenCase(t *testing.T) {
 	result := pickingNumbers(input)
 
 	if result != expected {
-		t.Errorf("Picking numbers second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Picking numbers basic case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

@@ -29,7 +29,7 @@ func TestDynamicArrayFirstGivenCase(t *testing.T) {
 	result := dynamicArray(n, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Dynamic Array first case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Dynamic array first case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }
 
@@ -44,6 +44,6 @@ func TestDynamicArraySecondGivenCase(t *testing.T) {
 	result := dynamicArray(n, queries)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Dynamic Array second case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Dynamic array second case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }

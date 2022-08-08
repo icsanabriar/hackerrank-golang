@@ -24,7 +24,7 @@ func TestDownFirstGivenCase(t *testing.T) {
 	result := downToZero(input)
 
 	if result != expected {
-		t.Errorf("Down to Zero II first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Down to zero II first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -37,6 +37,6 @@ func TestDownSecondGivenCase(t *testing.T) {
 	result := downToZero(input)
 
 	if result != expected {
-		t.Errorf("Down to Zero II second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Down to zero II second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

@@ -26,7 +26,7 @@ func TestJesseAndCookiesFirstGivenCase(t *testing.T) {
 	result := cookies(k, A)
 
 	if result != expected {
-		t.Errorf("Jesse and Cookies first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Jesse and cookies first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -41,7 +41,7 @@ func TestJesseAndCookiesSecondGivenCase(t *testing.T) {
 	result := cookies(k, A)
 
 	if result != expected {
-		t.Errorf("Jesse and Cookies second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Jesse and cookies second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -56,6 +56,6 @@ func TestJesseAndCookiesEdgeGivenCase(t *testing.T) {
 	result := cookies(k, A)
 
 	if result != expected {
-		t.Errorf("Jesse and Cookies edge case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Jesse and cookies edge case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

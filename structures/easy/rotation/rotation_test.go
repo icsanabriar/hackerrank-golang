@@ -29,7 +29,7 @@ func TestRotationFirstGivenCase(t *testing.T) {
 	result := rotLeft(a, d)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Left Rotation first case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Left rotation first case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }
 
@@ -44,6 +44,6 @@ func TestRotationSecondGivenCase(t *testing.T) {
 	result := rotLeft(a, d)
 
 	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Left Rotation second case was incorrect, got: %v, want: %v.", result, expected)
+		t.Errorf("Left rotation second case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }

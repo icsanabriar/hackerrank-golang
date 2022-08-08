@@ -24,7 +24,7 @@ func TestSkyscraperFirstGivenCase(t *testing.T) {
 	result := solveFlyRoute(input)
 
 	if result != expected {
-		t.Errorf("Jim and the Skyscrapers first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Jim and the skyscrapers first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -37,7 +37,7 @@ func TestSkyscraperSecondGivenCase(t *testing.T) {
 	result := solveFlyRoute(input)
 
 	if result != expected {
-		t.Errorf("Jim and the Skyscrapers second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Jim and the skyscrapers second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -50,6 +50,6 @@ func TestSkyscraperEdgeCase(t *testing.T) {
 	result := solveFlyRoute(input)
 
 	if result != expected {
-		t.Errorf("Jim and the Skyscrapers edge case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Jim and the skyscrapers edge case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

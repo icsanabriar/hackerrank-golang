@@ -89,6 +89,6 @@ func TestMostDistantEdgeCase(t *testing.T) {
 	result := big.NewFloat(solution).Cmp(big.NewFloat(expected))
 
 	if 0 != result {
-		t.Errorf("Most distant edge y case was incorrect, got: %f, want: %f.", solution, expected)
+		t.Errorf("Most distant edge case was incorrect, got: %f, want: %f.", solution, expected)
 	}
 }

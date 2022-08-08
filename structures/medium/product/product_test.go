@@ -24,7 +24,7 @@ func TestProductFirstGivenCase(t *testing.T) {
 	result := solve(input)
 
 	if result != expected {
-		t.Errorf("Find Maximum Index Product first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Find maximum index product first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -37,6 +37,6 @@ func TestProductSecondGivenCase(t *testing.T) {
 	result := solve(input)
 
 	if result != expected {
-		t.Errorf("Find Maximum Index Product second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Find maximum index product second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

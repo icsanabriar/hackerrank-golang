@@ -24,7 +24,7 @@ func TestRectangleFirstGivenCase(t *testing.T) {
 	result := largestRectangle(input)
 
 	if result != expected {
-		t.Errorf("Largest Rectangle first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Largest rectangle first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -37,7 +37,7 @@ func TestRectangleSecondGivenCase(t *testing.T) {
 	result := largestRectangle(input)
 
 	if result != expected {
-		t.Errorf("Largest Rectangle second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Largest rectangle second case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
@@ -50,6 +50,6 @@ func TestRectangleThirdGivenCase(t *testing.T) {
 	result := largestRectangle(input)
 
 	if result != expected {
-		t.Errorf("Largest Rectangle third case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Largest rectangle third case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
