@@ -54,19 +54,6 @@ func TestBalanceBracketThirdGivenCase(t *testing.T) {
 	}
 }
 
-// TestBalanceBracketEdgeCase implements the test given as edge example on hackerrank.
-func TestBalanceBracketEdgeCase(t *testing.T) {
-
-	s := "{[()]"
-	expected := "NO"
-
-	result := isBalanced(s)
-
-	if result != expected {
-		t.Errorf("Balance bracket edge case was incorrect, got: %s, want: %s.", result, expected)
-	}
-}
-
 // TestBalanceBracketHiddenCase implements the test given as hidden example on hackerrank.
 func TestBalanceBracketHiddenCase(t *testing.T) {
 
@@ -77,5 +64,18 @@ func TestBalanceBracketHiddenCase(t *testing.T) {
 
 	if result != expected {
 		t.Errorf("Balance bracket hidden case was incorrect, got: %s, want: %s.", result, expected)
+	}
+}
+
+// TestBalanceBracketEdgeCase implements the test given as edge example.
+func TestBalanceBracketEdgeCase(t *testing.T) {
+
+	s := "{[()]"
+	expected := "NO"
+
+	result := isBalanced(s)
+
+	if result != expected {
+		t.Errorf("Balance bracket edge case was incorrect, got: %s, want: %s.", result, expected)
 	}
 }

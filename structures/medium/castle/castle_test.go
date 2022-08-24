@@ -71,3 +71,41 @@ func TestCastleGridThirdGivenCase(t *testing.T) {
 		t.Errorf("Castle grid third case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
+
+// TestCastleGridFourthCase implements the test given as fourth example on hackerrank.
+func TestCastleGridFourthCase(t *testing.T) {
+
+	grid := [][]string{{"X", ".", "X"}, {".", ".", "."}, {".", "X", "."}}
+	startX := int32(2)
+	startY := int32(2)
+	goalX := int32(1)
+	goalY := int32(0)
+	visited := make(map[Cell]bool, 0)
+	size := int32(3)
+	expected := int32(2)
+
+	result := minimumMoves(grid, startX, startY, goalX, goalY, visited, size)
+
+	if result != expected {
+		t.Errorf("Castle grid fourth case was incorrect, got: %d, want: %d.", result, expected)
+	}
+}
+
+// TestCastleGridEdgeCase implements the test given as edge example on hackerrank.
+func TestCastleGridEdgeCase(t *testing.T) {
+
+	grid := [][]string{{".", ".", "."}, {"X", "X", "X"}, {".", "X", "."}}
+	startX := int32(2)
+	startY := int32(0)
+	goalX := int32(2)
+	goalY := int32(2)
+	visited := make(map[Cell]bool, 0)
+	size := int32(3)
+	expected := int32(-1)
+
+	result := minimumMoves(grid, startX, startY, goalX, goalY, visited, size)
+
+	if result != expected {
+		t.Errorf("Castle grid edge case was incorrect, got: %d, want: %d.", result, expected)
+	}
+}
