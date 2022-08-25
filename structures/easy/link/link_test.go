@@ -21,7 +21,6 @@ func TestGetNodeValueFirstGivenCase(t *testing.T) {
 	position := int32(0)
 	list := SinglyLinkedList{}
 	list.insertNodeIntoSinglyLinkedList(int32(1))
-
 	expected := int32(1)
 
 	result := getNode(list.head, position)
@@ -39,12 +38,31 @@ func TestGetNodeValueSecondGivenCase(t *testing.T) {
 	list.insertNodeIntoSinglyLinkedList(int32(3))
 	list.insertNodeIntoSinglyLinkedList(int32(2))
 	list.insertNodeIntoSinglyLinkedList(int32(1))
-
 	expected := int32(3)
 
 	result := getNode(list.head, position)
 
 	if result != expected {
 		t.Errorf("Get node value second case was incorrect, got: %d, want: %d.", result, expected)
+	}
+}
+
+// TestGetNodeValueThirdGivenCase implements the test given as third example on hackerrank.
+func TestGetNodeValueThirdGivenCase(t *testing.T) {
+
+	position := int32(1)
+	list := SinglyLinkedList{}
+	list.insertNodeIntoSinglyLinkedList(int32(3))
+	list.insertNodeIntoSinglyLinkedList(int32(2))
+	list.insertNodeIntoSinglyLinkedList(int32(1))
+	list.insertNodeIntoSinglyLinkedList(int32(5))
+	list.insertNodeIntoSinglyLinkedList(int32(6))
+	list.insertNodeIntoSinglyLinkedList(int32(3))
+	expected := int32(6)
+
+	result := getNode(list.head, position)
+
+	if result != expected {
+		t.Errorf("Get node value third case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
