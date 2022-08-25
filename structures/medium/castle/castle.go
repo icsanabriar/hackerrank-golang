@@ -20,7 +20,7 @@ type Cell struct {
 	direction string
 }
 
-// nextCell finds the next open cell that is not visited.
+// nextCells finds the next open cell that is not visited.
 func nextCells(grid [][]string, current Cell, visited map[Cell]bool, size int32) []Cell {
 	next := make([]Cell, 0)
 
