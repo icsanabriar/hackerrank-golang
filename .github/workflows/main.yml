@@ -9,6 +9,7 @@ on:
       
 #Environment variables required for the tests
 env:
+  OUTPUT_PATH: /home/runner/work/hackerrank-golang/hackerrank-golang/results.txt
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
 jobs:

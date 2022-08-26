@@ -9,6 +9,7 @@ build: ## Build the executable modules project.
 	GOARCH=amd64 GOOS=linux go build -o bin ./...
 
 test: build ## Execute the test of the different modules of the project.
+	echo 'Bootstrap output file' > $(OUTPUT_PATH)
 	go test ./... -coverprofile=bin/coverage.out
 
 clean: ## Remove the executable modules of the project.
