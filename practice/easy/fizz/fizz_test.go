@@ -13,15 +13,55 @@
 // limitations under the License.
 package main
 
-import "testing"
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"testing"
+)
 
 // TestFizzBuzzGivenCase implements the test given as first example on hackerrank.
 func TestFizzBuzzGivenCase(t *testing.T) {
+
 	input := int32(15)
-	result := fizzBuzz(input)
-	expected := "1\n2\nfizz\n4\nbuzz\nfizz\n7\n8\nfizz\nbuzz\n11\nfizz\n13\n14\nfizzbuzz\n"
+	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
+	checkError(err)
+
+	expected := "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n"
+
+	fizzBuzz(stdout, input)
+	result := readTestFile()
 
 	if result != expected {
 		t.Errorf("Fizz buzz first case was incorrect, got: %s, want: %s.", result, expected)
 	}
+}
+
+// readTestFile is responsible of reading the output of the program written in the given writer.
+func readTestFile() string {
+	text := ""
+
+	file, err := os.Open(os.Getenv("OUTPUT_PATH"))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer func(stdout *os.File) {
+		err := stdout.Close()
+		if err != nil {
+			fmt.Println("Error reading output path file.")
+		}
+	}(file)
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		text = text + scanner.Text() + "\n"
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
+
+	return text
 }

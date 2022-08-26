@@ -1,4 +1,4 @@
-// Copyright 2020 Iván Camilo Sanabria
+// Copyright 2022 Iván Camilo Sanabria
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,36 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"os"
-	"strconv"
 	"strings"
 )
 
 // main function provided by hacker rank to execute the code on platform.
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
-	n := int32(nTemp)
 
-	fizzBuzz(os.Stdout, n)
+	defer func(stdout *os.File) {
+		err := stdout.Close()
+		if err != nil {
+			fmt.Println("Error reading output path file.")
+		}
+	}(stdout)
+
+	writer := bufio.NewWriterSize(stdout, 1024*1024)
+
+	s1 := readLine(reader)
+	s2 := readLine(reader)
+
+	result := commonChild(s1, s2)
+
+	_, _ = fmt.Fprintf(writer, "%d\n", result)
+
+	_ = writer.Flush()
 }
 
 // readLine function provided by hacker rank to execute the code on platform.
@@ -38,6 +53,7 @@ func readLine(reader *bufio.Reader) string {
 	if err == io.EOF {
 		return ""
 	}
+
 	return strings.TrimRight(string(str), "\r\n")
 }
 

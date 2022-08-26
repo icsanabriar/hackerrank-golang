@@ -13,28 +13,26 @@
 // limitations under the License.
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io"
+)
 
 //fizzBuzz function that print series fizz buzz based on the number n.
-func fizzBuzz(n int32) string {
-	result := ""
-
+func fizzBuzz(w io.Writer, n int32) {
 	for i := int32(1); i <= n; i++ {
-
-		if i%3 == 0 && i%5 == 0{
-			result = result + "fizzbuzz\n"
+		if i%3 == 0 && i%5 == 0 {
+			_, _ = fmt.Fprintln(w, "FizzBuzz")
 		} else {
 			if i%3 == 0 {
-				result = result + "fizz\n"
+				_, _ = fmt.Fprintln(w, "Fizz")
 			}
 			if i%5 == 0 {
-				result = result + "buzz\n"
+				_, _ = fmt.Fprintln(w, "Buzz")
 			}
 			if i%3 != 0 && i%5 != 0 {
-				result = result + fmt.Sprint(i) + "\n"
+				_, _ = fmt.Fprintln(w, i)
 			}
 		}
 	}
-
-	return result
 }
