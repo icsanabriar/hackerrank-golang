@@ -13,9 +13,7 @@
 // limitations under the License.
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // swap elements from the given array using the given indexes.
 func swap(a []int32, i int, j int) {
