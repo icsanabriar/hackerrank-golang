@@ -39,6 +39,20 @@ func TestCoinChangeProblemSecondGivenCase(t *testing.T) {
 	result := getWays(n, c)
 
 	if result != expected {
-		t.Errorf("Coin change problem first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Coin change problem second case was incorrect, got: %d, want: %d.", result, expected)
+	}
+}
+
+// TestCoinChangeProblemHiddenCase implements the test given as hidden example on hackerrank.
+func TestCoinChangeProblemHiddenCase(t *testing.T) {
+
+	n := int64(219)
+	c := []int64{36, 10, 42, 7, 50, 1, 49, 24, 37, 12, 34, 13, 39, 18, 8, 29, 19, 43, 5, 44, 28, 23, 35, 26}
+	expected := int64(168312708)
+
+	result := getWays(n, c)
+
+	if result != expected {
+		t.Errorf("Coin change problem hidden case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
