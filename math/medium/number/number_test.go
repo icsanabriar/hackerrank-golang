@@ -59,3 +59,33 @@ func TestClosestNumberThirdGivenCase(t *testing.T) {
 		t.Errorf("Closest Number third case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
+
+// TestClosestNumberEdgeCase implements the test given as edge case to increase coverage.
+func TestClosestNumberEdgeCase(t *testing.T) {
+
+	a := int32(1)
+	b := int32(0)
+	x := int32(2)
+	expected := int32(0)
+
+	result := closestNumber(a, b, x)
+
+	if result != expected {
+		t.Errorf("Closest Number edge case was incorrect, got: %d, want: %d.", result, expected)
+	}
+}
+
+// TestClosestNumberHiddenCase implements the test given as hidden case to increase coverage.
+func TestClosestNumberHiddenCase(t *testing.T) {
+
+	a := int32(1)
+	b := int32(973594325)
+	x := int32(1)
+	expected := int32(1)
+
+	result := closestNumber(a, b, x)
+
+	if result != expected {
+		t.Errorf("Closest Number hidden case was incorrect, got: %d, want: %d.", result, expected)
+	}
+}
