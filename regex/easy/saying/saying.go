@@ -25,7 +25,7 @@ func validate(w io.Writer, a []string) {
 	re := regexp.MustCompile(`^[Hh][Ii]\s[^Dd].*$`)
 
 	for i := 0; i < len(a); i++ {
-		if re.MatchString(a[i]){
+		if re.MatchString(a[i]) {
 			_, _ = fmt.Fprintf(w, "%s\n", a[i])
 		}
 	}

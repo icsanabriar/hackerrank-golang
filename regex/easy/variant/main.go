@@ -38,7 +38,7 @@ func main() {
 		b.WriteString(s)
 	}
 
-	ttemp , err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	ttemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
 	t := int32(ttemp)
 

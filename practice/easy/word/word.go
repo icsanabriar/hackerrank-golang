@@ -22,7 +22,7 @@ import (
 //validate function check that the given lines contains the given terms.
 func validate(w io.Writer, lines []string, terms []string) {
 
-	for i:= 0; i < len(terms); i++ {
+	for i := 0; i < len(terms); i++ {
 		exp := "[a-zA-Z0-1_]" + terms[i] + "[a-zA-Z0-1_]"
 		re := regexp.MustCompile(exp)
 		counter := 0

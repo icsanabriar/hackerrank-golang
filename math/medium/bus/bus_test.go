@@ -18,8 +18,8 @@ import (
 	"testing"
 )
 
-// TestBusStationFirstGivenCase implements the test given as first example on hackerrank.
-func TestBusStationFirstGivenCase(t *testing.T) {
+// TestBusStationGivenCase implements the test given as first example on hackerrank.
+func TestBusStationGivenCase(t *testing.T) {
 
 	a := []int32{1, 2, 1, 1, 1, 2, 1, 3}
 	expected := []int32{3, 4, 6, 12}

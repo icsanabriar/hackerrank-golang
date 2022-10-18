@@ -15,8 +15,8 @@ package main
 
 import "testing"
 
-// TestGetNodeValueFirstGivenCase implements the test given as first example on hackerrank.
-func TestGetNodeValueFirstGivenCase(t *testing.T) {
+// TestGetNodeValueGivenCase implements the test given as first example on hackerrank.
+func TestGetNodeValueGivenCase(t *testing.T) {
 
 	list := SinglyLinkedList{}
 	list.insertNodeIntoSinglyLinkedList(int32(3))

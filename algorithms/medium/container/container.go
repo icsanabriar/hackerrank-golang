@@ -32,16 +32,16 @@ func organizingContainers(container [][]int32, size int32) string {
 
 	rowSum := make([]int64, size)
 
-	for i:= int32(0); i<size; i++{
-		for j:= int32(0);  j<size; j++ {
+	for i := int32(0); i < size; i++ {
+		for j := int32(0); j < size; j++ {
 			rowSum[i] = rowSum[i] + int64(container[i][j])
 		}
 	}
 
 	colSum := make([]int64, size)
 
-	for i:= int32(0); i<size; i++{
-		for j:= int32(0);  j<size; j++ {
+	for i := int32(0); i < size; i++ {
+		for j := int32(0); j < size; j++ {
 			colSum[i] = colSum[i] + int64(container[j][i])
 		}
 	}

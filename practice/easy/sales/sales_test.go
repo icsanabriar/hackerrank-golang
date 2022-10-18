@@ -17,6 +17,7 @@ import "testing"
 
 // TestSalesByMatchFirstGivenCase implements the test given as first example on hackerrank.
 func TestSalesByMatchFirstGivenCase(t *testing.T) {
+
 	n := int32(7)
 	input := []int32{1, 2, 1, 2, 1, 3, 2}
 	expected := int32(2)
@@ -30,6 +31,7 @@ func TestSalesByMatchFirstGivenCase(t *testing.T) {
 
 // TestSalesByMatchSecondGivenCase implements the test given as second example on hackerrank.
 func TestSalesByMatchSecondGivenCase(t *testing.T) {
+
 	n := int32(9)
 	input := []int32{10, 20, 20, 10, 10, 30, 50, 10, 20}
 	expected := int32(3)

@@ -17,6 +17,7 @@ import "testing"
 
 // TestFraudulentActivityFirstGivenCase implements the test given as first example on hackerrank.
 func TestFraudulentActivityFirstGivenCase(t *testing.T) {
+
 	input := []int32{2, 3, 4, 2, 3, 6, 8, 4, 5}
 	d := int32(5)
 	expected := int32(2)
@@ -30,6 +31,7 @@ func TestFraudulentActivityFirstGivenCase(t *testing.T) {
 
 // TestFraudulentActivitySecondGivenCase implements the test given as second example on hackerrank.
 func TestFraudulentActivitySecondGivenCase(t *testing.T) {
+
 	input := []int32{1, 2, 3, 4, 4}
 	d := int32(4)
 	expected := int32(0)

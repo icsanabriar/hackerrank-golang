@@ -23,6 +23,7 @@ import (
 
 // TestValidPanFormatFirstGivenCase implements the test given as first example on hackerrank.
 func TestValidPanFormatFirstGivenCase(t *testing.T) {
+
 	input := "ABCDS1234Y"
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -40,6 +41,7 @@ func TestValidPanFormatFirstGivenCase(t *testing.T) {
 
 // TestValidPanFormatSecondGivenCase implements the test given as second example on hackerrank.
 func TestValidPanFormatSecondGivenCase(t *testing.T) {
+
 	input := "ABAB12345Y"
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -57,6 +59,7 @@ func TestValidPanFormatSecondGivenCase(t *testing.T) {
 
 // TestValidPanFormatThirdGivenCase implements the test given as third example on hackerrank.
 func TestValidPanFormatThirdGivenCase(t *testing.T) {
+
 	input := "avCDS1234Y"
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -74,6 +77,7 @@ func TestValidPanFormatThirdGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

@@ -6,22 +6,22 @@ on:
   push:
     branches:
       - '*'
-      
+
 #Environment variables required for the tests
 env:
   OUTPUT_PATH: /home/runner/work/hackerrank-golang/hackerrank-golang/results.txt
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Go 1.17
-      uses: actions/setup-go@v3
-      with:
-        go-version: 1.17
-    - name: Build and Test
-      run: make test
-    - name: Analyze with Sonar
-      uses: sonarsource/sonarcloud-github-action@master
+      - uses: actions/checkout@v3
+      - name: Set up Go 1.17
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.17
+      - name: Build and Test
+        run: make test
+      - name: Analyze with Sonar
+        uses: sonarsource/sonarcloud-github-action@master

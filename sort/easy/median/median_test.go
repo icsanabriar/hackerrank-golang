@@ -15,8 +15,9 @@ package main
 
 import "testing"
 
-// TestFindingMedianFirstGivenCase implements the test given as first example on hackerrank.
-func TestFindingMedianFirstGivenCase(t *testing.T) {
+// TestFindingMedianGivenCase implements the test given as first example on hackerrank.
+func TestFindingMedianGivenCase(t *testing.T) {
+
 	arr := []int32{0, 1, 2, 4, 6, 5, 3}
 	expected := int32(3)
 

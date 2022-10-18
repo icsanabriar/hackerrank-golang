@@ -18,8 +18,8 @@ import (
 	"testing"
 )
 
-// TestSalaryBluesFirstGivenCase implements the test given as first example on hackerrank.
-func TestSalaryBluesFirstGivenCase(t *testing.T) {
+// TestSalaryBluesGivenCase implements the test given as first example on hackerrank.
+func TestSalaryBluesGivenCase(t *testing.T) {
 
 	a := []int64{9, 12, 3, 6}
 	queries := []int32{0, 3}

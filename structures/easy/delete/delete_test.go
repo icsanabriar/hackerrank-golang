@@ -17,8 +17,8 @@ import (
 	"testing"
 )
 
-// TestDeleteNodeFirstGivenCase implements the test given as first example on hackerrank.
-func TestDeleteNodeFirstGivenCase(t *testing.T) {
+// TestDeleteNodeGivenCase implements the test given as first example on hackerrank.
+func TestDeleteNodeGivenCase(t *testing.T) {
 
 	n := int32(3)
 	array := []int32{20, 6, 2, 19, 7, 4, 15, 9}

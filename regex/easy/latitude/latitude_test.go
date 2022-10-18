@@ -21,8 +21,9 @@ import (
 	"testing"
 )
 
-// TestValidLatitudeLongitudeFirstGivenCase implements the test given as first example on hackerrank.
-func TestValidLatitudeLongitudeFirstGivenCase(t *testing.T) {
+// TestValidLatitudeLongitudeGivenCase implements the test given as first example on hackerrank.
+func TestValidLatitudeLongitudeGivenCase(t *testing.T) {
+
 	input := []string{"(75, 180)", "(+90.0, -147.45)", "(77.11112223331, 149.99999999)", "(+90, +180)", "(90, 180)",
 		"(-90.00000, -180.0000)", "(75, 280)", "(+190.0, -147.45)", "(77.11112223331, 249.99999999)", "(+90, +180.2)",
 		"(90., 180.)", "(-090.00000, -180.0000)"}
@@ -42,6 +43,7 @@ func TestValidLatitudeLongitudeFirstGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

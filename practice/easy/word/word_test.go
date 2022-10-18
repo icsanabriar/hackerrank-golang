@@ -21,8 +21,9 @@ import (
 	"testing"
 )
 
-// TestFindASubWordFirstGivenCase implements the test given as first example on hackerrank.
-func TestFindASubWordFirstGivenCase(t *testing.T) {
+// TestFindASubWordGivenCase implements the test given as first example on hackerrank.
+func TestFindASubWordGivenCase(t *testing.T) {
+
 	input := []string{"existing pessimist optimist this is"}
 	terms := []string{"is"}
 
@@ -42,6 +43,7 @@ func TestFindASubWordFirstGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

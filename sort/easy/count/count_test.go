@@ -18,8 +18,8 @@ import (
 	"testing"
 )
 
-// TestCountingSortFirstGivenCase implements the test given as first example on hackerrank.
-func TestCountingSortFirstGivenCase(t *testing.T) {
+// TestCountingSortGivenCase implements the test given as first example on hackerrank.
+func TestCountingSortGivenCase(t *testing.T) {
 
 	arr := []int32{63, 25, 73, 1, 98, 73, 56, 84, 86, 57, 16, 83, 8, 25, 81, 56, 9, 53, 98, 67, 99, 12, 83, 89, 80, 91,
 		39, 86, 76, 85, 74, 39, 25, 90, 59, 10, 94, 32, 44, 3, 89, 30, 27, 79, 46, 96, 27, 32, 18, 21, 92, 69, 81, 40,

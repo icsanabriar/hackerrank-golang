@@ -15,8 +15,8 @@ package main
 
 import "testing"
 
-// TestQueueFirstGivenCase implements the test given as first example on hackerrank.
-func TestQueueFirstGivenCase(t *testing.T) {
+// TestQueueGivenCase implements the test given as first example on hackerrank.
+func TestQueueGivenCase(t *testing.T) {
 
 	var q = queue{}
 

@@ -15,8 +15,8 @@ package main
 
 import "testing"
 
-// TestStackFirstGivenCase implements the test given as first example on hackerrank.
-func TestStackFirstGivenCase(t *testing.T) {
+// TestStackGivenCase implements the test given as first example on hackerrank.
+func TestStackGivenCase(t *testing.T) {
 
 	var s = stack{}
 	var maxStack = stack{}

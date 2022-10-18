@@ -57,7 +57,7 @@ func main() {
 	for i, resItem := range res {
 		_, _ = fmt.Fprintf(writer, "%d", resItem)
 
-		if i != len(res) - 1 {
+		if i != len(res)-1 {
 			_, _ = fmt.Fprintf(writer, " ")
 		}
 	}

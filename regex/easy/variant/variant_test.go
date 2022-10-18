@@ -21,8 +21,8 @@ import (
 	"testing"
 )
 
-// TestUKAndUs2FirstGivenCase implements the test given as first example on hackerrank.
-func TestUKAndUs2FirstGivenCase(t *testing.T) {
+// TestUKAndUs2GivenCase implements the test given as first example on hackerrank.
+func TestUKAndUs2GivenCase(t *testing.T) {
 
 	text := `the odour coming out of the left over food was intolerable ammonia has a very pungent odor`
 	terms := []string{"odour"}
@@ -43,6 +43,7 @@ func TestUKAndUs2FirstGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

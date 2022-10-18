@@ -18,8 +18,8 @@ import (
 	"testing"
 )
 
-// TestSherlockMovingTilesFirstGivenCase implements the test given as first example on hackerrank.
-func TestSherlockMovingTilesFirstGivenCase(t *testing.T) {
+// TestSherlockMovingTilesGivenCase implements the test given as first example on hackerrank.
+func TestSherlockMovingTilesGivenCase(t *testing.T) {
 
 	l := int32(10)
 	s1 := int32(1)

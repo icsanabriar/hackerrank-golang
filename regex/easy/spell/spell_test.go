@@ -21,8 +21,8 @@ import (
 	"testing"
 )
 
-// TestBritishAmericanSpellingFirstGivenCase implements the test given as first example on hackerrank.
-func TestBritishAmericanSpellingFirstGivenCase(t *testing.T) {
+// TestBritishAmericanSpellingGivenCase implements the test given as first example on hackerrank.
+func TestBritishAmericanSpellingGivenCase(t *testing.T) {
 
 	text := `hackerrank has such a good ui that it takes no time to familiarise its environment
 			 to familiarize oneself with ui of hackerrank is easy`
@@ -44,6 +44,7 @@ func TestBritishAmericanSpellingFirstGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

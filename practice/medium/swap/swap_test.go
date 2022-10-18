@@ -17,6 +17,7 @@ import "testing"
 
 // TestMinimumSwapsFirstGivenCase implements the test given as first example on hackerrank.
 func TestMinimumSwapsFirstGivenCase(t *testing.T) {
+
 	input := []int32{7, 1, 3, 2, 4, 5, 6}
 	expected := int32(5)
 
@@ -29,6 +30,7 @@ func TestMinimumSwapsFirstGivenCase(t *testing.T) {
 
 // TestMinimumSwapsSecondGivenCase implements the test given as second example on hackerrank.
 func TestMinimumSwapsSecondGivenCase(t *testing.T) {
+
 	input := []int32{4, 3, 1, 2}
 	expected := int32(3)
 

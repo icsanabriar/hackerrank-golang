@@ -20,6 +20,7 @@ import (
 
 // TestEncodingManagerGivenCase implements the test given as first example on hackerrank.
 func TestEncodingManagerGivenCase(t *testing.T) {
+
 	input := Manager{
 		FullName:       "Ivan Camilo Sanabria",
 		Position:       "CEO",

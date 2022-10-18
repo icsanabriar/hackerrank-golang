@@ -18,6 +18,7 @@ HackerRank is an online platform to connect companies with developers to practic
 assessments.
 
 ## Requirements
+
 - Golang 1.17.x
 
 ## Check Application Test Coverage

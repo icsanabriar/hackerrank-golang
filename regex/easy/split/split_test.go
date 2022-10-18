@@ -21,8 +21,9 @@ import (
 	"testing"
 )
 
-// TestSplitPhoneNumberFirstGivenCase implements the test given as first example on hackerrank.
-func TestSplitPhoneNumberFirstGivenCase(t *testing.T) {
+// TestSplitPhoneNumberGivenCase implements the test given as first example on hackerrank.
+func TestSplitPhoneNumberGivenCase(t *testing.T) {
+
 	input := []string{"1 877 2638277", "91-011-23413627"}
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -41,6 +42,7 @@ func TestSplitPhoneNumberFirstGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

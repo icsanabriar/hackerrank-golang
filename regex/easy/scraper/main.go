@@ -24,7 +24,7 @@ func main() {
 	text := ""
 
 	for scanner.Scan() {
-		text += scanner.Text()+"\n"
+		text += scanner.Text() + "\n"
 	}
 
 	scrape(os.Stdout, text)

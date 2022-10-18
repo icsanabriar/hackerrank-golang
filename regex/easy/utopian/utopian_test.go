@@ -21,8 +21,9 @@ import (
 	"testing"
 )
 
-// TestUtopianIdentificationNumberFirstGivenCase implements the test given as first example on hackerrank.
-func TestUtopianIdentificationNumberFirstGivenCase(t *testing.T) {
+// TestUtopianIdentificationNumberGivenCase implements the test given as first example on hackerrank.
+func TestUtopianIdentificationNumberGivenCase(t *testing.T) {
+
 	input := []string{"abc012333ABCDEEEE", "0123AB"}
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -40,6 +41,7 @@ func TestUtopianIdentificationNumberFirstGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

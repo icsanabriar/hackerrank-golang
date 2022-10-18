@@ -27,11 +27,11 @@ func find(w io.Writer, a []string) {
 	ree := regexp.MustCompile(`hackerrank$`)
 
 	for i := 0; i < len(a); i++ {
-		if reb.MatchString(a[i]){
+		if reb.MatchString(a[i]) {
 			_, _ = fmt.Fprintf(w, "0\n")
-		} else if res.MatchString(a[i]){
+		} else if res.MatchString(a[i]) {
 			_, _ = fmt.Fprintf(w, "1\n")
-		} else if ree.MatchString(a[i]){
+		} else if ree.MatchString(a[i]) {
 			_, _ = fmt.Fprintf(w, "2\n")
 		} else {
 			_, _ = fmt.Fprintf(w, "-1\n")

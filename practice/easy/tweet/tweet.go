@@ -24,7 +24,7 @@ func validate(w io.Writer, lines []string) {
 
 	re := regexp.MustCompile("(?i)hackerrank")
 
-	counter :=0
+	counter := 0
 
 	for i := 0; i < len(lines); i++ {
 		if re.MatchString(lines[i]) {

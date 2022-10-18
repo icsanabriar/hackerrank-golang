@@ -21,8 +21,9 @@ import (
 	"testing"
 )
 
-// TestInsertionSortFirstGivenCase implements the test given as first example on hackerrank.
-func TestInsertionSortFirstGivenCase(t *testing.T) {
+// TestInsertionSortGivenCase implements the test given as first example on hackerrank.
+func TestInsertionSortGivenCase(t *testing.T) {
+
 	n := int32(5)
 	arr := []int32{2, 4, 6, 8, 3}
 	expected := "2 4 6 8 8 \n2 4 6 6 8 \n2 4 4 6 8 \n2 3 4 6 8 \n"
@@ -41,6 +42,7 @@ func TestInsertionSortFirstGivenCase(t *testing.T) {
 
 // readTestFile is responsible of reading the output of the program written in the given writer.
 func readTestFile() string {
+
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))
