@@ -18,7 +18,7 @@ import (
 	"io"
 )
 
-// insertionSort return the array used to store the values for counting sort algorithm.
+// insertionSort print sorted values of the given array.
 func insertionSort(w io.Writer, n int32, arr []int32) {
 	temp := arr[n-1]
 	index := n - 2

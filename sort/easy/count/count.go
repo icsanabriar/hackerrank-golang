@@ -13,7 +13,7 @@
 // limitations under the License.
 package main
 
-// countingSort return the array used to store the values for counting sort algorithm.
+// countingSort return sorted values of the given array using the counting sort algorithm.
 func countingSort(arr []int32) []int32 {
 	counters := make([]int32, 100)
 
