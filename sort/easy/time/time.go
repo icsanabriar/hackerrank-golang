@@ -13,20 +13,21 @@
 // limitations under the License.
 package main
 
-import (
-	"reflect"
-	"testing"
-)
+// runningTime estimates the number of shifts it will take to sort the array.
+func runningTime(arr []int32) int32 {
 
-// TestClosestNumbersGivenCase implements the test given as first example on hackerrank.
-func TestClosestNumbersGivenCase(t *testing.T) {
+	counter := int32(0)
 
-	arr := []int32{5, 4, 3, 2}
-	expected := []int32{2, 3, 3, 4, 4, 5}
-
-	result := closestNumbers(arr)
-
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Closest number first case was incorrect, got: %v, want: %v.", result, expected)
+	for i := 1; i < len(arr); i++ {
+		value := arr[i]
+		j := i - 1
+		for j >= 0 && arr[j] > value {
+			arr[j+1] = arr[j]
+			j = j - 1
+			counter++
+		}
+		arr[j+1] = value
 	}
+
+	return counter
 }

@@ -13,20 +13,17 @@
 // limitations under the License.
 package main
 
-import (
-	"reflect"
-	"testing"
-)
+import "testing"
 
-// TestClosestNumbersGivenCase implements the test given as first example on hackerrank.
-func TestClosestNumbersGivenCase(t *testing.T) {
+// TestRunningTimeGivenCase implements the test given as first example on hackerrank.
+func TestRunningTimeGivenCase(t *testing.T) {
 
-	arr := []int32{5, 4, 3, 2}
-	expected := []int32{2, 3, 3, 4, 4, 5}
+	arr := []int32{2, 1, 3, 1, 2}
+	expected := int32(4)
 
-	result := closestNumbers(arr)
+	result := runningTime(arr)
 
-	if !reflect.DeepEqual(result, expected) {
-		t.Errorf("Closest number first case was incorrect, got: %v, want: %v.", result, expected)
+	if result != expected {
+		t.Errorf("Running time first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
