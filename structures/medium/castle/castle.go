@@ -23,7 +23,14 @@ type Cell struct {
 // nextCells finds the next open cell that is not visited.
 func nextCells(grid [][]string, current Cell, visited map[Cell]bool, size int32) []Cell {
 	next := make([]Cell, 0)
+	next = searchX(grid, current, visited, size, next)
+	next = searchY(grid, current, visited, size, next)
 
+	return next
+}
+
+// searchX make a search over X grid cells.
+func searchX(grid [][]string, current Cell, visited map[Cell]bool, size int32, next []Cell) []Cell {
 	if current.direction == "" || current.direction == "Y" {
 		x := current.x
 
@@ -49,7 +56,11 @@ func nextCells(grid [][]string, current Cell, visited map[Cell]bool, size int32)
 			}
 		}
 	}
+	return next
+}
 
+// searchY make a search over Y grid cells.
+func searchY(grid [][]string, current Cell, visited map[Cell]bool, size int32, next []Cell) []Cell {
 	if current.direction == "" || current.direction == "X" {
 		y := current.y
 
@@ -75,7 +86,6 @@ func nextCells(grid [][]string, current Cell, visited map[Cell]bool, size int32)
 			}
 		}
 	}
-
 	return next
 }
 

@@ -19,16 +19,11 @@ import "sort"
 // between any two of the chosen integers is less than or equal to 1.
 func pickingNumbers(a []int32) int32 {
 
-	m := make(map[int32]int32)
+	m := make(map[int32]int32, 0)
 
 	// Memorize array in order and count the number of each int.
 	for i := range a {
-		current := a[i]
-		if val, ok := m[current]; ok {
-			m[current] = val + 1
-		} else {
-			m[current] = 1
-		}
+		m[a[i]]++
 	}
 
 	// Basic case when there is one element.
@@ -36,18 +31,22 @@ func pickingNumbers(a []int32) int32 {
 		return int32(len(a))
 	}
 
-	// Sort the keys of the map to calculate maximum length.
 	keys := make([]int32, 0, len(m))
 
 	for k := range m {
 		keys = append(keys, k)
 	}
 
+	// Sort the keys of the map to calculate maximum length.
 	sort.Slice(keys, func(i, j int) bool { return keys[i] < keys[j] })
 
+	return maxLength(m, keys)
+}
+
+// maxLength Iterate over map looking for integers which absolute difference is less or equal to 1.
+func maxLength(m map[int32]int32, keys []int32) int32 {
 	maximumLength := m[keys[0]]
 
-	// Iterate over map looking for integers which absolute difference is less than or equal to 1.
 	for i := 0; i < (len(keys) - 1); i++ {
 		if keys[i+1]-keys[i] <= 1 {
 			currentLength := m[keys[i+1]] + m[keys[i]]

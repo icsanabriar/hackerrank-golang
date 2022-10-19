@@ -59,6 +59,11 @@ func waiter(number []int32, q int) []int32 {
 		p = prime(p)
 	}
 
+	return buildPiles(number, b)
+}
+
+// buildPiles append the results of the piles using the given number and indexes.
+func buildPiles(number []int32, b map[int][]int32) []int32 {
 	result := make([]int32, 0)
 
 	// Sort keys of b.
