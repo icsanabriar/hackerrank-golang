@@ -53,8 +53,8 @@ func TestGridlandMetroEdgeCase(t *testing.T) {
 	n := int32(1)
 	m := int32(10)
 
-	track := [][]int32{{1, 1, 2}, {1, 3, 4}, {1, 8, 9}}
-	expected := int64(4)
+	track := [][]int32{{1, 1, 2}, {1, 3, 4}, {1, 3, 5}, {1, 8, 9}}
+	expected := int64(3)
 
 	result := gridlandMetro(n, m, track)
 
