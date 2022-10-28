@@ -31,7 +31,7 @@ func TestGridlandMetroGivenCase(t *testing.T) {
 	}
 }
 
-// TestGridlandMetroHiddenCase implements the test given as first example on hackerrank.
+// TestGridlandMetroHiddenCase implements the test given as hidden example on hackerrank.
 func TestGridlandMetroHiddenCase(t *testing.T) {
 
 	n := int32(1)
@@ -44,5 +44,21 @@ func TestGridlandMetroHiddenCase(t *testing.T) {
 
 	if result != expected {
 		t.Errorf("Gridland metro hidden case was incorrect, got: %v, want: %v.", result, expected)
+	}
+}
+
+// TestGridlandMetroEdgeCase implements the test given as edge case.
+func TestGridlandMetroEdgeCase(t *testing.T) {
+
+	n := int32(1)
+	m := int32(10)
+
+	track := [][]int32{{1, 1, 2}, {1, 3, 4}, {1, 8, 9}}
+	expected := int64(4)
+
+	result := gridlandMetro(n, m, track)
+
+	if result != expected {
+		t.Errorf("Gridland metro edge case was incorrect, got: %v, want: %v.", result, expected)
 	}
 }
