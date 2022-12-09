@@ -38,40 +38,20 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
-
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
 	n := int32(nTemp)
 
-	mTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
-	checkError(err)
-	m := int32(mTemp)
+	var arr []int32
 
-	kTemp, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
-	checkError(err)
-	k := int32(kTemp)
-
-	var track [][]int32
-	for i := 0; i < int(k); i++ {
-		trackRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
-
-		var trackRow []int32
-		for _, trackRowItem := range trackRowTemp {
-			trackItemTemp, err := strconv.ParseInt(trackRowItem, 10, 64)
-			checkError(err)
-			trackItem := int32(trackItemTemp)
-			trackRow = append(trackRow, trackItem)
-		}
-
-		if len(trackRow) != 3 {
-			panic("Bad input")
-		}
-
-		track = append(track, trackRow)
+	for i := 0; i < int(n); i++ {
+		arrItemTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+		checkError(err)
+		arrItem := int32(arrItemTemp)
+		arr = append(arr, arrItem)
 	}
 
-	result := gridlandMetro(n, m, track)
+	result := candies(n, arr)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
 
