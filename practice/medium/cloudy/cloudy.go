@@ -29,6 +29,34 @@ type event struct {
 // maximumPeople estimates the maximum number of people that will be in a sunny town after removing exactly one cloud.
 func maximumPeople(p []int64, x []int64, y []int64, r []int64) int64 {
 	free := int64(0)
+	events := generateCache(p, x, y, r)
+
+	sum := make(map[int64]int64, 0)
+	clouds := make(map[int64]bool, 0)
+
+	for _, e := range events {
+		if e.t == 0 {
+			clouds[e.idx] = true
+		} else if e.t == 1 {
+			if len(clouds) == 0 {
+				free += e.p
+			} else {
+				if len(clouds) == 1 {
+					for k := range clouds {
+						sum[k] = sum[k] + e.p
+					}
+				}
+			}
+		} else {
+			delete(clouds, e.idx)
+		}
+	}
+
+	return free + findMax(sum)
+}
+
+// generateCache build the event cache and sort based on x and t values.
+func generateCache(p []int64, x []int64, y []int64, r []int64) []event {
 	events := make([]event, 0)
 
 	for i := 0; i < len(p); i++ {
@@ -69,32 +97,15 @@ func maximumPeople(p []int64, x []int64, y []int64, r []int64) int64 {
 		return events[i].t < events[j].t
 	})
 
-	sum := make(map[int64]int64, 0)
-	clouds := make(map[int64]bool, 0)
+	return events
+}
 
-	for _, e := range events {
-		if e.t == 0 {
-			clouds[e.idx] = true
-		} else if e.t == 1 {
-			if len(clouds) == 0 {
-				free += e.p
-			} else {
-				if len(clouds) == 1 {
-					for k := range clouds {
-						sum[k] = sum[k] + e.p
-					}
-				}
-			}
-		} else {
-			delete(clouds, e.idx)
-		}
-	}
-
+// findMax find the maximum value form the given map.
+func findMax(sum map[int64]int64) int64 {
 	dx := int64(0)
 
 	for _, v := range sum {
 		dx = int64(math.Max(float64(dx), float64(v)))
 	}
-
-	return free + dx
+	return dx
 }
