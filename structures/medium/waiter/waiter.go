@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -41,17 +41,9 @@ func waiter(number []int32, q int) []int32 {
 		for j := len(number) - 1; j >= 0; j-- {
 			e := number[j]
 			if e%p == 0 {
-				if val, ok := b[i]; ok {
-					b[i] = append(val, e)
-				} else {
-					b[i] = []int32{e}
-				}
+				appendValueToArray(b, i, e)
 			} else {
-				if val, ok := a[i]; ok {
-					a[i] = append(val, e)
-				} else {
-					a[i] = []int32{e}
-				}
+				appendValueToArray(a, i, e)
 			}
 		}
 		number = a[i]
@@ -60,6 +52,15 @@ func waiter(number []int32, q int) []int32 {
 	}
 
 	return buildPiles(number, b)
+}
+
+// appendValueToArray append the given value to the map using the given key
+func appendValueToArray(m map[int][]int32, k int, v int32) {
+	if val, ok := m[k]; ok {
+		m[k] = append(val, v)
+	} else {
+		m[k] = []int32{v}
+	}
 }
 
 // buildPiles append the results of the piles using the given number and indexes.
