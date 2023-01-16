@@ -1,16 +1,16 @@
 # Hacker Rank Solutions
 
-version 1.2.0 - 03/08/2021
+version 1.2.0 - 16/01/2023
 
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build](https://img.shields.io/github/workflow/status/icsanabriar/hackerrank-golang/CI)](https://github.com/icsanabriar/hackerrank-golang/actions/workflows/main.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/icsanabriar/hackerrank-golang/.github/workflows/main.yml?branch=main)](https://github.com/icsanabriar/hackerrank-golang/actions/workflows/main.yml)
 [![PR](https://img.shields.io/github/issues-pr/icsanabriar/hackerrank-golang)](https://github.com/icsanabriar/hackerrank-golang/pulls)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=alert_status)](https://sonarcloud.io/component_measures/metric/alert_status/list?id=icsanabriar_hackerrank-golang)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=bugs)](https://sonarcloud.io/component_measures/metric/bugs/list?id=icsanabriar_hackerrank-golang)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=icsanabriar_hackerrank-golang)
-[![Size](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=ncloc)](https://sonarcloud.io/component_measures/metric/ncloc/list?id=icsanabriar_hackerrank-golang)
-[![TechnicalDebt](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=sqale_index)](https://sonarcloud.io/component_measures/metric/sqale_index/list?id=icsanabriar_hackerrank-golang)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/vulnerabilities/list?id=icsanabriar_hackerrank-golang)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=alert_status)](https://sonarcloud.io/project/overview?id=icsanabriar_hackerrank-golang)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=bugs)](https://sonarcloud.io/project/issues?resolved=false&types=BUG&id=icsanabriar_hackerrank-golang)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=coverage)](https://sonarcloud.io/component_measures?id=icsanabriar_hackerrank-golang&metric=new_coverage)
+[![Size](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=ncloc)](https://sonarcloud.io/code?id=icsanabriar_hackerrank-golang)
+[![TechnicalDebt](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=sqale_index)](https://sonarcloud.io/component_measures?metric=Maintainability&id=icsanabriar_hackerrank-golang)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=vulnerabilities)](https://sonarcloud.io/project/issues?resolved=false&types=VULNERABILITY&id=icsanabriar_hackerrank-golang)
 
 ## Introduction
 
