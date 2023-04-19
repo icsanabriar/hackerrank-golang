@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,9 +24,7 @@ import (
 
 // main function provided by hacker rank to execute the code on platform.
 func main() {
-	//reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
-	file, _ := os.Open("/Users/hexad/input-2.txt")
-	reader := bufio.NewReader(file)
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -46,7 +44,7 @@ func main() {
 
 	var dates [][]int32
 	for i := 0; i < int(n); i++ {
-		datesRowTemp := strings.Split(strings.TrimRight(readLine(reader)," \t\r\n"), " ")
+		datesRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 		var datesRow []int32
 		for _, datesRowItem := range datesRowTemp {

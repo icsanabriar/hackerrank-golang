@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,7 @@
 // limitations under the License.
 package main
 
-//pairs search the number of pair in the given array with the same difference as k.
+// pairs search the number of pair in the given array with the same difference as k.
 func pairs(k int32, arr []int32) int32 {
 	cache := make(map[int32]bool, 0)
 	keys := make([]int32, 0, len(cache))

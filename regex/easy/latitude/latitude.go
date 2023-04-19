@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,7 +19,7 @@ import (
 	"regexp"
 )
 
-//validate function check that the given coordinate comply with specify latitude and longitude.
+// validate function check that the given coordinate comply with specify latitude and longitude.
 func validate(w io.Writer, lines []string) {
 
 	re := regexp.MustCompile(`\([+-]?((90(\.0+)?)|((\d|[1-8]\d)(\.\d+)?)), [+-]?((180(\.0+)?)|((\d?\d|1[0-7]\d)(\.\d+)?))\)`)

@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,7 +19,7 @@ import (
 	"regexp"
 )
 
-//validate function check that the given line complies with pan standard.
+// validate function check that the given line complies with pan standard.
 func validate(w io.Writer, line string) {
 
 	re := regexp.MustCompile(`[A-Z]{5}[0-9]{4}[A-Z]`)

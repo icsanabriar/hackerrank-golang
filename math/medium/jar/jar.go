@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,7 +30,7 @@ func max(a, b int32) int32 {
 	return a
 }
 
-// solve validates that the given amount c gallons could be achieve by the a and b gallon jugs.
+// solve validates that the given amount c gallons could be achieved by the a and b gallon jugs.
 func solve(a int32, b int32, c int32) string {
 	divisor := gcd(a, b)
 

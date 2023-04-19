@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,7 +13,7 @@
 // limitations under the License.
 package main
 
-//dynamicArray uses the given queries to complete arrays using the given n.
+// dynamicArray uses the given queries to complete arrays using the given n.
 func dynamicArray(n int32, queries [][]int32) []int32 {
 	last := int32(0)
 	results := make([]int32, 0)

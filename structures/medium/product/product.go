@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -37,7 +37,7 @@ func reverse(arr []int32) []int32 {
 	return arr
 }
 
-// buildIndexes calculates the near element that is higher than arr[i]. Depending of the value of indexes
+// buildIndexes calculates the near element that is higher than arr[i]. Depending on the value of indexes
 // it goes to the right or left direction.
 func buildIndexes(arr, indexes []int32) []int32 {
 

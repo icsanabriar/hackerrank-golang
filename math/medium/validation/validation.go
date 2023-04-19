@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -37,7 +37,7 @@ func solveIsFibo(n int64, cache []int64) string {
 	// Iterate in order to optimize search.
 	for _, fib := range cache {
 
-		// Current Fibonacci value is higher than given number then break.
+		// Current Fibonacci value is higher than given number than break.
 		if n < fib {
 			break
 		}

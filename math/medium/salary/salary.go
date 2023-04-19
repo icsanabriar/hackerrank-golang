@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,7 +36,7 @@ func diffGcd(a []int64) int64 {
 	return result
 }
 
-// normalize finds the common salaries for the given array a, taking into account the given queries
+// normalize finds the common salaries for the given array, taking into account the given queries
 // that represents raises for all employees of a before normalization is executed.
 func normalize(a []int64, queries []int32) []int64 {
 

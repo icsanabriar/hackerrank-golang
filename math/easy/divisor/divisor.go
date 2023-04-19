@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -34,7 +34,7 @@ func findDivisor(n int32) int32 {
 
 	for i := int32(1); i*i <= n; i++ {
 
-		// Validate i is a divisor of n.
+		// Validate index is a divisor of n.
 		if n%i == 0 {
 
 			di := sumDigits(i)

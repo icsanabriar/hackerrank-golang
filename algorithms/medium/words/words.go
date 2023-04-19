@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -57,7 +57,7 @@ func timeInWords(h int32, m int32) string {
 		minutesString = " minutes"
 	}
 
-	// Validate minutes should be include in time.
+	// Validate minutes should be included in time.
 	if m%15 == 0 {
 		minutesString = ""
 	}
@@ -67,7 +67,7 @@ func timeInWords(h int32, m int32) string {
 		return numberString[h] + " o' clock"
 	}
 
-	// Past time output.
+	// Pastime output.
 	if 0 < m && m < 31 {
 		return numberString[m] + minutesString + " past " + numberString[h]
 	}

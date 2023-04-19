@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//     https://www.apache.org/licenses/LICENSE-2.0
+//	https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,7 +24,7 @@ func (q *queue) queueElement(x int32) {
 	q.recipient = append(q.recipient, x)
 }
 
-// transfer is responsible of moving elements from recipient to messenger stack.
+// transfer is responsible for moving elements from recipient to messenger stack.
 func (q *queue) transferElements() {
 	if len(q.messenger) == 0 {
 		for len(q.recipient) > 0 {
@@ -34,13 +34,13 @@ func (q *queue) transferElements() {
 	}
 }
 
-// dequeueElement is responsible of removing the first element of the queue using transfer.
+// dequeueElement is responsible for removing the first element of the queue using transfer.
 func (q *queue) dequeueElement() {
 	q.transferElements()
 	q.messenger = q.messenger[:len(q.messenger)-1]
 }
 
-// firstElement is responsible of getting the first element of the queue.
+// firstElement is responsible for getting the first element of the queue.
 func (q *queue) firstElement() int32 {
 	q.transferElements()
 	return q.messenger[len(q.messenger)-1]
