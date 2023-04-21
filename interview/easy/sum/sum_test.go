@@ -13,9 +13,7 @@
 // limitations under the License.
 package main
 
-import (
-	"testing"
-)
+import "testing"
 
 // TestMinMaxSumFirstGivenCase implements the test given as first example on hackerrank.
 func TestMinMaxSumFirstGivenCase(t *testing.T) {

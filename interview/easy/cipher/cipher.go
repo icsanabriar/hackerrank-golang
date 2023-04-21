@@ -13,24 +13,21 @@
 // limitations under the License.
 package main
 
-// miniMaxSum find the min and maximum sum of the given array.
-func miniMaxSum(arr []int32) (int64, int64) {
+// caesarCipher encrypt the given string using the k factor.
+func caesarCipher(s string, k int32) string {
 
-	var minSum, maxSum, currentSum int64
+	text := ""
 
-	minSum = int64(arr[0])
-	maxSum = int64(arr[0])
+	for _, char := range s {
 
-	for _, val := range arr {
-		currentSum += int64(val)
-
-		if int64(val) < minSum {
-			minSum = int64(val)
+		if char >= 'a' && char <= 'z' {
+			char = (char-'a'+k)%26 + 'a'
+		} else if char >= 'A' && char <= 'Z' {
+			char = (char-'A'+k)%26 + 'A'
 		}
-		if int64(val) > maxSum {
-			maxSum = int64(val)
-		}
+
+		text += string(char)
 	}
 
-	return currentSum - maxSum, currentSum - minSum
+	return text
 }

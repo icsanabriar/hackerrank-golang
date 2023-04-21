@@ -13,24 +13,38 @@
 // limitations under the License.
 package main
 
-// miniMaxSum find the min and maximum sum of the given array.
-func miniMaxSum(arr []int32) (int64, int64) {
-
-	var minSum, maxSum, currentSum int64
-
-	minSum = int64(arr[0])
-	maxSum = int64(arr[0])
-
-	for _, val := range arr {
-		currentSum += int64(val)
-
-		if int64(val) < minSum {
-			minSum = int64(val)
+// isPalindrome validates if the given string is palindrome or not.
+func isPalindrome(s string) bool {
+	for i := 0; i < len(s)/2; i++ {
+		if s[i] != s[len(s)-i-1] {
+			return false
 		}
-		if int64(val) > maxSum {
-			maxSum = int64(val)
+	}
+	return true
+}
+
+// palindromeIndex search the index to remove character to make the given string a palindrome.
+func palindromeIndex(s string) int {
+
+	if len(s) > 0 && isPalindrome(s) {
+		return -1
+	}
+
+	for i := 0; i < len(s)/2; i++ {
+
+		if s[i] != s[len(s)-i-1] {
+
+			if isPalindrome(s[:i] + s[i+1:]) {
+				return i
+			}
+
+			if isPalindrome(s[:len(s)-i-1] + s[len(s)-i:]) {
+				return len(s) - i - 1
+			}
+
+			return -1
 		}
 	}
 
-	return currentSum - maxSum, currentSum - minSum
+	return -1
 }

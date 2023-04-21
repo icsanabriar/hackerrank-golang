@@ -15,28 +15,30 @@ package main
 
 import "testing"
 
-// TestDiagonalDifferenceFirstGivenCase implements the test given as first example on hackerrank.
-func TestDiagonalDifferenceFirstGivenCase(t *testing.T) {
+// TestTowerBreakersFirstGivenCase implements the test given as first example on hackerrank.
+func TestTowerBreakersFirstGivenCase(t *testing.T) {
 
-	arr := [][]int32{{1, 2, 3}, {4, 5, 6}, {9, 8, 9}}
+	n := int32(2)
+	m := int32(2)
 	expected := int32(2)
 
-	result := diagonalDifference(arr)
+	result := towerBreakers(n, m)
 
 	if result != expected {
-		t.Errorf("Diagonal difference first case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Tower breakers first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }
 
-// TestDiagonalDifferenceSecondGivenCase implements the test given as second example on hackerrank.
-func TestDiagonalDifferenceSecondGivenCase(t *testing.T) {
+// TestTowerBreakersSecondGivenCase implements the test given as second example on hackerrank.
+func TestTowerBreakersSecondGivenCase(t *testing.T) {
 
-	arr := [][]int32{{11, 2, 4}, {4, 5, 6}, {10, 8, -12}}
-	expected := int32(15)
+	n := int32(1)
+	m := int32(4)
+	expected := int32(1)
 
-	result := diagonalDifference(arr)
+	result := towerBreakers(n, m)
 
 	if result != expected {
-		t.Errorf("Diagonal difference second case was incorrect, got: %d, want: %d.", result, expected)
+		t.Errorf("Tower breakers first case was incorrect, got: %d, want: %d.", result, expected)
 	}
 }

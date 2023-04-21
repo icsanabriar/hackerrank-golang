@@ -13,24 +13,12 @@
 // limitations under the License.
 package main
 
-// miniMaxSum find the min and maximum sum of the given array.
-func miniMaxSum(arr []int32) (int64, int64) {
+// towerBreakers calculate the winner player with the given number of towers and altitudes.
+func towerBreakers(n int32, m int32) int32 {
 
-	var minSum, maxSum, currentSum int64
-
-	minSum = int64(arr[0])
-	maxSum = int64(arr[0])
-
-	for _, val := range arr {
-		currentSum += int64(val)
-
-		if int64(val) < minSum {
-			minSum = int64(val)
-		}
-		if int64(val) > maxSum {
-			maxSum = int64(val)
-		}
+	if n%2 == 0 || m == 1 {
+		return 2
+	} else {
+		return 1
 	}
-
-	return currentSum - maxSum, currentSum - minSum
 }

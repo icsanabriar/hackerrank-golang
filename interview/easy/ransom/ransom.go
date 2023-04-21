@@ -16,6 +16,7 @@ package main
 
 // checkMagazine return YES if the Harold's note can be formed using the magazine, otherwise prints NO.
 func checkMagazine(magazine []string, note []string) string {
+
 	wordMap := make(map[string]int)
 
 	// Count the number of words in the magazine.

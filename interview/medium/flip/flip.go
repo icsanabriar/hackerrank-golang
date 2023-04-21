@@ -13,24 +13,39 @@
 // limitations under the License.
 package main
 
-// miniMaxSum find the min and maximum sum of the given array.
-func miniMaxSum(arr []int32) (int64, int64) {
+// flippingMatrix calculates the maximum sum of the upper left quadrant.
+func flippingMatrix(matrix [][]int32) int32 {
 
-	var minSum, maxSum, currentSum int64
+	n := len(matrix)
+	m := len(matrix[0])
 
-	minSum = int64(arr[0])
-	maxSum = int64(arr[0])
+	var maxScore int32 = 0
 
-	for _, val := range arr {
-		currentSum += int64(val)
+	for j := 0; j < n/2; j++ {
 
-		if int64(val) < minSum {
-			minSum = int64(val)
-		}
-		if int64(val) > maxSum {
-			maxSum = int64(val)
+		for k := 0; k < m/2; k++ {
+
+			a := matrix[j][k]
+			b := matrix[j][m-1-k]
+			c := matrix[n-1-j][k]
+			d := matrix[n-1-j][m-1-k]
+			currentScore := a
+
+			if b > currentScore {
+				currentScore = b
+			}
+
+			if c > currentScore {
+				currentScore = c
+			}
+
+			if d > currentScore {
+				currentScore = d
+			}
+
+			maxScore += currentScore
 		}
 	}
 
-	return currentSum - maxSum, currentSum - minSum
+	return maxScore
 }
