@@ -1,4 +1,4 @@
-// Copyright 2020 Iván Camilo Sanabria
+// Copyright 2023 Iván Camilo Sanabria
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,29 +38,26 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
-
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	tTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
+	t := int32(tTemp)
 
-	k, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
-	checkError(err)
-
-	ATemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
-
-	var A []int32
-
-	for i := 0; i < int(n); i++ {
-		AItemTemp, err := strconv.ParseInt(ATemp[i], 10, 64)
+	for tItr := 0; tItr < int(t); tItr++ {
+		nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 		checkError(err)
-		AItem := int32(AItemTemp)
-		A = append(A, AItem)
+		n := int32(nTemp)
+
+		var grid []string
+
+		for i := 0; i < int(n); i++ {
+			gridItem := readLine(reader)
+			grid = append(grid, gridItem)
+		}
+
+		result := gridChallenge(grid)
+
+		_, _ = fmt.Fprintf(writer, "%s\n", result)
 	}
-
-	result := cookies(k, A)
-
-	_, _ = fmt.Fprintf(writer, "%d\n", result)
 
 	_ = writer.Flush()
 }
@@ -71,7 +68,6 @@ func readLine(reader *bufio.Reader) string {
 	if err == io.EOF {
 		return ""
 	}
-
 	return strings.TrimRight(string(str), "\r\n")
 }
 

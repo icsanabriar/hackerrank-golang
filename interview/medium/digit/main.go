@@ -1,4 +1,4 @@
-// Copyright 2020 Iván Camilo Sanabria
+// Copyright 2023 Iván Camilo Sanabria
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -40,27 +40,16 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
-	checkError(err)
-	n := int32(nTemp)
+	n := firstMultipleInput[0]
+	digitSum := int64(superDigit(n))
 
 	k, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
 
-	ATemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
+	result := digitSum * k
+	finalResult := superDigit(fmt.Sprintf("%d", result))
 
-	var A []int32
-
-	for i := 0; i < int(n); i++ {
-		AItemTemp, err := strconv.ParseInt(ATemp[i], 10, 64)
-		checkError(err)
-		AItem := int32(AItemTemp)
-		A = append(A, AItem)
-	}
-
-	result := cookies(k, A)
-
-	_, _ = fmt.Fprintf(writer, "%d\n", result)
+	_, _ = fmt.Fprintf(writer, "%d\n", finalResult)
 
 	_ = writer.Flush()
 }
@@ -71,7 +60,6 @@ func readLine(reader *bufio.Reader) string {
 	if err == io.EOF {
 		return ""
 	}
-
 	return strings.TrimRight(string(str), "\r\n")
 }
 
