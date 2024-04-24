@@ -38,15 +38,15 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	tests, err := strconv.ParseInt(readLine(reader), 10, 64)
+	tests, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
-	for testsItr := 0; testsItr < int(tests); testsItr++ {
-		listCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+	for testsItr := 0; testsItr < tests; testsItr++ {
+		listCount, err := strconv.Atoi(readLine(reader))
 		checkError(err)
 
 		list := SinglyLinkedList{}
-		for i := 0; i < int(listCount); i++ {
+		for i := 0; i < listCount; i++ {
 			listItem, err := strconv.ParseInt(readLine(reader), 10, 64)
 			checkError(err)
 			list.insertNodeIntoSinglyLinkedList(listItem)

@@ -27,17 +27,17 @@ func isEqual(a, b []int64) bool {
 }
 
 // organizingContainers find if the given container are possible to sort or not.
-func organizingContainers(container [][]int64, size int64) string {
+func organizingContainers(container [][]int64, size int) string {
 	rowSum := make([]int64, size)
-	for i := int64(0); i < size; i++ {
-		for j := int64(0); j < size; j++ {
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
 			rowSum[i] += container[i][j]
 		}
 	}
 
 	colSum := make([]int64, size)
-	for i := int64(0); i < size; i++ {
-		for j := int64(0); j < size; j++ {
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
 			colSum[i] += container[j][i]
 		}
 	}

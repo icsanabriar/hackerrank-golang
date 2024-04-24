@@ -38,11 +38,11 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	queriesRows, err := strconv.ParseInt(readLine(reader), 10, 64)
+	queriesRows, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
 	var queries [][]string
-	for queriesRowItr := 0; queriesRowItr < int(queriesRows); queriesRowItr++ {
+	for queriesRowItr := 0; queriesRowItr < queriesRows; queriesRowItr++ {
 		queriesRowTemp := strings.Split(readLine(reader), " ")
 
 		var queriesRow []string

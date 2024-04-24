@@ -40,16 +40,16 @@ func main() {
 
 	nq := strings.Split(readLine(reader), " ")
 
-	n, err := strconv.ParseInt(nq[0], 10, 64)
+	n, err := strconv.Atoi(nq[0])
 	checkError(err)
 
-	q, err := strconv.ParseInt(nq[1], 10, 64)
+	q, err := strconv.Atoi(nq[1])
 	checkError(err)
 
 	numberTemp := strings.Split(readLine(reader), " ")
 
 	var number []int64
-	for numberItr := 0; numberItr < int(n); numberItr++ {
+	for numberItr := 0; numberItr < n; numberItr++ {
 		numberItem, err := strconv.ParseInt(numberTemp[numberItr], 10, 64)
 		checkError(err)
 		number = append(number, numberItem)

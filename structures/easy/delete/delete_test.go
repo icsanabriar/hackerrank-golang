@@ -19,7 +19,7 @@ import (
 
 // TestDeleteNodeGivenCase implements the test given as first example on hackerrank.
 func TestDeleteNodeGivenCase(t *testing.T) {
-	n := int64(3)
+	n := 3
 	array := []int64{20, 6, 2, 19, 7, 4, 15, 9}
 	list := buildList(array)
 

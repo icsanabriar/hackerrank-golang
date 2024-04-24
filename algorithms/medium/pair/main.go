@@ -40,7 +40,7 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n, err := strconv.Atoi(firstMultipleInput[0])
 	checkError(err)
 
 	k, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
@@ -49,7 +49,7 @@ func main() {
 	arrTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var arr []int64
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		arrItem, err := strconv.ParseInt(arrTemp[i], 10, 64)
 		checkError(err)
 		arr = append(arr, arrItem)

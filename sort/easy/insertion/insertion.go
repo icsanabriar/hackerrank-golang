@@ -19,7 +19,7 @@ import (
 )
 
 // insertionSort print sorted values of the given array.
-func insertionSort(w io.Writer, n int64, arr []int64) {
+func insertionSort(w io.Writer, n int, arr []int64) {
 	temp := arr[n-1]
 	index := n - 2
 

@@ -49,11 +49,11 @@ func main() {
 	s2, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
 	checkError(err)
 
-	queriesCount, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	queriesCount, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
 	var queries []int64
-	for i := 0; i < int(queriesCount); i++ {
+	for i := 0; i < queriesCount; i++ {
 		queriesItemTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 		checkError(err)
 		queries = append(queries, queriesItemTemp)

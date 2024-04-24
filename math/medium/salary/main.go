@@ -43,7 +43,7 @@ func main() {
 	_, err = strconv.ParseInt(nq[0], 10, 64)
 	checkError(err)
 
-	q, err := strconv.ParseInt(nq[1], 10, 64)
+	q, err := strconv.Atoi(nq[1])
 	checkError(err)
 
 	aTemp := strings.Split(readLine(reader), " ")
@@ -56,7 +56,7 @@ func main() {
 	}
 
 	var queries []int64
-	for i := 0; i < int(q); i++ {
+	for i := 0; i < q; i++ {
 		queriesItem, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
 		queries = append(queries, queriesItem)

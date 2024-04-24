@@ -38,10 +38,10 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	q, err := strconv.ParseInt(readLine(reader), 10, 64)
+	q, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
-	for qItr := 0; qItr < int(q); qItr++ {
+	for qItr := 0; qItr < q; qItr++ {
 		n, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
 

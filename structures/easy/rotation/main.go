@@ -40,7 +40,7 @@ func main() {
 
 	nd := strings.Split(readLine(reader), " ")
 
-	n, err := strconv.ParseInt(nd[0], 10, 64)
+	n, err := strconv.Atoi(nd[0])
 	checkError(err)
 
 	d, err := strconv.ParseInt(nd[1], 10, 64)
@@ -49,7 +49,7 @@ func main() {
 	aTemp := strings.Split(readLine(reader), " ")
 
 	var a []int64
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		aItem, err := strconv.ParseInt(aTemp[i], 10, 64)
 		checkError(err)
 		a = append(a, aItem)

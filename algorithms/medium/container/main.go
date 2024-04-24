@@ -38,15 +38,15 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	q, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	q, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
-	for qItr := 0; qItr < int(q); qItr++ {
-		n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	for qItr := 0; qItr < q; qItr++ {
+		n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 		checkError(err)
 
 		var container [][]int64
-		for i := 0; i < int(n); i++ {
+		for i := 0; i < n; i++ {
 			containerRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 			var containerRow []int64
@@ -56,7 +56,7 @@ func main() {
 				containerRow = append(containerRow, containerItem)
 			}
 
-			if len(containerRow) != int(n) {
+			if len(containerRow) != n {
 				panic("Bad input")
 			}
 

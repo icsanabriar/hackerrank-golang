@@ -40,19 +40,19 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	n1, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n1, err := strconv.Atoi(firstMultipleInput[0])
 	checkError(err)
 
-	n2, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	n2, err := strconv.Atoi(firstMultipleInput[1])
 	checkError(err)
 
-	n3, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+	n3, err := strconv.Atoi(firstMultipleInput[2])
 	checkError(err)
 
 	h1Temp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var h1 []int64
-	for i := 0; i < int(n1); i++ {
+	for i := 0; i < n1; i++ {
 		h1Item, err := strconv.ParseInt(h1Temp[i], 10, 64)
 		checkError(err)
 		h1 = append(h1, h1Item)
@@ -61,7 +61,7 @@ func main() {
 	h2Temp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var h2 []int64
-	for i := 0; i < int(n2); i++ {
+	for i := 0; i < n2; i++ {
 		h2Item, err := strconv.ParseInt(h2Temp[i], 10, 64)
 		checkError(err)
 		h2 = append(h2, h2Item)
@@ -70,7 +70,7 @@ func main() {
 	h3Temp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var h3 []int64
-	for i := 0; i < int(n3); i++ {
+	for i := 0; i < n3; i++ {
 		h3Item, err := strconv.ParseInt(h3Temp[i], 10, 64)
 		checkError(err)
 		h3 = append(h3, h3Item)

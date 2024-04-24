@@ -30,13 +30,13 @@ func prime(previous int64) int64 {
 // waiter separates the given array of plates (number) into Ai Bi piles doing q iterations.
 // Returns an array of int with the order of the piles B0, B1, ... Bi, Ai taking into account
 // the TOP element which is the last one of the pile.
-func waiter(number []int64, q int64) []int64 {
+func waiter(number []int64, q int) []int64 {
 	a := make(map[int][]int64)
 	b := make(map[int][]int64)
 	p := int64(2)
 
 	// Build piles from ai.
-	for i := 1; i <= int(q); i++ {
+	for i := 1; i <= q; i++ {
 		for j := len(number) - 1; j >= 0; j-- {
 			e := number[j]
 			if e%p == 0 {

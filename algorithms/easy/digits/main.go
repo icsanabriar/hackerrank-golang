@@ -38,10 +38,10 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	t, err := strconv.ParseInt(readLine(reader), 10, 64)
+	t, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
-	for tItr := 0; tItr < int(t); tItr++ {
+	for tItr := 0; tItr < t; tItr++ {
 		n, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
 		result := findDigits(n)

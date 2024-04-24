@@ -38,13 +38,13 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	aCount, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	aCount, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
 	aTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var a []int64
-	for i := 0; i < int(aCount); i++ {
+	for i := 0; i < aCount; i++ {
 		aItem, err := strconv.ParseInt(aTemp[i], 10, 64)
 		checkError(err)
 		a = append(a, aItem)

@@ -14,9 +14,9 @@
 package main
 
 // bfs estimates the shortest distance between the nodes given a starting one.
-func bfs(n int64, m int64, edges [][]int64, s int64) []int64 {
+func bfs(n int, m int, edges [][]int64, s int64) []int64 {
 	graph := make([][]int64, n+1)
-	for i := int64(0); i < m; i++ {
+	for i := 0; i < m; i++ {
 		u := edges[i][0]
 		v := edges[i][1]
 		graph[u] = append(graph[u], v)

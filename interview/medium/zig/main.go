@@ -26,17 +26,17 @@ import (
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
-	for tItr := 0; tItr < int(t); tItr++ {
-		n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	for tItr := 0; tItr < t; tItr++ {
+		n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 		checkError(err)
 
 		arrTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 		var arr []int64
-		for i := 0; i < int(n); i++ {
+		for i := 0; i < n; i++ {
 			arrItem, err := strconv.ParseInt(arrTemp[i], 10, 64)
 			checkError(err)
 			arr = append(arr, arrItem)
@@ -44,7 +44,7 @@ func main() {
 
 		result := zigZagSequence(arr)
 
-		for i := int64(0); i < n; i++ {
+		for i := 0; i < n; i++ {
 			fmt.Print(result[i], " ")
 		}
 

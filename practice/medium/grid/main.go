@@ -46,11 +46,11 @@ func main() {
 	m, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
 
-	k, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+	k, err := strconv.Atoi(firstMultipleInput[2])
 	checkError(err)
 
 	var track [][]int64
-	for i := 0; i < int(k); i++ {
+	for i := 0; i < k; i++ {
 		trackRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 		var trackRow []int64

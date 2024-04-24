@@ -23,7 +23,7 @@ import (
 
 // TestInsertionSortGivenCase implements the test given as first example on hackerrank.
 func TestInsertionSortGivenCase(t *testing.T) {
-	n := int64(5)
+	n := 5
 	arr := []int64{2, 4, 6, 8, 3}
 	expected := "2 4 6 8 8 \n2 4 6 6 8 \n2 4 4 6 8 \n2 3 4 6 8 \n"
 

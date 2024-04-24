@@ -43,11 +43,11 @@ func main() {
 	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
 
-	q, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	q, err := strconv.Atoi(firstMultipleInput[1])
 	checkError(err)
 
 	var queries [][]int64
-	for i := 0; i < int(q); i++ {
+	for i := 0; i < q; i++ {
 		queriesRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 		var queriesRow []int64

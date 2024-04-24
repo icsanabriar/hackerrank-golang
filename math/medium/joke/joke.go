@@ -20,11 +20,8 @@ func solve(dates [][]int64) int64 {
 	cache := make(map[int64]int64)
 
 	for _, date := range dates {
-		month := int(date[0])
-		day := int(date[1])
-
-		dayString := strconv.FormatInt(int64(day), 10)
-		monthBase, err := strconv.ParseInt(dayString, month, 64)
+		dayString := strconv.FormatInt(date[1], 10)
+		monthBase, err := strconv.ParseInt(dayString, int(date[0]), 64)
 
 		if err == nil {
 			cache[monthBase]++

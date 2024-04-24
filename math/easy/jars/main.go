@@ -43,11 +43,11 @@ func main() {
 	n, err := strconv.ParseInt(nm[0], 10, 64)
 	checkError(err)
 
-	m, err := strconv.ParseInt(nm[1], 10, 64)
+	m, err := strconv.Atoi(nm[1])
 	checkError(err)
 
 	var operations [][]int64
-	for operationsRowItr := 0; operationsRowItr < int(m); operationsRowItr++ {
+	for operationsRowItr := 0; operationsRowItr < m; operationsRowItr++ {
 		operationsRowTemp := strings.Split(readLine(reader), " ")
 
 		var operationsRow []int64

@@ -14,11 +14,11 @@
 package main
 
 // connectingTowns calculates the total number of routes to connect the first to last town.
-func connectingTowns(n int64, routes []int64) int64 {
+func connectingTowns(n int, routes []int64) int64 {
 	modulo := int64(1234567)
 	total := int64(1)
 
-	for i := int64(0); i < (n - 1); i++ {
+	for i := 0; i < (n - 1); i++ {
 		total = (total * routes[i]) % modulo
 	}
 

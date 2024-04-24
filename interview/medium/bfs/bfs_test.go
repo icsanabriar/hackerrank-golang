@@ -20,8 +20,8 @@ import (
 
 // TestBFSFirstGivenCase implements the test given as first example on hackerrank.
 func TestBFSFirstGivenCase(t *testing.T) {
-	n := int64(4)
-	m := int64(2)
+	n := 4
+	m := 2
 	edges := [][]int64{{1, 2}, {1, 3}}
 	s := int64(1)
 
@@ -36,8 +36,8 @@ func TestBFSFirstGivenCase(t *testing.T) {
 
 // TestBFSSecondGivenCase implements the test given as second example on hackerrank.
 func TestBFSSecondGivenCase(t *testing.T) {
-	n := int64(3)
-	m := int64(1)
+	n := 3
+	m := 1
 	edges := [][]int64{{2, 3}}
 	s := int64(2)
 

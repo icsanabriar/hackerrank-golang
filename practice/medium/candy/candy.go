@@ -14,11 +14,11 @@
 package main
 
 // candies calculates the minimum number of candies to buy.
-func candies(n int64, arr []int64) int64 {
+func candies(n int, arr []int64) int64 {
 	c := make([]int64, n)
 	c[0] = 1
 
-	for i := 1; i < int(n); i++ {
+	for i := 1; i < n; i++ {
 		c[i] = 1
 		if arr[i] > arr[i-1] {
 			c[i] = c[i-1] + 1
@@ -32,7 +32,7 @@ func candies(n int64, arr []int64) int64 {
 	}
 
 	total := int64(0)
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		total += c[i]
 	}
 

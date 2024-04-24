@@ -42,13 +42,13 @@ func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeDat
 }
 
 // deleteNode returns the node is being deleted from the given structure.
-func deleteNode(list *SinglyLinkedListNode, position int64) *SinglyLinkedListNode {
+func deleteNode(list *SinglyLinkedListNode, position int) *SinglyLinkedListNode {
 	tempHead := SinglyLinkedListNode{
 		next: list,
 	}
 
 	temp := &tempHead
-	for i := 0; i < int(position); i++ {
+	for i := 0; i < position; i++ {
 		temp = temp.next
 	}
 

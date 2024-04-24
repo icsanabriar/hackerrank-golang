@@ -38,20 +38,20 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	q, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	q, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
-	for qItr := 0; qItr < int(q); qItr++ {
+	for qItr := 0; qItr < q; qItr++ {
 		firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-		n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+		n, err := strconv.Atoi(firstMultipleInput[0])
 		checkError(err)
 
-		m, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+		m, err := strconv.Atoi(firstMultipleInput[1])
 		checkError(err)
 
 		var edges [][]int64
-		for i := 0; i < int(m); i++ {
+		for i := 0; i < m; i++ {
 			edgesRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 			var edgesRow []int64

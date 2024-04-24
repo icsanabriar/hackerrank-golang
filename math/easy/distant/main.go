@@ -38,11 +38,11 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	n, err := strconv.ParseInt(readLine(reader), 10, 64)
+	n, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
 	var coordinates [][]int64
-	for coordinatesRowItr := 0; coordinatesRowItr < int(n); coordinatesRowItr++ {
+	for coordinatesRowItr := 0; coordinatesRowItr < n; coordinatesRowItr++ {
 		coordinatesRowTemp := strings.Split(readLine(reader), " ")
 
 		var coordinatesRow []int64

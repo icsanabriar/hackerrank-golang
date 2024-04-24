@@ -38,7 +38,7 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	t, err := strconv.ParseInt(readLine(reader), 10, 64)
+	t, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
 	// Build cache to increase performance.
@@ -47,7 +47,7 @@ func main() {
 		cache[i] = -1
 	}
 
-	for tItr := 0; tItr < int(t); tItr++ {
+	for tItr := 0; tItr < t; tItr++ {
 		n, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
 

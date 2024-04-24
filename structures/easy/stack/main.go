@@ -38,13 +38,13 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
 	s := stack{}
 	maxStack := stack{}
 
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		command := strings.Split(readLine(reader), " ")
 		// Command 1 is the only two parameters.
 		if len(command) == 2 {

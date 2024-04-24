@@ -38,15 +38,15 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
-	for tItr := 0; tItr < int(t); tItr++ {
-		n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	for tItr := 0; tItr < t; tItr++ {
+		n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 		checkError(err)
 
 		var grid []string
-		for i := 0; i < int(n); i++ {
+		for i := 0; i < n; i++ {
 			gridItem := readLine(reader)
 			grid = append(grid, gridItem)
 		}

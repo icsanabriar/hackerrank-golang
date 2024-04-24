@@ -17,7 +17,7 @@ import "testing"
 
 // TestConnectingTownsFirstGivenCase implements the test given as first example on hackerrank.
 func TestConnectingTownsFirstGivenCase(t *testing.T) {
-	n := int64(3)
+	n := 3
 	routes := []int64{1, 3}
 	expected := int64(3)
 
@@ -30,7 +30,7 @@ func TestConnectingTownsFirstGivenCase(t *testing.T) {
 
 // TestConnectingTownsSecondGivenCase implements the test given as second example on hackerrank.
 func TestConnectingTownsSecondGivenCase(t *testing.T) {
-	n := int64(4)
+	n := 4
 	routes := []int64{2, 2, 2}
 	expected := int64(8)
 

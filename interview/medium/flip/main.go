@@ -38,15 +38,15 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	q, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	q, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
-	for qItr := 0; qItr < int(q); qItr++ {
-		n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	for qItr := 0; qItr < q; qItr++ {
+		n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 		checkError(err)
 
 		var matrix [][]int64
-		for i := 0; i < 2*int(n); i++ {
+		for i := 0; i < 2*n; i++ {
 			matrixRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 			var matrixRow []int64
@@ -56,7 +56,7 @@ func main() {
 				matrixRow = append(matrixRow, matrixItem)
 			}
 
-			if len(matrixRow) != 2*int(n) {
+			if len(matrixRow) != 2*n {
 				panic("Bad input")
 			}
 

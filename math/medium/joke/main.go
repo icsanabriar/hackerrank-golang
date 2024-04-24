@@ -38,11 +38,11 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
 	var dates [][]int64
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		datesRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 		var datesRow []int64

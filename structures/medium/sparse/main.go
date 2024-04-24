@@ -38,20 +38,20 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	stringsCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+	stringsCount, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
 	var array []string
-	for i := 0; i < int(stringsCount); i++ {
+	for i := 0; i < stringsCount; i++ {
 		stringsItem := readLine(reader)
 		array = append(array, stringsItem)
 	}
 
-	queriesCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+	queriesCount, err := strconv.Atoi(readLine(reader))
 	checkError(err)
 
 	var queries []string
-	for i := 0; i < int(queriesCount); i++ {
+	for i := 0; i < queriesCount; i++ {
 		queriesItem := readLine(reader)
 		queries = append(queries, queriesItem)
 	}

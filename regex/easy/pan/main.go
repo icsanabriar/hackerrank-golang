@@ -25,10 +25,10 @@ import (
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		s := strings.TrimSpace(readLine(reader))
 		validate(os.Stdout, s)
 	}

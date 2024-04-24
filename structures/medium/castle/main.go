@@ -38,11 +38,11 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
 	var grid []string
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		gridItem := readLine(reader)
 		grid = append(grid, gridItem)
 	}
@@ -68,7 +68,7 @@ func main() {
 	}
 
 	visited := make(map[Cell]bool)
-	result := minimumMoves(parsed, startX, startY, goalX, goalY, visited, n)
+	result := minimumMoves(parsed, startX, startY, goalX, goalY, visited, int64(n))
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
 	_ = writer.Flush()

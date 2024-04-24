@@ -14,11 +14,11 @@
 package main
 
 // sockMerchant count the number of pairs given in the array.
-func sockMerchant(n int64, arr []int64) int64 {
+func sockMerchant(n int, arr []int64) int64 {
 	cache := map[int64]int{}
 	pairs := int64(0)
 
-	for i := int64(0); i < n; i++ {
+	for i := 0; i < n; i++ {
 		if _, ok := cache[arr[i]]; ok {
 			delete(cache, arr[i])
 			pairs++

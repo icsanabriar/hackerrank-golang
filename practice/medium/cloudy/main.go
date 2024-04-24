@@ -38,13 +38,13 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
 	pTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var p []int64
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		pItem, err := strconv.ParseInt(pTemp[i], 10, 64)
 		checkError(err)
 		p = append(p, pItem)
@@ -53,19 +53,19 @@ func main() {
 	xTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var x []int64
-	for i := 0; i < int(n); i++ {
+	for i := 0; i < n; i++ {
 		xItem, err := strconv.ParseInt(xTemp[i], 10, 64)
 		checkError(err)
 		x = append(x, xItem)
 	}
 
-	m, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	m, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
 	yTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var y []int64
-	for i := 0; i < int(m); i++ {
+	for i := 0; i < m; i++ {
 		yItem, err := strconv.ParseInt(yTemp[i], 10, 64)
 		checkError(err)
 		y = append(y, yItem)
@@ -74,7 +74,7 @@ func main() {
 	rTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var r []int64
-	for i := 0; i < int(m); i++ {
+	for i := 0; i < m; i++ {
 		rItem, err := strconv.ParseInt(rTemp[i], 10, 64)
 		checkError(err)
 		r = append(r, rItem)

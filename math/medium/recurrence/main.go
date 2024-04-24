@@ -38,10 +38,10 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.Atoi(strings.TrimSpace(readLine(reader)))
 	checkError(err)
 
-	for tItr := 0; tItr < int(t); tItr++ {
+	for tItr := 0; tItr < t; tItr++ {
 		firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 		a, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
