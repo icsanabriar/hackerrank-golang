@@ -16,10 +16,8 @@ package main
 import "fmt"
 
 // plusMinus retrieves the ratios of positive, negative and zero values of the given array.
-func plusMinus(arr []int32) []string {
-
+func plusMinus(arr []int64) []string {
 	positive, negative, zeros := 0, 0, 0
-
 	for _, value := range arr {
 		switch {
 		case value == 0:

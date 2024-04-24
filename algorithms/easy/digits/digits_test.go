@@ -17,8 +17,7 @@ import "testing"
 
 // TestDigitsFirstGivenCase implements the test given as first example on hackerrank.
 func TestDigitsFirstGivenCase(t *testing.T) {
-
-	input := int32(12)
+	input := int64(12)
 	expected := 2
 
 	result := findDigits(input)
@@ -30,8 +29,7 @@ func TestDigitsFirstGivenCase(t *testing.T) {
 
 // TestDigitsSecondGivenCase implements the test given as second example on hackerrank.
 func TestDigitsSecondGivenCase(t *testing.T) {
-
-	input := int32(1012)
+	input := int64(1012)
 	expected := 3
 
 	result := findDigits(input)

@@ -23,7 +23,6 @@ import (
 
 // extract function to extract the html tags of the given lines.
 func extract(w io.Writer, lines []string) {
-
 	re := regexp.MustCompile(`<\s*([a-z][a-z0-9]*)[^>]*>`)
 	tags := map[string]bool{}
 
@@ -38,12 +37,10 @@ func extract(w io.Writer, lines []string) {
 	}
 
 	keys := make([]string, 0)
-
 	for k := range tags {
 		keys = append(keys, k)
 	}
 
 	sort.Strings(keys)
-
 	_, _ = fmt.Fprintln(w, strings.Join(keys, ";"))
 }

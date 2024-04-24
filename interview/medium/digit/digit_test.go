@@ -17,7 +17,6 @@ import "testing"
 
 // TestSuperDigitFirstGivenCase implements the test given as first example on hackerrank.
 func TestSuperDigitFirstGivenCase(t *testing.T) {
-
 	s := "9875987598759875"
 	expected := 8
 

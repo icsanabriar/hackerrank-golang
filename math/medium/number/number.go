@@ -16,7 +16,7 @@ package main
 import "math"
 
 // closer find the close number from the target given a and b.
-func closer(target int32, a int32, b int32) int32 {
+func closer(target int64, a int64, b int64) int64 {
 	d1 := math.Abs(float64(a - target))
 	d2 := math.Abs(float64(b - target))
 
@@ -28,8 +28,7 @@ func closer(target int32, a int32, b int32) int32 {
 }
 
 // closestNumber find the multiple of x closest to a pow b.
-func closestNumber(a int32, b int32, x int32) int32 {
-
+func closestNumber(a int64, b int64, x int64) int64 {
 	if a == 1 || b == 0 {
 		return closer(1, 0, x)
 	}
@@ -38,10 +37,9 @@ func closestNumber(a int32, b int32, x int32) int32 {
 		return 0
 	}
 
-	target := int32(1)
-
-	for i := int32(0); i < b; i++ {
-		target = target * a
+	target := int64(1)
+	for i := int64(0); i < b; i++ {
+		target *= a
 	}
 
 	return closer(target, target/x*x, (target/x+1)*x)

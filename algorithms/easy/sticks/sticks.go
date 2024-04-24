@@ -16,29 +16,26 @@ package main
 import "sort"
 
 // cutTheSticks return the number of sticks after each iteration of cutting.
-func cutTheSticks(arr []int32) []int32 {
-
-	cache := make(map[int32]int32)
-
+func cutTheSticks(arr []int64) []int64 {
+	cache := make(map[int64]int64)
 	for i := range arr {
 		length := arr[i]
 		cache[length]++
 	}
 
-	keys := make([]int32, 0, len(cache))
-
+	keys := make([]int64, 0, len(cache))
 	for k := range cache {
 		keys = append(keys, k)
 	}
 
 	sort.Slice(keys, func(i, j int) bool { return keys[i] < keys[j] })
 
-	var result []int32
-	left := int32(len(arr))
+	left := int64(len(arr))
+	result := make([]int64, 0, len(keys))
 
 	for _, k := range keys {
 		result = append(result, left)
-		left = left - cache[k]
+		left -= cache[k]
 	}
 
 	return result

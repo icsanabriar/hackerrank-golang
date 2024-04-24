@@ -16,7 +16,6 @@ package main
 // fibonacci return the sequence of Fibonacci with the given length n. Cache is map used to memorize the sequence
 // that is already estimated on previous loops of recursion in order to increase performance of the function.
 func fibonacci(n int, cache []int) int {
-
 	if n == 0 || n == 1 {
 		return n
 	}

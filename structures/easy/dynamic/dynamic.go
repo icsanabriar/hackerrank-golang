@@ -14,10 +14,10 @@
 package main
 
 // dynamicArray uses the given queries to complete arrays using the given n.
-func dynamicArray(n int32, queries [][]int32) []int32 {
-	last := int32(0)
-	results := make([]int32, 0)
-	dynamic := make([][]int32, n)
+func dynamicArray(n int64, queries [][]int64) []int64 {
+	last := int64(0)
+	results := make([]int64, 0)
+	dynamic := make([][]int64, n)
 
 	for _, item := range queries {
 		operation := item[0]
@@ -26,12 +26,12 @@ func dynamicArray(n int32, queries [][]int32) []int32 {
 
 		index := (x ^ last) % n
 
-		if 1 == operation {
+		if operation == 1 {
 			array := dynamic[index]
 			dynamic[index] = append(array, y)
-		} else if 2 == operation {
+		} else if operation == 2 {
 			array := dynamic[index]
-			index = y % int32(len(array))
+			index = y % int64(len(array))
 			last = array[index]
 			results = append(results, last)
 		}

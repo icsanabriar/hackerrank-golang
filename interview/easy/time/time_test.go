@@ -17,7 +17,6 @@ import "testing"
 
 // TestTimeConversionFirstGivenCase implements the test given as first example on hackerrank.
 func TestTimeConversionFirstGivenCase(t *testing.T) {
-
 	s := "12:01:00PM"
 	expected := "12:01:00"
 
@@ -30,7 +29,6 @@ func TestTimeConversionFirstGivenCase(t *testing.T) {
 
 // TestTimeConversionSecondGivenCase implements the test given as second example on hackerrank.
 func TestTimeConversionSecondGivenCase(t *testing.T) {
-
 	s := "12:01:00AM"
 	expected := "00:01:00"
 
@@ -43,7 +41,6 @@ func TestTimeConversionSecondGivenCase(t *testing.T) {
 
 // TestTimeConversionThirdGivenCase implements the test given as third example on hackerrank.
 func TestTimeConversionThirdGivenCase(t *testing.T) {
-
 	s := "07:05:45PM"
 	expected := "19:05:45"
 
@@ -56,7 +53,6 @@ func TestTimeConversionThirdGivenCase(t *testing.T) {
 
 // TestTimeConversionFourthGivenCase implements the test given as fourth example on hackerrank.
 func TestTimeConversionFourthGivenCase(t *testing.T) {
-
 	s := "02:07:33AM"
 	expected := "02:07:33"
 

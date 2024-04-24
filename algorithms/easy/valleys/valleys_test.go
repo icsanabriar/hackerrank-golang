@@ -17,7 +17,6 @@ import "testing"
 
 // TestValleysFirstGivenCase implements the test given as first example on hackerrank.
 func TestValleysFirstGivenCase(t *testing.T) {
-
 	input := "UDDDUDUU"
 	expected := int32(1)
 
@@ -30,7 +29,6 @@ func TestValleysFirstGivenCase(t *testing.T) {
 
 // TestValleysSecondGivenCase implements the test given as second example on hackerrank.
 func TestValleysSecondGivenCase(t *testing.T) {
-
 	input := "DDUUDDUDUUUD"
 	expected := int32(2)
 

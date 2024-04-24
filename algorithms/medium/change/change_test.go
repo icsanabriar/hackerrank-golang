@@ -17,7 +17,6 @@ import "testing"
 
 // TestCoinChangeProblemFirstGivenCase implements the test given as first example on hackerrank.
 func TestCoinChangeProblemFirstGivenCase(t *testing.T) {
-
 	n := int64(4)
 	c := []int64{1, 2, 3}
 	expected := int64(4)
@@ -31,7 +30,6 @@ func TestCoinChangeProblemFirstGivenCase(t *testing.T) {
 
 // TestCoinChangeProblemSecondGivenCase implements the test given as second example on hackerrank.
 func TestCoinChangeProblemSecondGivenCase(t *testing.T) {
-
 	n := int64(10)
 	c := []int64{2, 5, 3, 6}
 	expected := int64(5)
@@ -45,7 +43,6 @@ func TestCoinChangeProblemSecondGivenCase(t *testing.T) {
 
 // TestCoinChangeProblemHiddenCase implements the test given as hidden example on hackerrank.
 func TestCoinChangeProblemHiddenCase(t *testing.T) {
-
 	n := int64(219)
 	c := []int64{36, 10, 42, 7, 50, 1, 49, 24, 37, 12, 34, 13, 39, 18, 8, 29, 19, 43, 5, 44, 28, 23, 35, 26}
 	expected := int64(168312708)

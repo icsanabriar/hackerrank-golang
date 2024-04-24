@@ -14,6 +14,6 @@
 package main
 
 // gameWithCells calculates how many packages should be dropped to supply all army.
-func gameWithCells(n int32, m int32) int32 {
+func gameWithCells(n int64, m int64) int64 {
 	return ((n + 1) / 2) * ((m + 1) / 2)
 }

@@ -38,18 +38,15 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	hTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	h, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
-	h := int32(hTemp)
 
-	mTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	m, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
-	m := int32(mTemp)
 
 	result := timeInWords(h, m)
 
 	_, _ = fmt.Fprintf(writer, "%s\n", result)
-
 	_ = writer.Flush()
 }
 

@@ -24,9 +24,8 @@ func findWay(c []int64, remain int64, index int, cache [][]int64) int64 {
 	if index == 0 {
 		if remain%c[0] == 0 {
 			return 1
-		} else {
-			return 0
 		}
+		return 0
 	}
 
 	if cache[remain][index] >= 0 {
@@ -34,7 +33,6 @@ func findWay(c []int64, remain int64, index int, cache [][]int64) int64 {
 	}
 
 	result := int64(0)
-
 	for i := int64(0); (i * c[index]) <= remain; i++ {
 		result += findWay(c, remain-i*c[index], index-1, cache)
 	}
@@ -46,9 +44,7 @@ func findWay(c []int64, remain int64, index int, cache [][]int64) int64 {
 
 // getWays find the number of possible change based on the given amount n and the coin designation c.
 func getWays(n int64, c []int64) int64 {
-
 	cache := make([][]int64, n+1)
-
 	for i := range cache {
 		cache[i] = make([]int64, len(c))
 		for j := range cache[i] {

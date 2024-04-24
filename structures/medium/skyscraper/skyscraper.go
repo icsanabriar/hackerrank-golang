@@ -14,11 +14,11 @@
 package main
 
 // solveFlyRoute calculates the number of valid routes for Jim's flying device.
-func solveFlyRoute(arr []int32) int64 {
+func solveFlyRoute(arr []int64) int64 {
 	routes := int64(0)
 	cache := make([]int64, len(arr))
 
-	stack := make([]int32, 0)
+	stack := make([]int64, 0)
 	stack = append(stack, 0)
 
 	for i := 1; i < len(arr); i++ {
@@ -30,10 +30,10 @@ func solveFlyRoute(arr []int32) int64 {
 		if len(stack) > 0 && arr[stack[len(stack)-1]] == arr[i] {
 			cache[i] = cache[stack[len(stack)-1]] + 1
 			stack = stack[:len(stack)-1]
-			routes = routes + cache[i]
+			routes += cache[i]
 		}
 		// Push current index.
-		stack = append(stack, int32(i))
+		stack = append(stack, int64(i))
 	}
 
 	return routes * 2

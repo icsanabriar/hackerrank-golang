@@ -16,9 +16,8 @@ package main
 import "strconv"
 
 // solve find that the given dates are the same based on the number and base used for each one.
-func solve(dates [][]int32) int64 {
-
-	cache := make(map[int64]int64, 0)
+func solve(dates [][]int64) int64 {
+	cache := make(map[int64]int64)
 
 	for _, date := range dates {
 		month := int(date[0])
@@ -32,11 +31,11 @@ func solve(dates [][]int32) int64 {
 		}
 	}
 
-	max := int64(0)
+	maximum := int64(0)
 
 	for _, v := range cache {
-		max += v * (v - 1) / 2
+		maximum += v * (v - 1) / 2
 	}
 
-	return max
+	return maximum
 }

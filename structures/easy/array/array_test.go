@@ -20,9 +20,8 @@ import (
 
 // TestReverseArrayGivenCase implements the test given as first example on hackerrank.
 func TestReverseArrayGivenCase(t *testing.T) {
-
-	a := []int32{1, 4, 3, 2}
-	expected := []int32{2, 3, 4, 1}
+	a := []int64{1, 4, 3, 2}
+	expected := []int64{2, 3, 4, 1}
 
 	result := reverseArray(a)
 

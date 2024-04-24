@@ -20,11 +20,10 @@ import (
 
 // TestWaiterFirstGivenCase implements the test given as first example on hackerrank.
 func TestWaiterFirstGivenCase(t *testing.T) {
+	number := []int64{3, 4, 7, 6, 5}
+	q := int64(1)
 
-	number := []int32{3, 4, 7, 6, 5}
-	q := 1
-
-	expected := []int32{4, 6, 3, 7, 5}
+	expected := []int64{4, 6, 3, 7, 5}
 
 	result := waiter(number, q)
 
@@ -35,11 +34,10 @@ func TestWaiterFirstGivenCase(t *testing.T) {
 
 // TestWaiterSecondGivenCase implements the test given as second example on hackerrank.
 func TestWaiterSecondGivenCase(t *testing.T) {
+	number := []int64{3, 3, 4, 4, 9}
+	q := int64(2)
 
-	number := []int32{3, 3, 4, 4, 9}
-	q := 2
-
-	expected := []int32{4, 4, 9, 3, 3}
+	expected := []int64{4, 4, 9, 3, 3}
 
 	result := waiter(number, q)
 

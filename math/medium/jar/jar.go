@@ -14,16 +14,15 @@
 package main
 
 // gcd calculate the great common divisor of given a,b.
-func gcd(a int32, b int32) int32 {
+func gcd(a int64, b int64) int64 {
 	if b == 0 {
 		return a
-	} else {
-		return gcd(b, a%b)
 	}
+	return gcd(b, a%b)
 }
 
-// max retrieves the maximum value of the given values.
-func max(a, b int32) int32 {
+// maximum retrieves the max value of the given values.
+func maximum(a, b int64) int64 {
 	if a < b {
 		return b
 	}
@@ -31,10 +30,10 @@ func max(a, b int32) int32 {
 }
 
 // solve validates that the given amount c gallons could be achieved by the a and b gallon jugs.
-func solve(a int32, b int32, c int32) string {
+func solve(a int64, b int64, c int64) string {
 	divisor := gcd(a, b)
 
-	if c <= max(a, b) && c%divisor == 0 {
+	if c <= maximum(a, b) && c%divisor == 0 {
 		return "YES"
 	}
 

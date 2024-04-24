@@ -14,10 +14,8 @@
 package main
 
 // lonelyInteger retrieves the integer of the array that is frequent one time.
-func lonelyInteger(arr []int32) int32 {
-
-	cache := make(map[int32]int32)
-
+func lonelyInteger(arr []int64) int64 {
+	cache := make(map[int64]int64)
 	for _, num := range arr {
 		cache[num]++
 	}

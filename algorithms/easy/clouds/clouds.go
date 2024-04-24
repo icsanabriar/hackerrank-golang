@@ -15,21 +15,20 @@ package main
 
 // jumpingOnClouds return an integer representing the minimum number of jumps required to get to the end of given
 // array c taking into account save jumps.
-func jumpingOnClouds(c []int32) int32 {
-
+func jumpingOnClouds(c []int64) int64 {
 	i := 0
-	jumps := int32(0)
+	jumps := int64(0)
 
 	for i < len(c) {
 		if i+2 < len(c) {
 			twoSteps := c[i+2]
 			if twoSteps == 0 {
-				i = i + 2
+				i += 2
 			} else {
-				i = i + 1
+				i++
 			}
 		} else {
-			i = i + 1
+			i++
 		}
 		jumps++
 	}

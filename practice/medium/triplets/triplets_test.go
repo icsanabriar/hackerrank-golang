@@ -17,7 +17,6 @@ import "testing"
 
 // TestCountTripletsFirstGivenCase implements the test given as first example on hackerrank.
 func TestCountTripletsFirstGivenCase(t *testing.T) {
-
 	r := int64(3)
 	arr := []int64{1, 3, 9, 9, 27, 81}
 	expected := int64(6)
@@ -31,7 +30,6 @@ func TestCountTripletsFirstGivenCase(t *testing.T) {
 
 // TestCountTripletsSecondGivenCase implements the test given as second example on hackerrank.
 func TestCountTripletsSecondGivenCase(t *testing.T) {
-
 	r := int64(5)
 	arr := []int64{1, 5, 5, 25, 125}
 	expected := int64(4)

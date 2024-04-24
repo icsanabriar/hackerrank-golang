@@ -15,14 +15,12 @@ package main
 
 // contacts count the partial results on cache map given on queries, which is a list of commands add or find.
 func contacts(queries [][]string) []int32 {
-
 	// Build cache on initial state.
 	cache := make(map[string]int32)
 	result := make([]int32, 0)
 
 	// Iterate over queries.
 	for _, row := range queries {
-
 		// Add possible partials to cache.
 		if row[0] == "add" {
 			for i := range row[1] {
@@ -34,7 +32,6 @@ func contacts(queries [][]string) []int32 {
 				}
 			}
 		}
-
 		// Add values to result when there is a partial
 		if row[0] == "find" {
 			result = append(result, cache[row[1]])

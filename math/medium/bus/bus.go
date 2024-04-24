@@ -16,27 +16,26 @@ package main
 import "sort"
 
 // sum add all the values of the array and return the total.
-func sum(a []int32) int32 {
-	total := int32(0)
-
+func sum(a []int64) int64 {
+	total := int64(0)
 	for i := range a {
-		total = total + a[i]
+		total += a[i]
 	}
 
 	return total
 }
 
 // validate checks if the given size fits for all elements in array.
-func validate(a []int32, size int32) bool {
+func validate(a []int64, size int64) bool {
 	remain := size
-
 	for i := range a {
-		if remain == a[i] {
+		switch {
+		case remain == a[i]:
 			remain = size
-		} else if remain < a[i] {
+		case remain < a[i]:
 			return false
-		} else {
-			remain = remain - a[i]
+		default:
+			remain -= a[i]
 		}
 	}
 
@@ -44,11 +43,11 @@ func validate(a []int32, size int32) bool {
 }
 
 // solve return the size of the bus to fit all the given groups in multiple rides.
-func solve(a []int32) []int32 {
+func solve(a []int64) []int64 {
 	total := sum(a)
-	sizes := make([]int32, 0)
+	sizes := make([]int64, 0)
 
-	for i := int32(1); i*i <= total; i++ {
+	for i := int64(1); i*i <= total; i++ {
 		if total%i == 0 {
 			if validate(a, i) {
 				sizes = append(sizes, i)

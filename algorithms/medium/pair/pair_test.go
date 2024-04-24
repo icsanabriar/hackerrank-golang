@@ -17,10 +17,9 @@ import "testing"
 
 // TestPairsFirstGivenCase implements the test given as first example on hackerrank.
 func TestPairsFirstGivenCase(t *testing.T) {
-
-	k := int32(1)
-	arr := []int32{1, 2, 3, 4}
-	expected := int32(3)
+	k := int64(1)
+	arr := []int64{1, 2, 3, 4}
+	expected := int64(3)
 
 	result := pairs(k, arr)
 
@@ -31,10 +30,9 @@ func TestPairsFirstGivenCase(t *testing.T) {
 
 // TestPairsSecondGivenCase implements the test given as second example on hackerrank.
 func TestPairsSecondGivenCase(t *testing.T) {
-
-	k := int32(2)
-	arr := []int32{1, 5, 3, 4, 2}
-	expected := int32(3)
+	k := int64(2)
+	arr := []int64{1, 5, 3, 4, 2}
+	expected := int64(3)
 
 	result := pairs(k, arr)
 

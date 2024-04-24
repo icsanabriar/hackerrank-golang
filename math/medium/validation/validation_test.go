@@ -17,7 +17,6 @@ import "testing"
 
 // TestIsFiboFirstGivenCase implements the test given as first example on hackerrank.
 func TestIsFiboFirstGivenCase(t *testing.T) {
-
 	cache := buildCache()
 
 	input := int64(5)
@@ -32,7 +31,6 @@ func TestIsFiboFirstGivenCase(t *testing.T) {
 
 // TestIsFiboSecondGivenCase implements the test given as second example on hackerrank.
 func TestIsFiboSecondGivenCase(t *testing.T) {
-
 	cache := buildCache()
 
 	input := int64(7)
@@ -47,7 +45,6 @@ func TestIsFiboSecondGivenCase(t *testing.T) {
 
 // TestIsFiboThirdGivenCase implements the test given as third example on hackerrank.
 func TestIsFiboThirdGivenCase(t *testing.T) {
-
 	cache := buildCache()
 
 	input := int64(8)
@@ -62,9 +59,7 @@ func TestIsFiboThirdGivenCase(t *testing.T) {
 
 // buildCache factory of a valid cache for solveIsFibo function.
 func buildCache() []int64 {
-
 	cache := make([]int64, 100)
-
 	for i := range cache {
 		cache[i] = -1
 	}

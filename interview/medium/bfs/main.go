@@ -38,30 +38,26 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	qTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	q, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	q := int32(qTemp)
 
 	for qItr := 0; qItr < int(q); qItr++ {
 		firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-		nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+		n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 		checkError(err)
-		n := int32(nTemp)
 
-		mTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+		m, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 		checkError(err)
-		m := int32(mTemp)
 
-		var edges [][]int32
+		var edges [][]int64
 		for i := 0; i < int(m); i++ {
 			edgesRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
-			var edgesRow []int32
+			var edgesRow []int64
 			for _, edgesRowItem := range edgesRowTemp {
-				edgesItemTemp, err := strconv.ParseInt(edgesRowItem, 10, 64)
+				edgesItem, err := strconv.ParseInt(edgesRowItem, 10, 64)
 				checkError(err)
-				edgesItem := int32(edgesItemTemp)
 				edgesRow = append(edgesRow, edgesItem)
 			}
 
@@ -72,24 +68,27 @@ func main() {
 			edges = append(edges, edgesRow)
 		}
 
-		sTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+		s, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 		checkError(err)
-		s := int32(sTemp)
 
 		result := bfs(n, m, edges, s)
-
-		for i, resultItem := range result {
-			_, _ = fmt.Fprintf(writer, "%d", resultItem)
-
-			if i != len(result)-1 {
-				_, _ = fmt.Fprintf(writer, " ")
-			}
-		}
-
-		_, _ = fmt.Fprintf(writer, "\n")
+		printResult(result, writer)
 	}
 
 	_ = writer.Flush()
+}
+
+// printResult function provided to simplify the output process.
+func printResult(result []int64, writer *bufio.Writer) {
+	for i, resultItem := range result {
+		_, _ = fmt.Fprintf(writer, "%d", resultItem)
+
+		if i != len(result)-1 {
+			_, _ = fmt.Fprintf(writer, " ")
+		}
+	}
+
+	_, _ = fmt.Fprintf(writer, "\n")
 }
 
 // readLine function provided by hacker rank to execute the code on platform.

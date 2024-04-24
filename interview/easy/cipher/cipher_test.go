@@ -19,7 +19,6 @@ import (
 
 // TestCaesarCipherFirstGivenCase implements the test given as first example on hackerrank.
 func TestCaesarCipherFirstGivenCase(t *testing.T) {
-
 	s := "middle-Outz"
 	k := int32(2)
 	expected := "okffng-Qwvb"
@@ -33,7 +32,6 @@ func TestCaesarCipherFirstGivenCase(t *testing.T) {
 
 // TestCaesarCipherSecondGivenCase implements the test given as second example on hackerrank.
 func TestCaesarCipherSecondGivenCase(t *testing.T) {
-
 	s := "Always-Look-on-the-Bright-Side-of-Life"
 	k := int32(5)
 	expected := "Fqbfdx-Qttp-ts-ymj-Gwnlmy-Xnij-tk-Qnkj"

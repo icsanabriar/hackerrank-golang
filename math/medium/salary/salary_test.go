@@ -20,9 +20,8 @@ import (
 
 // TestSalaryBluesGivenCase implements the test given as first example on hackerrank.
 func TestSalaryBluesGivenCase(t *testing.T) {
-
 	a := []int64{9, 12, 3, 6}
-	queries := []int32{0, 3}
+	queries := []int64{0, 3}
 	expected := []int64{3, 3}
 
 	result := normalize(a, queries)
@@ -34,9 +33,8 @@ func TestSalaryBluesGivenCase(t *testing.T) {
 
 // TestSalaryBluesEdgeGivenCase implements the test given as edge example on hackerrank.
 func TestSalaryBluesEdgeGivenCase(t *testing.T) {
-
 	a := []int64{474515580, 11940082770, 20257709010, 20257709010}
-	queries := []int32{0, 868972117, 971690506, 877902860}
+	queries := []int64{0, 868972117, 971690506, 877902860}
 	expected := []int64{2310, 1, 2, 10}
 
 	result := normalize(a, queries)

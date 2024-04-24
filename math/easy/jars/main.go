@@ -67,7 +67,6 @@ func main() {
 	result := estimate(n, operations)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

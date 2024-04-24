@@ -17,7 +17,6 @@ import "testing"
 
 // TestPalindromeIndexFirstGivenCase implements the test given as first example on hackerrank.
 func TestPalindromeIndexFirstGivenCase(t *testing.T) {
-
 	s := "aaab"
 	expected := 3
 
@@ -30,7 +29,6 @@ func TestPalindromeIndexFirstGivenCase(t *testing.T) {
 
 // TestPalindromeIndexSecondGivenCase implements the test given as second example on hackerrank.
 func TestPalindromeIndexSecondGivenCase(t *testing.T) {
-
 	s := "baa"
 	expected := 0
 
@@ -43,7 +41,6 @@ func TestPalindromeIndexSecondGivenCase(t *testing.T) {
 
 // TestPalindromeIndexThirdGivenCase implements the test given as third example on hackerrank.
 func TestPalindromeIndexThirdGivenCase(t *testing.T) {
-
 	s := "aaa"
 	expected := -1
 
@@ -56,7 +53,6 @@ func TestPalindromeIndexThirdGivenCase(t *testing.T) {
 
 // TestPalindromeIndexEdgeCase implements the test as edge example.
 func TestPalindromeIndexEdgeCase(t *testing.T) {
-
 	s := "arcade"
 	expected := -1
 
@@ -69,7 +65,6 @@ func TestPalindromeIndexEdgeCase(t *testing.T) {
 
 // TestPalindromeIndexEmptyCase implements the test as empty input example.
 func TestPalindromeIndexEmptyCase(t *testing.T) {
-
 	s := ""
 	expected := -1
 

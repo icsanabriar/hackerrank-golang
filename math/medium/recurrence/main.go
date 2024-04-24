@@ -38,62 +38,57 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	tTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	for tItr := 0; tItr < int(t); tItr++ {
 		firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-		aTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+		a, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 		checkError(err)
-		a := int32(aTemp)
 
-		bTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+		b, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 		checkError(err)
-		b := int32(bTemp)
 
-		cTemp, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+		c, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
 		checkError(err)
-		c := int32(cTemp)
 
-		dTemp, err := strconv.ParseInt(firstMultipleInput[3], 10, 64)
+		d, err := strconv.ParseInt(firstMultipleInput[3], 10, 64)
 		checkError(err)
-		d := int32(dTemp)
 
-		eTemp, err := strconv.ParseInt(firstMultipleInput[4], 10, 64)
+		e, err := strconv.ParseInt(firstMultipleInput[4], 10, 64)
 		checkError(err)
-		e := int32(eTemp)
 
-		fTemp, err := strconv.ParseInt(firstMultipleInput[5], 10, 64)
+		f, err := strconv.ParseInt(firstMultipleInput[5], 10, 64)
 		checkError(err)
-		f := int32(fTemp)
 
-		gTemp, err := strconv.ParseInt(firstMultipleInput[6], 10, 64)
+		g, err := strconv.ParseInt(firstMultipleInput[6], 10, 64)
 		checkError(err)
-		g := int32(gTemp)
 
-		hTemp, err := strconv.ParseInt(firstMultipleInput[7], 10, 64)
+		h, err := strconv.ParseInt(firstMultipleInput[7], 10, 64)
 		checkError(err)
-		h := int32(hTemp)
 
 		n, err := strconv.ParseInt(firstMultipleInput[8], 10, 64)
 		checkError(err)
 
 		result := recurrence(a, b, c, d, e, f, g, h, n)
-
-		for i, resultItem := range result {
-			_, _ = fmt.Fprintf(writer, "%d", resultItem)
-
-			if i != len(result)-1 {
-				_, _ = fmt.Fprintf(writer, " ")
-			}
-		}
-
-		_, _ = fmt.Fprintf(writer, "\n")
+		printResult(result, writer)
 	}
 
 	_ = writer.Flush()
+}
+
+// printResult function provided to simplify the output process.
+func printResult(result []int64, writer *bufio.Writer) {
+	for i, resultItem := range result {
+		_, _ = fmt.Fprintf(writer, "%d", resultItem)
+
+		if i != len(result)-1 {
+			_, _ = fmt.Fprintf(writer, " ")
+		}
+	}
+
+	_, _ = fmt.Fprintf(writer, "\n")
 }
 
 // readLine function provided by hacker rank to execute the code on platform.

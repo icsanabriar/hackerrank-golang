@@ -13,8 +13,8 @@
 // limitations under the License.
 package main
 
-// max retrieves the maximum value of the given values.
-func max(a, b int32) int32 {
+// maximum retrieves the max value of the given values.
+func maximum(a, b int32) int32 {
 	if a < b {
 		return b
 	}
@@ -23,12 +23,10 @@ func max(a, b int32) int32 {
 
 // commonChild find the child string of the given ones, by eliminating zero or more characters.
 func commonChild(s1 string, s2 string) int32 {
-
 	lengthS1 := len(s1)
 	lengthS2 := len(s2)
 
 	var common [][]int32
-
 	for i := 0; i <= lengthS1; i++ {
 		var row []int32
 		for j := 0; j <= lengthS2; j++ {
@@ -42,7 +40,7 @@ func commonChild(s1 string, s2 string) int32 {
 			if s1[i-1] == s2[j-1] {
 				common[i][j] = common[i-1][j-1] + 1
 			} else {
-				common[i][j] = max(common[i-1][j], common[i][j-1])
+				common[i][j] = maximum(common[i-1][j], common[i][j-1])
 			}
 		}
 	}

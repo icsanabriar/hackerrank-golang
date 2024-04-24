@@ -38,29 +38,22 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	var s = stack{}
-	var maxStack = stack{}
+	s := stack{}
+	maxStack := stack{}
 
 	for i := 0; i < int(n); i++ {
 		command := strings.Split(readLine(reader), " ")
-
 		// Command 1 is the only two parameters.
 		if len(command) == 2 {
-
-			eTemp, err := strconv.ParseInt(command[1], 10, 64)
+			e, err := strconv.ParseInt(command[1], 10, 64)
 			checkError(err)
-			e := int32(eTemp)
-
 			// Push the element to the stacks.
 			s.push(e)
 			maxStack.pushMax(e)
-
 		} else {
-
 			// Check command 2 to delete top element from the stack and cache.
 			if command[0] == "2" {
 				s.pop()

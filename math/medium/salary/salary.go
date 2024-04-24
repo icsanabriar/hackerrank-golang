@@ -17,12 +17,10 @@ import "math"
 
 // gcd calculate the great common divisor of given a,b.
 func gcd(a int64, b int64) int64 {
-
 	if b == 0 {
 		return a
-	} else {
-		return gcd(b, a%b)
 	}
+	return gcd(b, a%b)
 }
 
 // diffGcd calculate gcd of the absolute difference of 2 elements in position i and i-1.
@@ -38,13 +36,12 @@ func diffGcd(a []int64) int64 {
 
 // normalize finds the common salaries for the given array, taking into account the given queries
 // that represents raises for all employees of a before normalization is executed.
-func normalize(a []int64, queries []int32) []int64 {
-
+func normalize(a []int64, queries []int64) []int64 {
 	result := make([]int64, 0)
 	diff := diffGcd(a)
 
 	for i := 0; i < len(queries); i++ {
-		k := int64(queries[i])
+		k := queries[i]
 		result = append(result, gcd(diff, a[0]+k))
 	}
 

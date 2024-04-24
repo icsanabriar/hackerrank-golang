@@ -23,8 +23,7 @@ import (
 
 // TestFizzBuzzGivenCase implements the test given as first example on hackerrank.
 func TestFizzBuzzGivenCase(t *testing.T) {
-
-	input := int32(15)
+	input := int64(15)
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
 
@@ -40,7 +39,6 @@ func TestFizzBuzzGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

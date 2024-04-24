@@ -20,10 +20,9 @@ import (
 
 // TestSherlockMovingTilesGivenCase implements the test given as first example on hackerrank.
 func TestSherlockMovingTilesGivenCase(t *testing.T) {
-
-	l := int32(10)
-	s1 := int32(1)
-	s2 := int32(2)
+	l := int64(10)
+	s1 := int64(1)
+	s2 := int64(2)
 	queries := []int64{50, 100}
 
 	expected := []float64{4.142135623730949, 0.0000}
@@ -37,10 +36,9 @@ func TestSherlockMovingTilesGivenCase(t *testing.T) {
 
 // TestSherlockMovingTilesHiddenGivenCase implements the test given as hidden example on hackerrank.
 func TestSherlockMovingTilesHiddenGivenCase(t *testing.T) {
-
-	l := int32(10000000)
-	s1 := int32(1)
-	s2 := int32(99999997)
+	l := int64(10000000)
+	s1 := int64(1)
+	s2 := int64(99999997)
 	queries := []int64{81258385599125, 16248989464296, 47115376367013}
 
 	expected := []float64{0.01393929091961771879, 0.08441436098337191940, 0.044348832168970016}

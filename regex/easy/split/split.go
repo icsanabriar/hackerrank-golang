@@ -21,7 +21,6 @@ import (
 
 // classify function extract information of the given phone numbers into specify format.
 func classify(w io.Writer, a []string) {
-
 	re := regexp.MustCompile(`(\d{1,3})[- ](\d{1,3})[- ](\d{4,10})`)
 
 	for tc := 0; tc < len(a); tc++ {

@@ -15,13 +15,11 @@ package main
 
 // countingValleys calculates how many valleys were walked by Gary on the given road s.
 func countingValleys(s string) int32 {
-
 	counter := int32(0)
 	level := int32(0)
 
 	for _, c := range s {
 		previousLevel := level
-
 		if string(c) == "U" {
 			level++
 		} else {

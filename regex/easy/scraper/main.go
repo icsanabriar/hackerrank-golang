@@ -29,10 +29,3 @@ func main() {
 
 	scrape(os.Stdout, text)
 }
-
-// checkError function provided by hacker rank to execute the code on platform.
-func checkError(err error) {
-	if err != nil {
-		panic(err)
-	}
-}

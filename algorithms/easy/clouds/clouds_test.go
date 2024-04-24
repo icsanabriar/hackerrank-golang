@@ -17,9 +17,8 @@ import "testing"
 
 // TestJumpingFirstGivenCase implements the test given as first example on hackerrank.
 func TestJumpingFirstGivenCase(t *testing.T) {
-
-	input := []int32{0, 0, 1, 0, 0, 1, 0}
-	expected := int32(4)
+	input := []int64{0, 0, 1, 0, 0, 1, 0}
+	expected := int64(4)
 
 	result := jumpingOnClouds(input)
 
@@ -30,9 +29,8 @@ func TestJumpingFirstGivenCase(t *testing.T) {
 
 // TestJumpingSecondGivenCase implements the test given as second example on hackerrank.
 func TestJumpingSecondGivenCase(t *testing.T) {
-
-	input := []int32{0, 0, 0, 0, 1, 0}
-	expected := int32(3)
+	input := []int64{0, 0, 0, 0, 1, 0}
+	expected := int64(3)
 
 	result := jumpingOnClouds(input)
 

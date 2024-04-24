@@ -17,20 +17,18 @@ import "sort"
 
 // bigSorting return sorted values of the given array using the length of the given values.
 func bigSorting(arr []string) []string {
-
 	sort.Slice(arr, func(i, j int) bool {
 		if len(arr[i]) != len(arr[j]) {
 			return len(arr[i]) < len(arr[j])
-		} else {
-			for k := 0; k < len(arr[i]); k++ {
-				d1 := arr[i][k] - '0'
-				d2 := arr[j][k] - '0'
-				if d1 != d2 {
-					return d1 < d2
-				}
-			}
-			return false
 		}
+		for k := 0; k < len(arr[i]); k++ {
+			d1 := arr[i][k] - '0'
+			d2 := arr[j][k] - '0'
+			if d1 != d2 {
+				return d1 < d2
+			}
+		}
+		return false
 	})
 
 	return arr

@@ -17,7 +17,6 @@ import "testing"
 
 // TestCommonChildFirstGivenCase implements the test given as first example on hackerrank.
 func TestCommonChildFirstGivenCase(t *testing.T) {
-
 	s1 := "ABCD"
 	s2 := "ABDC"
 	expected := int32(3)
@@ -31,7 +30,6 @@ func TestCommonChildFirstGivenCase(t *testing.T) {
 
 // TestCommonChildSecondGivenCase implements the test given as second example on hackerrank.
 func TestCommonChildSecondGivenCase(t *testing.T) {
-
 	s1 := "HARRY"
 	s2 := "SALLY"
 	expected := int32(2)
@@ -45,7 +43,6 @@ func TestCommonChildSecondGivenCase(t *testing.T) {
 
 // TestCommonChildThirdGivenCase implements the test given as third example on hackerrank.
 func TestCommonChildThirdGivenCase(t *testing.T) {
-
 	s1 := "AA"
 	s2 := "BB"
 	expected := int32(0)

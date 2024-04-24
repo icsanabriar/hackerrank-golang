@@ -40,29 +40,24 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	kTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	k, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	k := int32(kTemp)
 
 	sTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var s []int32
-
+	var s []int64
 	for i := 0; i < int(n); i++ {
-		sItemTemp, err := strconv.ParseInt(sTemp[i], 10, 64)
+		sItem, err := strconv.ParseInt(sTemp[i], 10, 64)
 		checkError(err)
-		sItem := int32(sItemTemp)
 		s = append(s, sItem)
 	}
 
 	result := nonDivisibleSubset(k, s)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

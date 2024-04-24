@@ -17,7 +17,6 @@ import "testing"
 
 // TestLegoBlocksFirstGivenCase implements the test given as first example on hackerrank.
 func TestLegoBlocksFirstGivenCase(t *testing.T) {
-
 	n := 3
 	m := 2
 	expected := int64(7)
@@ -31,7 +30,6 @@ func TestLegoBlocksFirstGivenCase(t *testing.T) {
 
 // TestLegoBlocksSecondGivenCase implements the test given as second example on hackerrank.
 func TestLegoBlocksSecondGivenCase(t *testing.T) {
-
 	n := 2
 	m := 3
 	expected := int64(9)
@@ -45,7 +43,6 @@ func TestLegoBlocksSecondGivenCase(t *testing.T) {
 
 // TestLegoBlocksThirdGivenCase implements the test given as third example on hackerrank.
 func TestLegoBlocksThirdGivenCase(t *testing.T) {
-
 	n := 4
 	m := 4
 	expected := int64(3375)
@@ -59,7 +56,6 @@ func TestLegoBlocksThirdGivenCase(t *testing.T) {
 
 // TestLegoBlocksHiddenCase implements the test given as hidden example on hackerrank.
 func TestLegoBlocksHiddenCase(t *testing.T) {
-
 	n := 924
 	m := 604
 	expected := int64(382238489)
@@ -73,7 +69,6 @@ func TestLegoBlocksHiddenCase(t *testing.T) {
 
 // TestLegoBlocksBasicCase implements the test for basic case.
 func TestLegoBlocksBasicCase(t *testing.T) {
-
 	n := 2
 	m := 1
 	expected := int64(1)

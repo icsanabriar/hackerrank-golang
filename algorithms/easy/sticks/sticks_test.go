@@ -20,9 +20,8 @@ import (
 
 // TestSticksFirstGivenCase implements the test given as first example on hackerrank.
 func TestSticksFirstGivenCase(t *testing.T) {
-
-	input := []int32{5, 4, 4, 2, 2, 8}
-	expected := []int32{6, 4, 2, 1}
+	input := []int64{5, 4, 4, 2, 2, 8}
+	expected := []int64{6, 4, 2, 1}
 
 	result := cutTheSticks(input)
 
@@ -33,9 +32,8 @@ func TestSticksFirstGivenCase(t *testing.T) {
 
 // TestSticksSecondGivenCase implements the test given as second example on hackerrank.
 func TestSticksSecondGivenCase(t *testing.T) {
-
-	input := []int32{1, 2, 3, 4, 3, 3, 2, 1}
-	expected := []int32{8, 6, 4, 1}
+	input := []int64{1, 2, 3, 4, 3, 3, 2, 1}
+	expected := []int64{8, 6, 4, 1}
 
 	result := cutTheSticks(input)
 

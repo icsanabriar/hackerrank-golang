@@ -17,9 +17,8 @@ import "testing"
 
 // TestDiagonalDifferenceFirstGivenCase implements the test given as first example on hackerrank.
 func TestDiagonalDifferenceFirstGivenCase(t *testing.T) {
-
-	arr := [][]int32{{1, 2, 3}, {4, 5, 6}, {9, 8, 9}}
-	expected := int32(2)
+	arr := [][]int64{{1, 2, 3}, {4, 5, 6}, {9, 8, 9}}
+	expected := int64(2)
 
 	result := diagonalDifference(arr)
 
@@ -30,9 +29,8 @@ func TestDiagonalDifferenceFirstGivenCase(t *testing.T) {
 
 // TestDiagonalDifferenceSecondGivenCase implements the test given as second example on hackerrank.
 func TestDiagonalDifferenceSecondGivenCase(t *testing.T) {
-
-	arr := [][]int32{{11, 2, 4}, {4, 5, 6}, {10, 8, -12}}
-	expected := int32(15)
+	arr := [][]int64{{11, 2, 4}, {4, 5, 6}, {10, 8, -12}}
+	expected := int64(15)
 
 	result := diagonalDifference(arr)
 

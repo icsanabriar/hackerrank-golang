@@ -14,13 +14,13 @@
 package main
 
 // modulus is the value to simplify the result.
-const modulus = int32(100000)
+const modulus = int64(100000)
 
 // lights calculate the total number of patterns that could be made using the given N serial light bulbs modulo 10e5.
-func lights(n int32) int32 {
-	total := int32(1)
+func lights(n int64) int64 {
+	total := int64(1)
 
-	for i := int32(0); i < n; i++ {
+	for i := int64(0); i < n; i++ {
 		total = 2 * total % modulus
 	}
 

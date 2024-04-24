@@ -17,7 +17,6 @@ import "testing"
 
 // TestFibonacciGivenCase implements the test given as first example on hackerrank.
 func TestFibonacciGivenCase(t *testing.T) {
-
 	n := 3
 	cache := initCache(n)
 	expected := 2

@@ -15,24 +15,22 @@ package main
 
 // stack structure compose by an array.
 type stack struct {
-	arr []int32
+	arr []int64
 }
 
 // push is responsible for adding the element to the stack.
-func (s *stack) push(e int32) {
+func (s *stack) push(e int64) {
 	s.arr = append(s.arr, e)
 }
 
 // pushMax is responsible for adding the element to the stack.
-func (s *stack) pushMax(e int32) {
-
-	max := e
-
-	if len(s.arr) > 0 && max < s.peek() {
-		max = s.peek()
+func (s *stack) pushMax(e int64) {
+	maximum := e
+	if len(s.arr) > 0 && maximum < s.peek() {
+		maximum = s.peek()
 	}
 
-	s.arr = append(s.arr, max)
+	s.arr = append(s.arr, maximum)
 }
 
 // pop is responsible for deleting the top element of the stack.
@@ -41,11 +39,11 @@ func (s *stack) pop() {
 }
 
 // peek is responsible for getting the element at the top of the stack.
-func (s *stack) peek() int32 {
+func (s *stack) peek() int64 {
 	return s.arr[len(s.arr)-1]
 }
 
-// length is responsible for getting the size of the stack.
-func (s *stack) length() int {
+// Length is responsible for getting the size of the stack.
+func (s *stack) Length() int {
 	return len(s.arr)
 }

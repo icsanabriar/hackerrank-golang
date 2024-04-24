@@ -17,15 +17,14 @@ import "testing"
 
 // TestCastleGridFirstGivenCase implements the test given as first example on hackerrank.
 func TestCastleGridFirstGivenCase(t *testing.T) {
-
 	grid := [][]string{{".", "X", "."}, {".", "X", "."}, {".", ".", "."}}
-	startX := int32(0)
-	startY := int32(0)
-	goalX := int32(0)
-	goalY := int32(2)
-	visited := make(map[Cell]bool, 0)
-	size := int32(3)
-	expected := int32(3)
+	startX := int64(0)
+	startY := int64(0)
+	goalX := int64(0)
+	goalY := int64(2)
+	visited := make(map[Cell]bool)
+	size := int64(3)
+	expected := int64(3)
 
 	result := minimumMoves(grid, startX, startY, goalX, goalY, visited, size)
 
@@ -36,15 +35,14 @@ func TestCastleGridFirstGivenCase(t *testing.T) {
 
 // TestCastleGridSecondGivenCase implements the test given as second example on hackerrank.
 func TestCastleGridSecondGivenCase(t *testing.T) {
-
 	grid := [][]string{{".", ".", "."}, {".", "X", "."}, {".", "X", "."}}
-	startX := int32(2)
-	startY := int32(0)
-	goalX := int32(0)
-	goalY := int32(2)
-	visited := make(map[Cell]bool, 0)
-	size := int32(3)
-	expected := int32(2)
+	startX := int64(2)
+	startY := int64(0)
+	goalX := int64(0)
+	goalY := int64(2)
+	visited := make(map[Cell]bool)
+	size := int64(3)
+	expected := int64(2)
 
 	result := minimumMoves(grid, startX, startY, goalX, goalY, visited, size)
 
@@ -55,15 +53,14 @@ func TestCastleGridSecondGivenCase(t *testing.T) {
 
 // TestCastleGridThirdGivenCase implements the test given as third example on hackerrank.
 func TestCastleGridThirdGivenCase(t *testing.T) {
-
 	grid := [][]string{{".", ".", "."}, {".", "X", "."}, {".", "X", "."}}
-	startX := int32(2)
-	startY := int32(0)
-	goalX := int32(2)
-	goalY := int32(2)
-	visited := make(map[Cell]bool, 0)
-	size := int32(3)
-	expected := int32(3)
+	startX := int64(2)
+	startY := int64(0)
+	goalX := int64(2)
+	goalY := int64(2)
+	visited := make(map[Cell]bool)
+	size := int64(3)
+	expected := int64(3)
 
 	result := minimumMoves(grid, startX, startY, goalX, goalY, visited, size)
 
@@ -74,15 +71,14 @@ func TestCastleGridThirdGivenCase(t *testing.T) {
 
 // TestCastleGridFourthCase implements the test given as fourth example on hackerrank.
 func TestCastleGridFourthCase(t *testing.T) {
-
 	grid := [][]string{{"X", ".", "X"}, {".", ".", "."}, {".", "X", "."}}
-	startX := int32(2)
-	startY := int32(2)
-	goalX := int32(1)
-	goalY := int32(0)
-	visited := make(map[Cell]bool, 0)
-	size := int32(3)
-	expected := int32(2)
+	startX := int64(2)
+	startY := int64(2)
+	goalX := int64(1)
+	goalY := int64(0)
+	visited := make(map[Cell]bool)
+	size := int64(3)
+	expected := int64(2)
 
 	result := minimumMoves(grid, startX, startY, goalX, goalY, visited, size)
 
@@ -93,15 +89,14 @@ func TestCastleGridFourthCase(t *testing.T) {
 
 // TestCastleGridEdgeCase implements the test given as edge example on hackerrank.
 func TestCastleGridEdgeCase(t *testing.T) {
-
 	grid := [][]string{{".", ".", "."}, {"X", "X", "X"}, {".", "X", "."}}
-	startX := int32(2)
-	startY := int32(0)
-	goalX := int32(2)
-	goalY := int32(2)
-	visited := make(map[Cell]bool, 0)
-	size := int32(3)
-	expected := int32(-1)
+	startX := int64(2)
+	startY := int64(0)
+	goalX := int64(2)
+	goalY := int64(2)
+	visited := make(map[Cell]bool)
+	size := int64(3)
+	expected := int64(-1)
 
 	result := minimumMoves(grid, startX, startY, goalX, goalY, visited, size)
 

@@ -17,13 +17,12 @@ import "testing"
 
 // TestJesseAndCookiesFirstGivenCase implements the test given as first example on hackerrank.
 func TestJesseAndCookiesFirstGivenCase(t *testing.T) {
-
 	k := int64(9)
-	A := []int32{2, 7, 3, 6, 4, 6}
+	arr := []int64{2, 7, 3, 6, 4, 6}
 
 	expected := int64(4)
 
-	result := cookies(k, A)
+	result := cookies(k, arr)
 
 	if result != expected {
 		t.Errorf("Jesse and cookies first case was incorrect, got: %d, want: %d.", result, expected)
@@ -32,13 +31,12 @@ func TestJesseAndCookiesFirstGivenCase(t *testing.T) {
 
 // TestJesseAndCookiesSecondGivenCase implements the test given as second example on hackerrank.
 func TestJesseAndCookiesSecondGivenCase(t *testing.T) {
-
 	k := int64(7)
-	A := []int32{1, 2, 3, 9, 10, 12}
+	arr := []int64{1, 2, 3, 9, 10, 12}
 
 	expected := int64(2)
 
-	result := cookies(k, A)
+	result := cookies(k, arr)
 
 	if result != expected {
 		t.Errorf("Jesse and cookies second case was incorrect, got: %d, want: %d.", result, expected)
@@ -47,13 +45,12 @@ func TestJesseAndCookiesSecondGivenCase(t *testing.T) {
 
 // TestJesseAndCookiesEdgeGivenCase implements the test given as edge example on hackerrank.
 func TestJesseAndCookiesEdgeGivenCase(t *testing.T) {
-
 	k := int64(10)
-	A := []int32{1, 1, 1}
+	arr := []int64{1, 1, 1}
 
 	expected := int64(-1)
 
-	result := cookies(k, A)
+	result := cookies(k, arr)
 
 	if result != expected {
 		t.Errorf("Jesse and cookies edge case was incorrect, got: %d, want: %d.", result, expected)

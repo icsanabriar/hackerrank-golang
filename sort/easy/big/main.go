@@ -38,12 +38,10 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
 	var unsorted []string
-
 	for i := 0; i < int(n); i++ {
 		unsortedItem := readLine(reader)
 		unsorted = append(unsorted, unsortedItem)
@@ -60,7 +58,6 @@ func main() {
 	}
 
 	_, _ = fmt.Fprintf(writer, "\n")
-
 	_ = writer.Flush()
 }
 

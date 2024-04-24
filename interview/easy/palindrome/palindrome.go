@@ -25,23 +25,18 @@ func isPalindrome(s string) bool {
 
 // palindromeIndex search the index to remove character to make the given string a palindrome.
 func palindromeIndex(s string) int {
-
 	if len(s) > 0 && isPalindrome(s) {
 		return -1
 	}
 
 	for i := 0; i < len(s)/2; i++ {
-
 		if s[i] != s[len(s)-i-1] {
-
 			if isPalindrome(s[:i] + s[i+1:]) {
 				return i
 			}
-
 			if isPalindrome(s[:len(s)-i-1] + s[len(s)-i:]) {
 				return len(s) - i - 1
 			}
-
 			return -1
 		}
 	}

@@ -23,9 +23,9 @@ import (
 
 // TestHackerRankTweetsGivenCase implements the test given as first example on hackerrank.
 func TestHackerRankTweetsGivenCase(t *testing.T) {
-
 	input := []string{"I love #hackerrank", "I just scored 27 points in the Picking Cards challenge on #HackerRank",
 		"I just signed up for summer cup @hackerrank", "interesting talk by hari, co-founder of hackerrank"}
+
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
 
@@ -42,7 +42,6 @@ func TestHackerRankTweetsGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

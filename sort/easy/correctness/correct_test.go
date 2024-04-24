@@ -23,8 +23,7 @@ import (
 
 // TestCorrectnessLoopInvariantGivenCase implements the test given as first example on hackerrank.
 func TestCorrectnessLoopInvariantGivenCase(t *testing.T) {
-
-	arr := []int32{7, 4, 3, 5, 6, 2}
+	arr := []int64{7, 4, 3, 5, 6, 2}
 	expected := "2 3 4 5 6 7 \n"
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
@@ -41,7 +40,6 @@ func TestCorrectnessLoopInvariantGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

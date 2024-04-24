@@ -38,27 +38,22 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	tTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	for tItr := 0; tItr < int(t); tItr++ {
 		firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-		aTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+		a, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 		checkError(err)
-		a := int32(aTemp)
 
-		bTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+		b, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 		checkError(err)
-		b := int32(bTemp)
 
-		xTemp, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+		x, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
 		checkError(err)
-		x := int32(xTemp)
 
 		result := closestNumber(a, b, x)
-
 		_, _ = fmt.Fprintf(writer, "%d\n", result)
 	}
 

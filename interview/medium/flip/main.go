@@ -38,24 +38,21 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	qTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	q, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	q := int32(qTemp)
 
 	for qItr := 0; qItr < int(q); qItr++ {
-		nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+		n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 		checkError(err)
-		n := int32(nTemp)
 
-		var matrix [][]int32
+		var matrix [][]int64
 		for i := 0; i < 2*int(n); i++ {
 			matrixRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
-			var matrixRow []int32
+			var matrixRow []int64
 			for _, matrixRowItem := range matrixRowTemp {
-				matrixItemTemp, err := strconv.ParseInt(matrixRowItem, 10, 64)
+				matrixItem, err := strconv.ParseInt(matrixRowItem, 10, 64)
 				checkError(err)
-				matrixItem := int32(matrixItemTemp)
 				matrixRow = append(matrixRow, matrixItem)
 			}
 
@@ -67,7 +64,6 @@ func main() {
 		}
 
 		result := flippingMatrix(matrix)
-
 		_, _ = fmt.Fprintf(writer, "%d\n", result)
 	}
 

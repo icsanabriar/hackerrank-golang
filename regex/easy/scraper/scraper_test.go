@@ -23,7 +23,6 @@ import (
 
 // TestBuildExchangeScraperGivenCase implements the test given as first example on hackerrank.
 func TestBuildExchangeScraperGivenCase(t *testing.T) {
-
 	input := `        <div class="question-summary" id="question-summary-80407">
         <div class="statscontainer">
             <div class="statsarrow"></div>
@@ -131,7 +130,9 @@ func TestBuildExchangeScraperGivenCase(t *testing.T) {
     </div>`
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
-	checkError(err)
+	if err != nil {
+		panic(err)
+	}
 
 	expected := "80407;about power supply of opertional amplifier;11 hours ago\n" +
 		"80405;5V Regulator Power Dissipation;11 hours ago\n"
@@ -147,7 +148,6 @@ func TestBuildExchangeScraperGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

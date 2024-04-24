@@ -20,9 +20,8 @@ import (
 
 // TestZigZagSequenceFirstGivenCase implements the test given as first example on hackerrank.
 func TestZigZagSequenceFirstGivenCase(t *testing.T) {
-
-	arr := []int32{2, 3, 5, 1, 4}
-	expected := []int32{1, 2, 5, 4, 3}
+	arr := []int64{2, 3, 5, 1, 4}
+	expected := []int64{1, 2, 5, 4, 3}
 
 	result := zigZagSequence(arr)
 
@@ -33,9 +32,8 @@ func TestZigZagSequenceFirstGivenCase(t *testing.T) {
 
 // TestZigZagSequenceSecondGivenCase implements the test given as second example on hackerrank.
 func TestZigZagSequenceSecondGivenCase(t *testing.T) {
-
-	arr := []int32{1, 2, 3, 4, 5, 6, 7}
-	expected := []int32{1, 2, 3, 7, 6, 5, 4}
+	arr := []int64{1, 2, 3, 4, 5, 6, 7}
+	expected := []int64{1, 2, 3, 7, 6, 5, 4}
 
 	result := zigZagSequence(arr)
 

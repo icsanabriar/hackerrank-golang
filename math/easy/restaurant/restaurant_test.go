@@ -17,10 +17,9 @@ import "testing"
 
 // TestRestaurantFirstGivenCase implements the test given as first example on hackerrank.
 func TestRestaurantFirstGivenCase(t *testing.T) {
-
-	l := int32(2)
-	b := int32(2)
-	expected := int32(1)
+	l := int64(2)
+	b := int64(2)
+	expected := int64(1)
 
 	result := restaurant(l, b)
 
@@ -31,10 +30,9 @@ func TestRestaurantFirstGivenCase(t *testing.T) {
 
 // TestRestaurantSecondGivenCase implements the test given as second example on hackerrank.
 func TestRestaurantSecondGivenCase(t *testing.T) {
-
-	l := int32(6)
-	b := int32(9)
-	expected := int32(6)
+	l := int64(6)
+	b := int64(9)
+	expected := int64(6)
 
 	result := restaurant(l, b)
 

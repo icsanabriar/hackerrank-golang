@@ -38,20 +38,17 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	tTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	for tItr := 0; tItr < int(t); tItr++ {
 		firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-		nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+		n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 		checkError(err)
-		n := int32(nTemp)
 
-		kTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+		k, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 		checkError(err)
-		k := int32(kTemp)
 
 		result := absolutePermutation(n, k)
 

@@ -42,17 +42,11 @@ func main() {
 	checkError(err)
 
 	var queries [][]string
-
 	for queriesRowItr := 0; queriesRowItr < int(queriesRows); queriesRowItr++ {
-
 		queriesRowTemp := strings.Split(readLine(reader), " ")
 
 		var queriesRow []string
-
-		for _, queriesRowItem := range queriesRowTemp {
-			queriesRow = append(queriesRow, queriesRowItem)
-		}
-
+		queriesRow = append(queriesRow, queriesRowTemp...)
 		if len(queriesRow) != 2 {
 			panic("Bad input")
 		}
@@ -64,14 +58,12 @@ func main() {
 
 	for resultItr, resultItem := range result {
 		_, _ = fmt.Fprintf(writer, "%d", resultItem)
-
 		if resultItr != len(result)-1 {
 			_, _ = fmt.Fprintf(writer, "\n")
 		}
 	}
 
 	_, _ = fmt.Fprintf(writer, "\n")
-
 	_ = writer.Flush()
 }
 

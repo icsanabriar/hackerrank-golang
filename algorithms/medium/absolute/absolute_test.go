@@ -20,10 +20,9 @@ import (
 
 // TestAbsolutePermutationFirstGivenCase implements the test given as first example on hackerrank.
 func TestAbsolutePermutationFirstGivenCase(t *testing.T) {
-
-	n := int32(4)
-	k := int32(2)
-	expected := []int32{3, 4, 1, 2}
+	n := int64(4)
+	k := int64(2)
+	expected := []int64{3, 4, 1, 2}
 
 	result := absolutePermutation(n, k)
 
@@ -34,10 +33,9 @@ func TestAbsolutePermutationFirstGivenCase(t *testing.T) {
 
 // TestAbsolutePermutationSecondGivenCase implements the test given as second example on hackerrank.
 func TestAbsolutePermutationSecondGivenCase(t *testing.T) {
-
-	n := int32(2)
-	k := int32(1)
-	expected := []int32{2, 1}
+	n := int64(2)
+	k := int64(1)
+	expected := []int64{2, 1}
 
 	result := absolutePermutation(n, k)
 
@@ -48,10 +46,9 @@ func TestAbsolutePermutationSecondGivenCase(t *testing.T) {
 
 // TestAbsolutePermutationThirdGivenCase implements the test given as third example on hackerrank.
 func TestAbsolutePermutationThirdGivenCase(t *testing.T) {
-
-	n := int32(3)
-	k := int32(0)
-	expected := []int32{1, 2, 3}
+	n := int64(3)
+	k := int64(0)
+	expected := []int64{1, 2, 3}
 
 	result := absolutePermutation(n, k)
 
@@ -62,11 +59,9 @@ func TestAbsolutePermutationThirdGivenCase(t *testing.T) {
 
 // TestAbsolutePermutationFourthGivenCase implements the test given as fourth example on hackerrank.
 func TestAbsolutePermutationFourthGivenCase(t *testing.T) {
-
-	n := int32(3)
-	k := int32(2)
-
-	expected := []int32{-1}
+	n := int64(3)
+	k := int64(2)
+	expected := []int64{-1}
 
 	result := absolutePermutation(n, k)
 

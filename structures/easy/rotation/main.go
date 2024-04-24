@@ -40,22 +40,18 @@ func main() {
 
 	nd := strings.Split(readLine(reader), " ")
 
-	nTemp, err := strconv.ParseInt(nd[0], 10, 64)
+	n, err := strconv.ParseInt(nd[0], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	dTemp, err := strconv.ParseInt(nd[1], 10, 64)
+	d, err := strconv.ParseInt(nd[1], 10, 64)
 	checkError(err)
-	d := int32(dTemp)
 
 	aTemp := strings.Split(readLine(reader), " ")
 
-	var a []int32
-
+	var a []int64
 	for i := 0; i < int(n); i++ {
-		aItemTemp, err := strconv.ParseInt(aTemp[i], 10, 64)
+		aItem, err := strconv.ParseInt(aTemp[i], 10, 64)
 		checkError(err)
-		aItem := int32(aItemTemp)
 		a = append(a, aItem)
 	}
 
@@ -70,7 +66,6 @@ func main() {
 	}
 
 	_, _ = fmt.Fprintf(writer, "\n")
-
 	_ = writer.Flush()
 }
 

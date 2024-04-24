@@ -50,16 +50,16 @@ func main() {
 		manager.Position = position
 	}
 
-	ageTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	age, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	age := int32(ageTemp)
+
 	if age != 0 {
 		manager.Age = age
 	}
 
-	yearsInCompanyTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	yearsInCompany, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	yearsInCompany := int32(yearsInCompanyTemp)
+
 	if yearsInCompany != 0 {
 		manager.YearsInCompany = yearsInCompany
 	}
@@ -71,7 +71,6 @@ func main() {
 	checkError(err)
 
 	_, _ = fmt.Fprintf(writer, "%s\n", string(result))
-
 	_ = writer.Flush()
 }
 

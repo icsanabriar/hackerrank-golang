@@ -17,7 +17,6 @@ import "testing"
 
 // TestBalanceBracketFirstGivenCase implements the test given as first example on hackerrank.
 func TestBalanceBracketFirstGivenCase(t *testing.T) {
-
 	s := "{[()]}"
 	expected := "YES"
 
@@ -30,7 +29,6 @@ func TestBalanceBracketFirstGivenCase(t *testing.T) {
 
 // TestBalanceBracketSecondGivenCase implements the test given as second example on hackerrank.
 func TestBalanceBracketSecondGivenCase(t *testing.T) {
-
 	s := "{[(])}"
 	expected := "NO"
 
@@ -43,7 +41,6 @@ func TestBalanceBracketSecondGivenCase(t *testing.T) {
 
 // TestBalanceBracketThirdGivenCase implements the test given as third example on hackerrank.
 func TestBalanceBracketThirdGivenCase(t *testing.T) {
-
 	s := "{{[[(())]]}}"
 	expected := "YES"
 
@@ -56,7 +53,6 @@ func TestBalanceBracketThirdGivenCase(t *testing.T) {
 
 // TestBalanceBracketHiddenCase implements the test given as hidden example on hackerrank.
 func TestBalanceBracketHiddenCase(t *testing.T) {
-
 	s := "}([[{)[]))]{){}["
 	expected := "NO"
 
@@ -69,7 +65,6 @@ func TestBalanceBracketHiddenCase(t *testing.T) {
 
 // TestBalanceBracketEdgeCase implements the test given as edge example.
 func TestBalanceBracketEdgeCase(t *testing.T) {
-
 	s := "{[()]"
 	expected := "NO"
 

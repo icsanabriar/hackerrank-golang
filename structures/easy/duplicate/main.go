@@ -38,23 +38,21 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	tTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	t, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	for tItr := 0; tItr < int(t); tItr++ {
-		llistCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+		listCount, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
 
-		llist := SinglyLinkedList{}
-		for i := 0; i < int(llistCount); i++ {
-			llistItemTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+		list := SinglyLinkedList{}
+		for i := 0; i < int(listCount); i++ {
+			listItem, err := strconv.ParseInt(readLine(reader), 10, 64)
 			checkError(err)
-			llistItem := int32(llistItemTemp)
-			llist.insertNodeIntoSinglyLinkedList(llistItem)
+			list.insertNodeIntoSinglyLinkedList(listItem)
 		}
 
-		result := removeDuplicates(llist.head)
+		result := removeDuplicates(list.head)
 
 		printSinglyLinkedList(result, " ", writer)
 		_, _ = fmt.Fprintf(writer, "\n")
@@ -88,7 +86,7 @@ func printSinglyLinkedList(node *SinglyLinkedListNode, sep string, writer *bufio
 		node = node.next
 
 		if node != nil {
-			_, _ = fmt.Fprintf(writer, sep)
+			_, _ = fmt.Fprint(writer, sep)
 		}
 	}
 }

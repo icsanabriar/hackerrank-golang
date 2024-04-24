@@ -17,9 +17,8 @@ import "testing"
 
 // TestFindingMedianGivenCase implements the test given as first example on hackerrank.
 func TestFindingMedianGivenCase(t *testing.T) {
-
-	arr := []int32{0, 1, 2, 4, 6, 5, 3}
-	expected := int32(3)
+	arr := []int64{0, 1, 2, 4, 6, 5, 3}
+	expected := int64(3)
 
 	result := findMedian(arr)
 

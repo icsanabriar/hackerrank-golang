@@ -17,9 +17,8 @@ import "testing"
 
 // TestRunningTimeGivenCase implements the test given as first example on hackerrank.
 func TestRunningTimeGivenCase(t *testing.T) {
-
-	arr := []int32{2, 1, 3, 1, 2}
-	expected := int32(4)
+	arr := []int64{2, 1, 3, 1, 2}
+	expected := int64(4)
 
 	result := runningTime(arr)
 

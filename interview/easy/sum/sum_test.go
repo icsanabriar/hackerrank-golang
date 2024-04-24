@@ -17,8 +17,7 @@ import "testing"
 
 // TestMinMaxSumFirstGivenCase implements the test given as first example on hackerrank.
 func TestMinMaxSumFirstGivenCase(t *testing.T) {
-
-	arr := []int32{1, 3, 5, 7, 9}
+	arr := []int64{1, 3, 5, 7, 9}
 	emin := int64(16)
 	emax := int64(24)
 
@@ -32,8 +31,7 @@ func TestMinMaxSumFirstGivenCase(t *testing.T) {
 
 // TestMinMaxSumSecondGivenCase implements the test given as second example on hackerrank.
 func TestMinMaxSumSecondGivenCase(t *testing.T) {
-
-	arr := []int32{7, 69, 2, 221, 8974}
+	arr := []int64{7, 69, 2, 221, 8974}
 	emin := int64(299)
 	emax := int64(9271)
 

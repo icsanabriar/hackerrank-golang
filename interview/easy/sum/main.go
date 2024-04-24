@@ -28,17 +28,15 @@ func main() {
 
 	arrTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var arr []int32
-
+	var arr []int64
 	for i := 0; i < 5; i++ {
-		arrItemTemp, err := strconv.ParseInt(arrTemp[i], 10, 64)
+		arrItem, err := strconv.ParseInt(arrTemp[i], 10, 64)
 		checkError(err)
-		arrItem := int32(arrItemTemp)
 		arr = append(arr, arrItem)
 	}
 
-	min, max := miniMaxSum(arr)
-	fmt.Printf("%d %d", min, max)
+	rmin, rmax := miniMaxSum(arr)
+	fmt.Printf("%d %d", rmin, rmax)
 }
 
 // readLine function provided by hacker rank to execute the code on platform.

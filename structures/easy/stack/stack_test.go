@@ -17,11 +17,10 @@ import "testing"
 
 // TestStackGivenCase implements the test given as first example on hackerrank.
 func TestStackGivenCase(t *testing.T) {
-
 	var s = stack{}
 	var maxStack = stack{}
 
-	var input = int32(91)
+	var input = int64(91)
 	s.push(input)
 	maxStack.pushMax(input)
 
@@ -32,11 +31,11 @@ func TestStackGivenCase(t *testing.T) {
 	s.pop()
 	maxStack.pop()
 
-	if 0 != s.length() {
-		t.Errorf("Stack pop second input was incorrect, got: %v, want: %v.", s.length(), 0)
+	if s.Length() != 0 {
+		t.Errorf("Stack pop second input was incorrect, got: %v, want: %v.", s.Length(), 0)
 	}
 
-	input = int32(20)
+	input = int64(20)
 	s.push(input)
 	maxStack.pushMax(input)
 
@@ -47,11 +46,11 @@ func TestStackGivenCase(t *testing.T) {
 	s.pop()
 	maxStack.pop()
 
-	if 0 != s.length() {
-		t.Errorf("Stack pop fourth input was incorrect, got: %v, want: %v.", s.length(), 0)
+	if s.Length() != 0 {
+		t.Errorf("Stack pop fourth input was incorrect, got: %v, want: %v.", s.Length(), 0)
 	}
 
-	input = int32(26)
+	input = int64(26)
 	s.push(input)
 	maxStack.pushMax(input)
 
@@ -59,7 +58,7 @@ func TestStackGivenCase(t *testing.T) {
 		t.Errorf("Stack push fifth input was incorrect, got: %v, want: %v.", s.peek(), input)
 	}
 
-	input = int32(20)
+	input = int64(20)
 	s.push(input)
 	maxStack.pushMax(input)
 
@@ -70,18 +69,18 @@ func TestStackGivenCase(t *testing.T) {
 	s.pop()
 	maxStack.pop()
 
-	if 1 != s.length() {
-		t.Errorf("Stack pop seventh input was incorrect, got: %v, want: %v.", s.length(), 1)
+	if s.Length() != 1 {
+		t.Errorf("Stack pop seventh input was incorrect, got: %v, want: %v.", s.Length(), 1)
 	}
 
-	max := maxStack.peek()
-	expected := int32(26)
+	maximum := maxStack.peek()
+	expected := int64(26)
 
-	if expected != max {
-		t.Errorf("Stack print maximum element eight input was incorrect, got: %v, want: %v.", max, expected)
+	if expected != maximum {
+		t.Errorf("Stack print maximum element eight input was incorrect, got: %v, want: %v.", maximum, expected)
 	}
 
-	input = int32(91)
+	input = int64(91)
 	s.push(input)
 	maxStack.pushMax(input)
 
@@ -89,10 +88,10 @@ func TestStackGivenCase(t *testing.T) {
 		t.Errorf("Stack push ninth input was incorrect, got: %v, want: %v.", s.peek(), input)
 	}
 
-	max = maxStack.peek()
-	expected = int32(91)
+	maximum = maxStack.peek()
+	expected = int64(91)
 
-	if expected != max {
-		t.Errorf("Stack print maximum element tenth input was incorrect, got: %v, want: %v.", max, expected)
+	if expected != maximum {
+		t.Errorf("Stack print maximum element tenth input was incorrect, got: %v, want: %v.", maximum, expected)
 	}
 }

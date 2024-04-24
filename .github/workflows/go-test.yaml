@@ -1,0 +1,50 @@
+name: "Go Test"
+
+on: [ push ]
+
+jobs:
+  lint:
+    name: "Lint & Tidy"
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: set up go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: ./go.mod
+      - name: validate lint
+        uses: golangci/golangci-lint-action@v4
+        with:
+          version: v.1.57.0
+          skip-cache: true
+          args: --timeout=10m --out-format=github-actions-compact
+      - name: validate tidy
+        run: |
+          go mod tidy
+          git diff --exit-code $(git rev-parse HEAD) go.sum go.mod
+
+  test:
+    name: "Unit Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: set up go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: ./go.mod
+      - name: run unit tests
+        run: make unit-test
+      - name: run sonar analysis
+        uses: sonarsource/sonarcloud-github-action@v2.1.1
+        env:
+          OUTPUT_PATH: /home/runner/work/hackerrank-golang/hackerrank-golang/test-output.out
+        with:
+          token: ${{ secrets.SONAR_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: read sonar quality gate
+        uses: sonarsource/sonarqube-quality-gate-action@v1.1.0
+        timeout-minutes: 2
+        with:
+          token: ${{ secrets.SONAR_TOKEN }}

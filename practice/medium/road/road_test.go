@@ -17,12 +17,11 @@ import "testing"
 
 // TestRoadsAndLibrariesFirstGivenCase implements the test given as first example on hackerrank.
 func TestRoadsAndLibrariesFirstGivenCase(t *testing.T) {
+	n := int64(3)
+	lib := int64(2)
+	road := int64(1)
 
-	n := int32(3)
-	lib := int32(2)
-	road := int32(1)
-
-	cities := [][]int32{{1, 2}, {3, 1}, {2, 3}}
+	cities := [][]int64{{1, 2}, {3, 1}, {2, 3}}
 	expected := int64(4)
 
 	result := roadsAndLibraries(n, lib, road, cities)
@@ -34,12 +33,11 @@ func TestRoadsAndLibrariesFirstGivenCase(t *testing.T) {
 
 // TestRoadsAndLibrariesSecondGivenCase implements the test given as second example on hackerrank.
 func TestRoadsAndLibrariesSecondGivenCase(t *testing.T) {
+	n := int64(6)
+	lib := int64(2)
+	road := int64(5)
 
-	n := int32(6)
-	lib := int32(2)
-	road := int32(5)
-
-	cities := [][]int32{{1, 3}, {3, 4}, {2, 4}, {1, 2}, {2, 3}, {5, 6}}
+	cities := [][]int64{{1, 3}, {3, 4}, {2, 4}, {1, 2}, {2, 3}, {5, 6}}
 	expected := int64(12)
 
 	result := roadsAndLibraries(n, lib, road, cities)

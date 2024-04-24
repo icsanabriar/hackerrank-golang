@@ -17,7 +17,6 @@ import "testing"
 
 // TestCuttingPaperSquaresGivenCase implements the test given as first example on hackerrank.
 func TestCuttingPaperSquaresGivenCase(t *testing.T) {
-
 	n := int64(3)
 	m := int64(1)
 	expected := int64(2)
@@ -31,7 +30,6 @@ func TestCuttingPaperSquaresGivenCase(t *testing.T) {
 
 // TestCuttingPaperSquaresEdgeCase implements the edge case to validate results on hackerrank.
 func TestCuttingPaperSquaresEdgeCase(t *testing.T) {
-
 	n := int64(3)
 	m := int64(2)
 	expected := int64(5)
@@ -45,7 +43,6 @@ func TestCuttingPaperSquaresEdgeCase(t *testing.T) {
 
 // TestCuttingPaperSquaresHiddenCase implements the hidden case to validate results on hackerrank.
 func TestCuttingPaperSquaresHiddenCase(t *testing.T) {
-
 	n := int64(689715240)
 	m := int64(759842301)
 	expected := int64(524074814996367239)

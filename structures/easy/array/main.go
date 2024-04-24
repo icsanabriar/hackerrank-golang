@@ -43,12 +43,10 @@ func main() {
 
 	arrTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var arr []int32
-
+	var arr []int64
 	for i := 0; i < int(arrCount); i++ {
-		arrItemTemp, err := strconv.ParseInt(arrTemp[i], 10, 64)
+		arrItem, err := strconv.ParseInt(arrTemp[i], 10, 64)
 		checkError(err)
-		arrItem := int32(arrItemTemp)
 		arr = append(arr, arrItem)
 	}
 
@@ -63,7 +61,6 @@ func main() {
 	}
 
 	_, _ = fmt.Fprintf(writer, "\n")
-
 	_ = writer.Flush()
 }
 

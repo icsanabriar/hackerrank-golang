@@ -14,6 +14,6 @@
 package main
 
 // handshake calculates the number of handshakes need it on a given group of n attendees.
-func handshake(n int32) int32 {
+func handshake(n int64) int64 {
 	return (n * (n - 1)) / 2
 }

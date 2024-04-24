@@ -20,7 +20,6 @@ import (
 
 // TestSparseFirstGivenCase implements the test given as first example on hackerrank.
 func TestSparseFirstGivenCase(t *testing.T) {
-
 	strings := []string{"aba", "baba", "aba", "xzxb"}
 	queries := []string{"aba", "xzxb", "ab"}
 
@@ -35,7 +34,6 @@ func TestSparseFirstGivenCase(t *testing.T) {
 
 // TestSparseSecondGivenCase implements the test given as second example on hackerrank.
 func TestSparseSecondGivenCase(t *testing.T) {
-
 	strings := []string{"def", "de", "fgh"}
 	queries := []string{"de", "lmn", "fgh"}
 

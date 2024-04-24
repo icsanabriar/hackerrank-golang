@@ -17,8 +17,7 @@ import "testing"
 
 // TestChaosFirstGivenCase implements the test given as first example on hackerrank.
 func TestChaosFirstGivenCase(t *testing.T) {
-
-	input := []int32{2, 1, 5, 3, 4}
+	input := []int64{2, 1, 5, 3, 4}
 	expected := "3"
 
 	result := minimumBribes(input)
@@ -30,8 +29,7 @@ func TestChaosFirstGivenCase(t *testing.T) {
 
 // TestChaosSecondGivenCase implements the test given as second example on hackerrank.
 func TestChaosSecondGivenCase(t *testing.T) {
-
-	input := []int32{2, 5, 1, 3, 4}
+	input := []int64{2, 5, 1, 3, 4}
 	expected := "Too chaotic"
 
 	result := minimumBribes(input)

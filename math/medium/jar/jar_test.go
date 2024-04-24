@@ -17,10 +17,9 @@ import "testing"
 
 // TestDieHard3FirstGivenCase implements the test given as first example on hackerrank.
 func TestDieHard3FirstGivenCase(t *testing.T) {
-
-	a := int32(5)
-	b := int32(3)
-	c := int32(4)
+	a := int64(5)
+	b := int64(3)
+	c := int64(4)
 	expected := "YES"
 
 	result := solve(a, b, c)
@@ -32,10 +31,9 @@ func TestDieHard3FirstGivenCase(t *testing.T) {
 
 // TestDieHard3SecondGivenCase implements the test given as second example on hackerrank.
 func TestDieHard3SecondGivenCase(t *testing.T) {
-
-	a := int32(3)
-	b := int32(6)
-	c := int32(4)
+	a := int64(3)
+	b := int64(6)
+	c := int64(4)
 	expected := "NO"
 
 	result := solve(a, b, c)

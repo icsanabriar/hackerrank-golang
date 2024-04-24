@@ -43,14 +43,12 @@ func main() {
 	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
 
-	mTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	m, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	m := int32(mTemp)
 
 	cTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var c []int64
-
 	for i := 0; i < int(m); i++ {
 		cItem, err := strconv.ParseInt(cTemp[i], 10, 64)
 		checkError(err)
@@ -60,7 +58,6 @@ func main() {
 	ways := getWays(n, c)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", ways)
-
 	_ = writer.Flush()
 }
 

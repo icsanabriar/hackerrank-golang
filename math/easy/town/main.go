@@ -38,28 +38,23 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	tTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	for tItr := 0; tItr < int(t); tItr++ {
-		nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+		n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 		checkError(err)
-		n := int32(nTemp)
 
 		routesTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-		var routes []int32
-
+		var routes []int64
 		for i := 0; i < int(n)-1; i++ {
-			routesItemTemp, err := strconv.ParseInt(routesTemp[i], 10, 64)
+			routesItem, err := strconv.ParseInt(routesTemp[i], 10, 64)
 			checkError(err)
-			routesItem := int32(routesItemTemp)
 			routes = append(routes, routesItem)
 		}
 
 		result := connectingTowns(n, routes)
-
 		_, _ = fmt.Fprintf(writer, "%d\n", result)
 	}
 

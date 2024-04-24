@@ -14,16 +14,15 @@
 package main
 
 // gcd calculate the great common divisor of given a,b.
-func gcd(a int32, b int32) int32 {
+func gcd(a int64, b int64) int64 {
 	if b == 0 {
 		return a
-	} else {
-		return gcd(b, a%b)
 	}
+	return gcd(b, a%b)
 }
 
 // restaurant calculates the number of squares that could be build using the given l and b.
-func restaurant(l int32, b int32) int32 {
+func restaurant(l int64, b int64) int64 {
 	g := gcd(l, b)
 	return (l * b) / (g * g)
 }

@@ -40,23 +40,19 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	lTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	l, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	l := int32(lTemp)
 
-	s1Temp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	s1, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	s1 := int32(s1Temp)
 
-	s2Temp, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+	s2, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
 	checkError(err)
-	s2 := int32(s2Temp)
 
 	queriesCount, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
 
 	var queries []int64
-
 	for i := 0; i < int(queriesCount); i++ {
 		queriesItemTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 		checkError(err)
@@ -74,7 +70,6 @@ func main() {
 	}
 
 	_, _ = fmt.Fprintf(writer, "\n")
-
 	_ = writer.Flush()
 }
 

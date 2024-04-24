@@ -15,7 +15,7 @@ package main
 
 // SinglyLinkedListNode structure to simulate linked list node.
 type SinglyLinkedListNode struct {
-	data int32
+	data int64
 	next *SinglyLinkedListNode
 }
 
@@ -26,7 +26,7 @@ type SinglyLinkedList struct {
 }
 
 // insertNodeIntoSinglyLinkedList insert a node into the list.
-func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeData int32) {
+func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeData int64) {
 	node := &SinglyLinkedListNode{
 		next: nil,
 		data: nodeData,
@@ -42,8 +42,8 @@ func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeDat
 }
 
 // removeDuplicates deletes the duplicate elements of the given list.
-func removeDuplicates(llist *SinglyLinkedListNode) *SinglyLinkedListNode {
-	node := llist
+func removeDuplicates(list *SinglyLinkedListNode) *SinglyLinkedListNode {
+	node := list
 
 	for node != nil && node.next != nil {
 		if node.next.data == node.data {
@@ -53,5 +53,5 @@ func removeDuplicates(llist *SinglyLinkedListNode) *SinglyLinkedListNode {
 		}
 	}
 
-	return llist
+	return list
 }

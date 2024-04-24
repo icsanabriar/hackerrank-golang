@@ -20,9 +20,8 @@ import (
 
 // TestEquationFirstGivenCase implements the test given as first example on hackerrank.
 func TestEquationFirstGivenCase(t *testing.T) {
-
-	input := []int32{2, 3, 1}
-	expected := []int32{2, 3, 1}
+	input := []int64{2, 3, 1}
+	expected := []int64{2, 3, 1}
 
 	result := permutationEquation(input)
 
@@ -33,9 +32,8 @@ func TestEquationFirstGivenCase(t *testing.T) {
 
 // TestEquationSecondGivenCase implements the test given as second example on hackerrank.
 func TestEquationSecondGivenCase(t *testing.T) {
-
-	input := []int32{4, 3, 5, 1, 2}
-	expected := []int32{1, 3, 5, 4, 2}
+	input := []int64{4, 3, 5, 1, 2}
+	expected := []int64{1, 3, 5, 4, 2}
 
 	result := permutationEquation(input)
 

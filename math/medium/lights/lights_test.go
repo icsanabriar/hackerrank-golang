@@ -17,9 +17,8 @@ import "testing"
 
 // TestDiwaliLightsFirstGivenCase implements the test given as first example on hackerrank.
 func TestDiwaliLightsFirstGivenCase(t *testing.T) {
-
-	input := int32(1)
-	expected := int32(1)
+	input := int64(1)
+	expected := int64(1)
 
 	result := lights(input)
 
@@ -30,9 +29,8 @@ func TestDiwaliLightsFirstGivenCase(t *testing.T) {
 
 // TestDiwaliLightsSecondGivenCase implements the test given as second example on hackerrank.
 func TestDiwaliLightsSecondGivenCase(t *testing.T) {
-
-	input := int32(2)
-	expected := int32(3)
+	input := int64(2)
+	expected := int64(3)
 
 	result := lights(input)
 

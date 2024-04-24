@@ -23,9 +23,8 @@ import (
 
 // TestInsertionSortGivenCase implements the test given as first example on hackerrank.
 func TestInsertionSortGivenCase(t *testing.T) {
-
-	n := int32(5)
-	arr := []int32{2, 4, 6, 8, 3}
+	n := int64(5)
+	arr := []int64{2, 4, 6, 8, 3}
 	expected := "2 4 6 8 8 \n2 4 6 6 8 \n2 4 4 6 8 \n2 3 4 6 8 \n"
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
@@ -42,7 +41,6 @@ func TestInsertionSortGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

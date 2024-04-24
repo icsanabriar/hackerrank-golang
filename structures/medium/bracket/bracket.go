@@ -19,22 +19,32 @@ func isBalanced(s string) string {
 
 	for i := range s {
 		char := string(s[i])
-		if char == "(" || char == "[" || char == "{" {
+		switch {
+		case char == "(" || char == "[" || char == "{":
 			cache = append(cache, char)
-		} else if len(cache) > 0 {
+		case len(cache) > 0:
 			last := len(cache) - 1
-			if (char == ")" && cache[last] != "(") || (char == "]" && cache[last] != "[") || (char == "}" && cache[last] != "{") {
-				return "NO"
+			if result, done := validatePair(char, cache, last); done {
+				return result
 			}
 			cache = cache[:last]
-		} else {
+		default:
 			return "NO"
 		}
 	}
 
 	if len(cache) == 0 {
 		return "YES"
-	} else {
-		return "NO"
 	}
+
+	return "NO"
+}
+
+// validatePair validates that the given character is part of pair brackets.
+func validatePair(char string, cache []string, last int) (string, bool) {
+	if (char == ")" && cache[last] != "(") || (char == "]" && cache[last] != "[") || (char == "}" && cache[last] != "{") {
+		return "NO", true
+	}
+
+	return "", false
 }

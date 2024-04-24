@@ -17,10 +17,9 @@ import "testing"
 
 // TestEqualStackFirstGivenCase implements the test given as first example on hackerrank.
 func TestEqualStackFirstGivenCase(t *testing.T) {
-
-	h1 := []int32{1, 2, 1, 1}
-	h2 := []int32{1, 1, 2}
-	h3 := []int32{1, 1}
+	h1 := []int64{1, 2, 1, 1}
+	h2 := []int64{1, 1, 2}
+	h3 := []int64{1, 1}
 
 	expected := int64(2)
 
@@ -33,10 +32,9 @@ func TestEqualStackFirstGivenCase(t *testing.T) {
 
 // TestEqualStackSecondGivenCase implements the test given as second example on hackerrank.
 func TestEqualStackSecondGivenCase(t *testing.T) {
-
-	h1 := []int32{3, 2, 1, 1, 1}
-	h2 := []int32{4, 3, 2}
-	h3 := []int32{1, 1, 4, 1}
+	h1 := []int64{3, 2, 1, 1, 1}
+	h2 := []int64{4, 3, 2}
+	h3 := []int64{1, 1, 4, 1}
 
 	expected := int64(5)
 
@@ -49,10 +47,9 @@ func TestEqualStackSecondGivenCase(t *testing.T) {
 
 // TestEqualStackThirdGivenCase implements the test given as third example on hackerrank.
 func TestEqualStackThirdGivenCase(t *testing.T) {
-
-	h1 := []int32{1, 1, 1, 1, 2}
-	h2 := []int32{3, 7}
-	h3 := []int32{1, 3, 1}
+	h1 := []int64{1, 1, 1, 1, 2}
+	h2 := []int64{3, 7}
+	h3 := []int64{1, 3, 1}
 
 	expected := int64(0)
 

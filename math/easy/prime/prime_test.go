@@ -17,11 +17,10 @@ import "testing"
 
 // TestLeonardoPrimeGameFirstGivenCase implements the test given as first example on hackerrank.
 func TestLeonardoPrimeGameFirstGivenCase(t *testing.T) {
-
 	input := int64(1)
 	expected := int32(0)
 
-	result := primeCount(input)
+	result := primeCount(input, generatePrimes())
 
 	if result != expected {
 		t.Errorf("Leonardo's prime factor first case was incorrect, got: %d, want: %d.", result, expected)
@@ -30,11 +29,10 @@ func TestLeonardoPrimeGameFirstGivenCase(t *testing.T) {
 
 // TestLeonardoPrimeGameSecondGivenCase implements the test given as second example on hackerrank.
 func TestLeonardoPrimeGameSecondGivenCase(t *testing.T) {
-
 	input := int64(2)
 	expected := int32(1)
 
-	result := primeCount(input)
+	result := primeCount(input, generatePrimes())
 
 	if result != expected {
 		t.Errorf("Leonardo's prime factor second case was incorrect, got: %d, want: %d.", result, expected)
@@ -43,11 +41,10 @@ func TestLeonardoPrimeGameSecondGivenCase(t *testing.T) {
 
 // TestLeonardoPrimeGameThirdGivenCase implements the test given as third example on hackerrank.
 func TestLeonardoPrimeGameThirdGivenCase(t *testing.T) {
-
 	input := int64(3)
 	expected := int32(1)
 
-	result := primeCount(input)
+	result := primeCount(input, generatePrimes())
 
 	if result != expected {
 		t.Errorf("Leonardo's prime factor third case was incorrect, got: %d, want: %d.", result, expected)
@@ -56,11 +53,10 @@ func TestLeonardoPrimeGameThirdGivenCase(t *testing.T) {
 
 // TestLeonardoPrimeGameFourthGivenCase implements the test given as fourth example on hackerrank.
 func TestLeonardoPrimeGameFourthGivenCase(t *testing.T) {
-
 	input := int64(500)
 	expected := int32(4)
 
-	result := primeCount(input)
+	result := primeCount(input, generatePrimes())
 
 	if result != expected {
 		t.Errorf("Leonardo's prime factor fourth case was incorrect, got: %d, want: %d.", result, expected)
@@ -69,11 +65,10 @@ func TestLeonardoPrimeGameFourthGivenCase(t *testing.T) {
 
 // TestLeonardoPrimeGameFifthGivenCase implements the test given as fifth example on hackerrank.
 func TestLeonardoPrimeGameFifthGivenCase(t *testing.T) {
-
 	input := int64(5000)
 	expected := int32(5)
 
-	result := primeCount(input)
+	result := primeCount(input, generatePrimes())
 
 	if result != expected {
 		t.Errorf("Leonardo's prime factor fifth case was incorrect, got: %d, want: %d.", result, expected)
@@ -82,11 +77,10 @@ func TestLeonardoPrimeGameFifthGivenCase(t *testing.T) {
 
 // TestLeonardoPrimeGameSixthGivenCase implements the test given as sixth example on hackerrank.
 func TestLeonardoPrimeGameSixthGivenCase(t *testing.T) {
-
 	input := int64(10000000000)
 	expected := int32(10)
 
-	result := primeCount(input)
+	result := primeCount(input, generatePrimes())
 
 	if result != expected {
 		t.Errorf("Leonardo's prime factor sixth case was incorrect, got: %d, want: %d.", result, expected)

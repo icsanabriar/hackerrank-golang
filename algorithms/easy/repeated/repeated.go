@@ -17,7 +17,6 @@ import "sort"
 
 // repeatedString return an integer representing the number of occurrences of 'a' in the length n.
 func repeatedString(s string, n int64) int64 {
-
 	searchChar := string('a')
 	cacheChar := make([]int, 0)
 	repeated := int64(0)
@@ -41,14 +40,14 @@ func repeatedString(s string, n int64) int64 {
 
 		for i := range cacheChar {
 			if split <= int64(cacheChar[i]) {
-				repeated = repeated + int64(i)
+				repeated += int64(i)
 				broken = true
 				break
 			}
 		}
 
 		if !broken {
-			repeated = repeated + int64(len(cacheChar))
+			repeated += int64(len(cacheChar))
 		}
 	}
 

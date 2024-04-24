@@ -17,8 +17,7 @@ import "testing"
 
 // TestSkyscraperFirstGivenCase implements the test given as first example on hackerrank.
 func TestSkyscraperFirstGivenCase(t *testing.T) {
-
-	input := []int32{3, 2, 1, 2, 3, 3}
+	input := []int64{3, 2, 1, 2, 3, 3}
 	expected := int64(8)
 
 	result := solveFlyRoute(input)
@@ -30,8 +29,7 @@ func TestSkyscraperFirstGivenCase(t *testing.T) {
 
 // TestSkyscraperSecondGivenCase implements the test given as second example on hackerrank.
 func TestSkyscraperSecondGivenCase(t *testing.T) {
-
-	input := []int32{1, 1000, 1}
+	input := []int64{1, 1000, 1}
 	expected := int64(0)
 
 	result := solveFlyRoute(input)
@@ -43,8 +41,7 @@ func TestSkyscraperSecondGivenCase(t *testing.T) {
 
 // TestSkyscraperEdgeCase implements the test given as edge example.
 func TestSkyscraperEdgeCase(t *testing.T) {
-
-	input := []int32{2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2}
+	input := []int64{2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2}
 	expected := int64(142)
 
 	result := solveFlyRoute(input)

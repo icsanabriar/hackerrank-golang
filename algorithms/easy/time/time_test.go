@@ -17,7 +17,6 @@ import "testing"
 
 // TestTimeFirstGivenCase implements the test given as first example on hackerrank.
 func TestTimeFirstGivenCase(t *testing.T) {
-
 	input := "07:05:45PM"
 	expected := "19:05:45"
 
@@ -30,7 +29,6 @@ func TestTimeFirstGivenCase(t *testing.T) {
 
 // TestTimeSecondGivenCase implements the test given as second example on hackerrank.
 func TestTimeSecondGivenCase(t *testing.T) {
-
 	input := "12:01:00AM"
 	expected := "00:01:00"
 

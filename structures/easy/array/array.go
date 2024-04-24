@@ -14,8 +14,8 @@
 package main
 
 // reverseArray reverse the given array.
-func reverseArray(a []int32) []int32 {
-	reverse := make([]int32, len(a))
+func reverseArray(a []int64) []int64 {
+	reverse := make([]int64, len(a))
 	last := len(a) - 1
 
 	for i := range a {

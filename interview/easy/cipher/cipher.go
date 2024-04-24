@@ -15,11 +15,8 @@ package main
 
 // caesarCipher encrypt the given string using the k factor.
 func caesarCipher(s string, k int32) string {
-
 	text := ""
-
 	for _, char := range s {
-
 		if char >= 'a' && char <= 'z' {
 			char = (char-'a'+k)%26 + 'a'
 		} else if char >= 'A' && char <= 'Z' {

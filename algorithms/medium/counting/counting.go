@@ -20,9 +20,7 @@ import (
 
 // countSort prints the given array in order taking into account the given index and value on the array.
 func countSort(w io.Writer, input map[int64]string) {
-
 	cache := make([]int64, 100)
-
 	for i := range cache {
 		cache[i] = int64(i)
 	}

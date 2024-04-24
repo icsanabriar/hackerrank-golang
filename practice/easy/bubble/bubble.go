@@ -16,14 +16,12 @@ package main
 import "fmt"
 
 // swap elements from the given array using the given indexes.
-func swap(a []int32, i int, j int) {
-	temp := a[i]
-	a[i] = a[j]
-	a[j] = temp
+func swap(a []int64, i int, j int) {
+	a[i], a[j] = a[j], a[i]
 }
 
 // countSwaps implements the count of swaps to sort the given array.
-func countSwaps(a []int32) string {
+func countSwaps(a []int64) string {
 	counter := 0
 
 	for i := 0; i < len(a); i++ {
@@ -37,8 +35,8 @@ func countSwaps(a []int32) string {
 	}
 
 	result := fmt.Sprintf("Array is sorted in %v swaps.\n", counter)
-	result = result + fmt.Sprintf("First Element: %v\n", a[0])
-	result = result + fmt.Sprintf("Last Element: %v\n", a[len(a)-1])
+	result += fmt.Sprintf("First Element: %v\n", a[0])
+	result += fmt.Sprintf("Last Element: %v\n", a[len(a)-1])
 
 	return result
 }

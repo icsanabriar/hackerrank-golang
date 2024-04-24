@@ -17,7 +17,6 @@ import "testing"
 
 // TestSherlockValidStringFirstGivenCase implements the test given as first example on hackerrank.
 func TestSherlockValidStringFirstGivenCase(t *testing.T) {
-
 	input := "abc"
 	expected := "YES"
 
@@ -30,7 +29,6 @@ func TestSherlockValidStringFirstGivenCase(t *testing.T) {
 
 // TestSherlockValidStringSecondGivenCase implements the test given as second example on hackerrank.
 func TestSherlockValidStringSecondGivenCase(t *testing.T) {
-
 	input := "abcc"
 	expected := "YES"
 
@@ -43,7 +41,6 @@ func TestSherlockValidStringSecondGivenCase(t *testing.T) {
 
 // TestSherlockValidStringThirdGivenCase implements the test given as third example on hackerrank.
 func TestSherlockValidStringThirdGivenCase(t *testing.T) {
-
 	input := "abccc"
 	expected := "NO"
 
@@ -56,7 +53,6 @@ func TestSherlockValidStringThirdGivenCase(t *testing.T) {
 
 // TestSherlockValidStringFourthGivenCase implements the test given as fourth example on hackerrank.
 func TestSherlockValidStringFourthGivenCase(t *testing.T) {
-
 	input := "aabbccddeefghi"
 	expected := "NO"
 
@@ -69,7 +65,6 @@ func TestSherlockValidStringFourthGivenCase(t *testing.T) {
 
 // TestSherlockValidStringFifthGivenCase implements the test given as fifth example on hackerrank.
 func TestSherlockValidStringFifthGivenCase(t *testing.T) {
-
 	input := "abcdefghhgfedecba"
 	expected := "YES"
 
@@ -82,7 +77,6 @@ func TestSherlockValidStringFifthGivenCase(t *testing.T) {
 
 // TestSherlockValidStringHiddenCase implements the test given as hidden example on hackerrank.
 func TestSherlockValidStringHiddenCase(t *testing.T) {
-
 	input := "ibfdgaeadiaefgbhbdghhhbgdfgeiccbiehhfcggchgghadhdhagfbahhddgghbdehidbibaeaagaeeigffcebfbaieggabcfbiiedc" +
 		"abfihchdfabifahcbhagccbdfifhghcadfiadeeaheeddddiecaicbgigccageicehfdhdgafaddhffadigfhhcaedcedecafeacbdacgfgf" +
 		"eeibgaiffdehigebhhehiaahfidibccdcdagifgaihacihadecgifihbebffebdfbchbgigeccahgihbcbcaggebaaafgfedbfgagfediddg" +

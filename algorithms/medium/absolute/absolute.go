@@ -15,25 +15,24 @@ package main
 
 // absolutePermutation retrieves the array with n elements which difference between index and element at the index is k.
 // In case is not possible it returns an array with -1.
-func absolutePermutation(n int32, k int32) []int32 {
-
-	result := make([]int32, 0)
+func absolutePermutation(n int64, k int64) []int64 {
+	result := make([]int64, 0)
 
 	if k > 0 && n%(2*k) != 0 {
 		result = append(result, -1)
 		return result
 	}
 
-	a := make([]int32, 0)
+	a := make([]int64, 0)
 	cache := make([]bool, 0)
 
-	for i := int32(1); i <= n; i++ {
+	for i := int64(1); i <= n; i++ {
 		a = append(a, i)
 		cache = append(cache, false)
 		result = append(result, 0)
 	}
 
-	for i := int32(0); i < int32(len(a)); i++ {
+	for i := int64(0); i < int64(len(a)); i++ {
 		if !cache[i] {
 			result[i] = a[i+k]
 			result[i+k] = a[i]

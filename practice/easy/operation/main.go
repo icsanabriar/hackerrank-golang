@@ -42,7 +42,6 @@ func main() {
 	result := ModifyString(str)
 
 	_, _ = fmt.Fprintf(writer, "%s\n", result)
-
 	_ = writer.Flush()
 }
 

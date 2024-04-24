@@ -17,7 +17,6 @@ import "testing"
 
 // TestGridChallengeFirstGivenCase implements the test given as first example on hackerrank.
 func TestGridChallengeFirstGivenCase(t *testing.T) {
-
 	grid := []string{"ebacd", "fghij", "olmkn", "trpqs", "xywuv"}
 	expected := "YES"
 
@@ -30,7 +29,6 @@ func TestGridChallengeFirstGivenCase(t *testing.T) {
 
 // TestGridChallengeSecondGivenCase implements the test given as second example on hackerrank.
 func TestGridChallengeSecondGivenCase(t *testing.T) {
-
 	grid := []string{"zb", "ac"}
 	expected := "NO"
 

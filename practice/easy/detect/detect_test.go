@@ -23,7 +23,6 @@ import (
 
 // TestIPAddressValidationGivenCase implements the test given as first example on hackerrank.
 func TestIPAddressValidationGivenCase(t *testing.T) {
-
 	input := []string{"This line has junk text.", "121.18.19.20", "2001:0db8:0000:0000:0000:ff00:0042:8329"}
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -41,7 +40,6 @@ func TestIPAddressValidationGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

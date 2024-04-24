@@ -14,17 +14,15 @@
 package main
 
 // runningTime estimates the number of shifts it will take to sort the array.
-func runningTime(arr []int32) int32 {
-
-	counter := int32(0)
-
+func runningTime(arr []int64) int64 {
+	counter := int64(0)
 	for i := 1; i < len(arr); i++ {
 		value := arr[i]
 		j := i - 1
 		for j >= 0 && arr[j] > value {
 			arr[j+1] = arr[j]
-			j = j - 1
 			counter++
+			j--
 		}
 		arr[j+1] = value
 	}

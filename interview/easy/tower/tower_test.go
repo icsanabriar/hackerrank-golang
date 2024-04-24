@@ -17,10 +17,9 @@ import "testing"
 
 // TestTowerBreakersFirstGivenCase implements the test given as first example on hackerrank.
 func TestTowerBreakersFirstGivenCase(t *testing.T) {
-
-	n := int32(2)
-	m := int32(2)
-	expected := int32(2)
+	n := int64(2)
+	m := int64(2)
+	expected := int64(2)
 
 	result := towerBreakers(n, m)
 
@@ -31,10 +30,9 @@ func TestTowerBreakersFirstGivenCase(t *testing.T) {
 
 // TestTowerBreakersSecondGivenCase implements the test given as second example on hackerrank.
 func TestTowerBreakersSecondGivenCase(t *testing.T) {
-
-	n := int32(1)
-	m := int32(4)
-	expected := int32(1)
+	n := int64(1)
+	m := int64(4)
+	expected := int64(1)
 
 	result := towerBreakers(n, m)
 

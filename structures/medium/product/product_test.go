@@ -17,8 +17,7 @@ import "testing"
 
 // TestProductFirstGivenCase implements the test given as first example on hackerrank.
 func TestProductFirstGivenCase(t *testing.T) {
-
-	input := []int32{5, 4, 3, 4, 5}
+	input := []int64{5, 4, 3, 4, 5}
 	expected := int64(8)
 
 	result := solve(input)
@@ -30,8 +29,7 @@ func TestProductFirstGivenCase(t *testing.T) {
 
 // TestProductSecondGivenCase implements the test given as second example on hackerrank.
 func TestProductSecondGivenCase(t *testing.T) {
-
-	input := []int32{1, 1, 1, 1, 0, 1, 1, 1, 1, 1}
+	input := []int64{1, 1, 1, 1, 0, 1, 1, 1, 1, 1}
 	expected := int64(24)
 
 	result := solve(input)

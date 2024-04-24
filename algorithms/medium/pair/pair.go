@@ -14,9 +14,9 @@
 package main
 
 // pairs search the number of pair in the given array with the same difference as k.
-func pairs(k int32, arr []int32) int32 {
-	cache := make(map[int32]bool, 0)
-	keys := make([]int32, 0, len(cache))
+func pairs(k int64, arr []int64) int64 {
+	cache := make(map[int64]bool)
+	keys := make([]int64, 0, len(cache))
 
 	for i := range arr {
 		if _, ok := cache[arr[i]]; !ok {
@@ -25,7 +25,7 @@ func pairs(k int32, arr []int32) int32 {
 		}
 	}
 
-	counter := int32(0)
+	counter := int64(0)
 
 	for i := range keys {
 		key := keys[i]

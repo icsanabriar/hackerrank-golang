@@ -17,7 +17,6 @@ import "testing"
 
 // TestOperationGivenCase implements the test given as first example on hackerrank.
 func TestOperationGivenCase(t *testing.T) {
-
 	input := "     !o23l4leH"
 	expected := "Hello!"
 

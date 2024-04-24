@@ -25,12 +25,10 @@ import (
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
 	var a []string
-
 	for i := 0; i < int(n); i++ {
 		s := strings.TrimSpace(readLine(reader))
 		a = append(a, s)

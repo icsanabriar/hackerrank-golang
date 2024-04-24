@@ -21,7 +21,6 @@ import (
 
 // scrape function that extract questions of the provided text.
 func scrape(w io.Writer, text string) {
-
 	re := regexp.MustCompile(`(?s)<h3><a .*?/questions/(\d{5})/.*?class="question-hyperlink">(.+?)</a>.*?class="relativetime">(.+?)</span>`)
 	matches := re.FindAllStringSubmatch(text, -1)
 

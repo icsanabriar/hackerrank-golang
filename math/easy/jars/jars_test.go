@@ -17,7 +17,6 @@ import "testing"
 
 // TestFillingJarsGivenCase implements the test given as first example on hackerrank.
 func TestFillingJarsGivenCase(t *testing.T) {
-
 	n := int64(5)
 	operations := [][]int64{{1, 2, 100}, {2, 5, 100}, {3, 4, 100}}
 	expected := int64(160)

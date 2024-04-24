@@ -17,11 +17,10 @@ import "testing"
 
 // TestDownFirstGivenCase implements the test given as first example on hackerrank.
 func TestDownFirstGivenCase(t *testing.T) {
-
-	input := int32(3)
+	input := int64(3)
 	expected := int32(3)
 
-	result := downToZero(input)
+	result := downToZero(input, buildCache())
 
 	if result != expected {
 		t.Errorf("Down to zero II first case was incorrect, got: %d, want: %d.", result, expected)
@@ -30,11 +29,10 @@ func TestDownFirstGivenCase(t *testing.T) {
 
 // TestDownSecondGivenCase implements the test given as second example on hackerrank.
 func TestDownSecondGivenCase(t *testing.T) {
-
-	input := int32(4)
+	input := int64(4)
 	expected := int32(3)
 
-	result := downToZero(input)
+	result := downToZero(input, buildCache())
 
 	if result != expected {
 		t.Errorf("Down to zero II second case was incorrect, got: %d, want: %d.", result, expected)

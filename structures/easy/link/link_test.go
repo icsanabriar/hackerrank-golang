@@ -17,11 +17,10 @@ import "testing"
 
 // TestGetNodeValueFirstGivenCase implements the test given as first example on hackerrank.
 func TestGetNodeValueFirstGivenCase(t *testing.T) {
-
-	position := int32(0)
+	position := int64(0)
 	list := SinglyLinkedList{}
-	list.insertNodeIntoSinglyLinkedList(int32(1))
-	expected := int32(1)
+	list.insertNodeIntoSinglyLinkedList(int64(1))
+	expected := int64(1)
 
 	result := getNode(list.head, position)
 
@@ -32,13 +31,12 @@ func TestGetNodeValueFirstGivenCase(t *testing.T) {
 
 // TestGetNodeValueSecondGivenCase implements the test given as second example on hackerrank.
 func TestGetNodeValueSecondGivenCase(t *testing.T) {
-
-	position := int32(2)
+	position := int64(2)
 	list := SinglyLinkedList{}
-	list.insertNodeIntoSinglyLinkedList(int32(3))
-	list.insertNodeIntoSinglyLinkedList(int32(2))
-	list.insertNodeIntoSinglyLinkedList(int32(1))
-	expected := int32(3)
+	list.insertNodeIntoSinglyLinkedList(int64(3))
+	list.insertNodeIntoSinglyLinkedList(int64(2))
+	list.insertNodeIntoSinglyLinkedList(int64(1))
+	expected := int64(3)
 
 	result := getNode(list.head, position)
 
@@ -49,16 +47,15 @@ func TestGetNodeValueSecondGivenCase(t *testing.T) {
 
 // TestGetNodeValueThirdGivenCase implements the test given as third example on hackerrank.
 func TestGetNodeValueThirdGivenCase(t *testing.T) {
-
-	position := int32(1)
+	position := int64(1)
 	list := SinglyLinkedList{}
-	list.insertNodeIntoSinglyLinkedList(int32(3))
-	list.insertNodeIntoSinglyLinkedList(int32(2))
-	list.insertNodeIntoSinglyLinkedList(int32(1))
-	list.insertNodeIntoSinglyLinkedList(int32(5))
-	list.insertNodeIntoSinglyLinkedList(int32(6))
-	list.insertNodeIntoSinglyLinkedList(int32(3))
-	expected := int32(6)
+	list.insertNodeIntoSinglyLinkedList(int64(3))
+	list.insertNodeIntoSinglyLinkedList(int64(2))
+	list.insertNodeIntoSinglyLinkedList(int64(1))
+	list.insertNodeIntoSinglyLinkedList(int64(5))
+	list.insertNodeIntoSinglyLinkedList(int64(6))
+	list.insertNodeIntoSinglyLinkedList(int64(3))
+	expected := int64(6)
 
 	result := getNode(list.head, position)
 

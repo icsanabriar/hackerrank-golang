@@ -22,10 +22,8 @@ import (
 
 // count function to count the number the terms appear on the text taking into account uk and usa spelling.
 func count(w io.Writer, text string, terms []string) {
-
 	for t := 0; t < len(terms); t++ {
 		term := terms[t]
-
 		re := regexp.MustCompile("\\b(" + term + "|" + strings.ReplaceAll(term, "our", "or") + ")\\b")
 		_, _ = fmt.Fprintf(w, "%v\n", len(re.FindAll([]byte(text), -1)))
 	}

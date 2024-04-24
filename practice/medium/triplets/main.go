@@ -40,9 +40,8 @@ func main() {
 
 	nr := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	nTemp, err := strconv.ParseInt(nr[0], 10, 64)
+	n, err := strconv.ParseInt(nr[0], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
 	r, err := strconv.ParseInt(nr[1], 10, 64)
 	checkError(err)
@@ -50,7 +49,6 @@ func main() {
 	arrTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
 	var arr []int64
-
 	for i := 0; i < int(n); i++ {
 		arrItem, err := strconv.ParseInt(arrTemp[i], 10, 64)
 		checkError(err)
@@ -60,7 +58,6 @@ func main() {
 	ans := countTriplets(arr, r)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", ans)
-
 	_ = writer.Flush()
 }
 

@@ -18,7 +18,6 @@ const M = 1000000007
 
 // legoBlocks estimates the number of valid wall formations modulo M.
 func legoBlocks(h int, w int) int64 {
-
 	splits := countSplits()
 
 	caches := make([]int64, w+1)
@@ -72,9 +71,7 @@ func powMod(a, b int64) int64 {
 
 // countSplits estimates the number of splits on 1001 rows.
 func countSplits() []int64 {
-
 	splits := make([]int64, 1001)
-
 	for i := 1; i <= 4; i++ {
 		splits[i] = 1
 	}

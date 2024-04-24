@@ -17,7 +17,6 @@ import "testing"
 
 // TestSummingNSeriesFirstGivenCase implements the test given as first example on hackerrank.
 func TestSummingNSeriesFirstGivenCase(t *testing.T) {
-
 	input := int64(2)
 	expected := int64(4)
 
@@ -30,7 +29,6 @@ func TestSummingNSeriesFirstGivenCase(t *testing.T) {
 
 // TestSummingNSeriesSecondGivenCase implements the test given as second example on hackerrank.
 func TestSummingNSeriesSecondGivenCase(t *testing.T) {
-
 	input := int64(1)
 	expected := int64(1)
 

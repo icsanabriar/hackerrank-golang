@@ -20,11 +20,10 @@ import (
 
 // TestDynamicArrayFirstGivenCase implements the test given as first example on hackerrank.
 func TestDynamicArrayFirstGivenCase(t *testing.T) {
+	queries := [][]int64{{1, 0, 5}, {1, 1, 7}, {1, 0, 3}, {2, 1, 0}, {2, 1, 1}}
+	n := int64(2)
 
-	queries := [][]int32{{1, 0, 5}, {1, 1, 7}, {1, 0, 3}, {2, 1, 0}, {2, 1, 1}}
-	n := int32(2)
-
-	expected := []int32{7, 3}
+	expected := []int64{7, 3}
 
 	result := dynamicArray(n, queries)
 
@@ -35,11 +34,10 @@ func TestDynamicArrayFirstGivenCase(t *testing.T) {
 
 // TestDynamicArraySecondGivenCase implements the test given as second example on hackerrank.
 func TestDynamicArraySecondGivenCase(t *testing.T) {
+	queries := [][]int64{{1, 0, 3}, {1, 1, 1}, {1, 0, 0}, {2, 2, 2}}
+	n := int64(2)
 
-	queries := [][]int32{{1, 0, 3}, {1, 1, 1}, {1, 0, 0}, {2, 2, 2}}
-	n := int32(2)
-
-	expected := []int32{3}
+	expected := []int64{3}
 
 	result := dynamicArray(n, queries)
 

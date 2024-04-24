@@ -15,13 +15,13 @@ package main
 
 // Cell is a struct to store coordinates of specific grid.
 type Cell struct {
-	x         int32
-	y         int32
+	x         int64
+	y         int64
 	direction string
 }
 
 // nextCells finds the next open cell that is not visited.
-func nextCells(grid [][]string, current Cell, visited map[Cell]bool, size int32) []Cell {
+func nextCells(grid [][]string, current Cell, visited map[Cell]bool, size int64) []Cell {
 	next := make([]Cell, 0)
 	next = searchX(grid, current, visited, size, next)
 	next = searchY(grid, current, visited, size, next)
@@ -30,10 +30,9 @@ func nextCells(grid [][]string, current Cell, visited map[Cell]bool, size int32)
 }
 
 // searchX make a search over X grid cells.
-func searchX(grid [][]string, current Cell, visited map[Cell]bool, size int32, next []Cell) []Cell {
+func searchX(grid [][]string, current Cell, visited map[Cell]bool, size int64, next []Cell) []Cell {
 	if current.direction == "" || current.direction == "Y" {
 		x := current.x
-
 		for i := x - 1; i >= 0; i-- {
 			if grid[i][current.y] == "X" {
 				break
@@ -56,14 +55,14 @@ func searchX(grid [][]string, current Cell, visited map[Cell]bool, size int32, n
 			}
 		}
 	}
+
 	return next
 }
 
 // searchY make a search over Y grid cells.
-func searchY(grid [][]string, current Cell, visited map[Cell]bool, size int32, next []Cell) []Cell {
+func searchY(grid [][]string, current Cell, visited map[Cell]bool, size int64, next []Cell) []Cell {
 	if current.direction == "" || current.direction == "X" {
 		y := current.y
-
 		for i := y - 1; i >= 0; i-- {
 			if grid[current.x][i] == "X" {
 				break
@@ -86,13 +85,12 @@ func searchY(grid [][]string, current Cell, visited map[Cell]bool, size int32, n
 			}
 		}
 	}
+
 	return next
 }
 
 // minimumMoves find the minimum number of moves to reach the given goal from the departure point.
-func minimumMoves(grid [][]string, startX int32, startY int32, goalX int32, goalY int32, visited map[Cell]bool,
-	size int32) int32 {
-
+func minimumMoves(grid [][]string, startX int64, startY int64, goalX int64, goalY int64, visited map[Cell]bool, size int64) int64 {
 	current := Cell{startX, startY, ""}
 	target := Cell{goalX, goalY, ""}
 	visited[current] = true
@@ -100,7 +98,7 @@ func minimumMoves(grid [][]string, startX int32, startY int32, goalX int32, goal
 	queue := make([]Cell, 0)
 	queue = append(queue, current)
 
-	moves := make([]int32, 0)
+	moves := make([]int64, 0)
 	moves = append(moves, 0)
 
 	for len(queue) > 0 {
@@ -115,7 +113,6 @@ func minimumMoves(grid [][]string, startX int32, startY int32, goalX int32, goal
 		}
 
 		next := nextCells(grid, nextCell, visited, size)
-
 		for i := range next {
 			if _, ok := visited[next[i]]; !ok {
 				visited[next[i]] = true

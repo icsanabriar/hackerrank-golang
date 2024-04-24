@@ -20,11 +20,10 @@ import (
 
 // TestRotationFirstGivenCase implements the test given as first example on hackerrank.
 func TestRotationFirstGivenCase(t *testing.T) {
+	a := []int64{1, 2, 3, 4, 5}
+	d := int64(4)
 
-	a := []int32{1, 2, 3, 4, 5}
-	d := int32(4)
-
-	expected := []int32{5, 1, 2, 3, 4}
+	expected := []int64{5, 1, 2, 3, 4}
 
 	result := rotLeft(a, d)
 
@@ -35,11 +34,10 @@ func TestRotationFirstGivenCase(t *testing.T) {
 
 // TestRotationSecondGivenCase implements the test given as second example on hackerrank.
 func TestRotationSecondGivenCase(t *testing.T) {
+	a := []int64{1, 2, 3, 4, 5}
+	d := int64(2)
 
-	a := []int32{1, 2, 3, 4, 5}
-	d := int32(2)
-
-	expected := []int32{3, 4, 5, 1, 2}
+	expected := []int64{3, 4, 5, 1, 2}
 
 	result := rotLeft(a, d)
 

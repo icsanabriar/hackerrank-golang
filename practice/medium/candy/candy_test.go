@@ -17,9 +17,8 @@ import "testing"
 
 // TestCandiesFirstGivenCase implements the test given as first example on hackerrank.
 func TestCandiesFirstGivenCase(t *testing.T) {
-
-	n := int32(10)
-	arr := []int32{2, 4, 2, 6, 1, 7, 8, 9, 2, 1}
+	n := int64(10)
+	arr := []int64{2, 4, 2, 6, 1, 7, 8, 9, 2, 1}
 	expected := int64(19)
 
 	result := candies(n, arr)
@@ -31,9 +30,8 @@ func TestCandiesFirstGivenCase(t *testing.T) {
 
 // TestCandiesSecondGivenCase implements the test given as second example on hackerrank.
 func TestCandiesSecondGivenCase(t *testing.T) {
-
-	n := int32(8)
-	arr := []int32{2, 4, 3, 5, 2, 6, 4, 5}
+	n := int64(8)
+	arr := []int64{2, 4, 3, 5, 2, 6, 4, 5}
 	expected := int64(12)
 
 	result := candies(n, arr)

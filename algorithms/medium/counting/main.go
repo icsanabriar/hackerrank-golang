@@ -25,19 +25,18 @@ import (
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
 	input := readInput(reader, n)
 	countSort(os.Stdout, input)
 }
 
 // readInput reads the given input to process information in order.
-func readInput(reader *bufio.Reader, n int32) map[int64]string {
-	helper := make(map[int64]string, 0)
+func readInput(reader *bufio.Reader, n int64) map[int64]string {
+	helper := make(map[int64]string)
 
-	for i := int32(0); i < (n / 2); i++ {
+	for i := int64(0); i < (n / 2); i++ {
 		row := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
 		if len(row) != 2 {

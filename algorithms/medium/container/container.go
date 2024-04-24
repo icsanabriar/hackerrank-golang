@@ -20,7 +20,6 @@ import (
 
 // isEqual validates that the given array are equal when those are sorted.
 func isEqual(a, b []int64) bool {
-
 	sort.Slice(a, func(i, j int) bool { return a[i] < a[j] })
 	sort.Slice(b, func(i, j int) bool { return b[i] < b[j] })
 
@@ -28,27 +27,22 @@ func isEqual(a, b []int64) bool {
 }
 
 // organizingContainers find if the given container are possible to sort or not.
-func organizingContainers(container [][]int32, size int32) string {
-
+func organizingContainers(container [][]int64, size int64) string {
 	rowSum := make([]int64, size)
-
-	for i := int32(0); i < size; i++ {
-		for j := int32(0); j < size; j++ {
-			rowSum[i] = rowSum[i] + int64(container[i][j])
+	for i := int64(0); i < size; i++ {
+		for j := int64(0); j < size; j++ {
+			rowSum[i] += container[i][j]
 		}
 	}
 
 	colSum := make([]int64, size)
-
-	for i := int32(0); i < size; i++ {
-		for j := int32(0); j < size; j++ {
-			colSum[i] = colSum[i] + int64(container[j][i])
+	for i := int64(0); i < size; i++ {
+		for j := int64(0); j < size; j++ {
+			colSum[i] += container[j][i]
 		}
 	}
 
-	equal := isEqual(rowSum, colSum)
-
-	if equal {
+	if isEqual(rowSum, colSum) {
 		return "Possible"
 	}
 

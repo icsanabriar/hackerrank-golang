@@ -17,9 +17,8 @@ import "testing"
 
 // TestHandshakeFirstGivenCase implements the test given as first example on hackerrank.
 func TestHandshakeFirstGivenCase(t *testing.T) {
-
-	input := int32(1)
-	expected := int32(0)
+	input := int64(1)
+	expected := int64(0)
 
 	result := handshake(input)
 
@@ -30,9 +29,8 @@ func TestHandshakeFirstGivenCase(t *testing.T) {
 
 // TestHandshakeSecondGivenCase implements the test given as second example on hackerrank.
 func TestHandshakeSecondGivenCase(t *testing.T) {
-
-	input := int32(2)
-	expected := int32(1)
+	input := int64(2)
+	expected := int64(1)
 
 	result := handshake(input)
 
@@ -43,9 +41,8 @@ func TestHandshakeSecondGivenCase(t *testing.T) {
 
 // TestHandshakeEdgeCase implements the edge case to validate results on hackerrank.
 func TestHandshakeEdgeCase(t *testing.T) {
-
-	input := int32(100)
-	expected := int32(4950)
+	input := int64(100)
+	expected := int64(4950)
 
 	result := handshake(input)
 

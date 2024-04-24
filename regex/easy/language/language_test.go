@@ -23,7 +23,6 @@ import (
 
 // TestHackerRankLanguageGivenCase implements the test given as first example on hackerrank.
 func TestHackerRankLanguageGivenCase(t *testing.T) {
-
 	input := []string{"11011 LUA", "11022 BRAINFUCK", "11044 X"}
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -41,7 +40,6 @@ func TestHackerRankLanguageGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

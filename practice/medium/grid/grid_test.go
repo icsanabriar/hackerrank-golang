@@ -17,11 +17,10 @@ import "testing"
 
 // TestGridlandMetroGivenCase implements the test given as first example on hackerrank.
 func TestGridlandMetroGivenCase(t *testing.T) {
+	n := int64(4)
+	m := int64(4)
 
-	n := int32(4)
-	m := int32(4)
-
-	track := [][]int32{{2, 2, 3}, {3, 1, 4}, {4, 4, 4}}
+	track := [][]int64{{2, 2, 3}, {3, 1, 4}, {4, 4, 4}}
 	expected := int64(9)
 
 	result := gridlandMetro(n, m, track)
@@ -33,11 +32,10 @@ func TestGridlandMetroGivenCase(t *testing.T) {
 
 // TestGridlandMetroHiddenCase implements the test given as hidden example on hackerrank.
 func TestGridlandMetroHiddenCase(t *testing.T) {
+	n := int64(1)
+	m := int64(5)
 
-	n := int32(1)
-	m := int32(5)
-
-	track := [][]int32{{1, 1, 2}, {1, 2, 4}, {1, 3, 5}}
+	track := [][]int64{{1, 1, 2}, {1, 2, 4}, {1, 3, 5}}
 	expected := int64(0)
 
 	result := gridlandMetro(n, m, track)
@@ -49,11 +47,10 @@ func TestGridlandMetroHiddenCase(t *testing.T) {
 
 // TestGridlandMetroEdgeCase implements the test given as edge case.
 func TestGridlandMetroEdgeCase(t *testing.T) {
+	n := int64(1)
+	m := int64(10)
 
-	n := int32(1)
-	m := int32(10)
-
-	track := [][]int32{{1, 1, 2}, {1, 3, 4}, {1, 3, 5}, {1, 8, 9}}
+	track := [][]int64{{1, 1, 2}, {1, 3, 4}, {1, 3, 5}, {1, 8, 9}}
 	expected := int64(3)
 
 	result := gridlandMetro(n, m, track)

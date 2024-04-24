@@ -14,9 +14,8 @@
 package main
 
 // countingSort return sorted values of the given array using the counting sort algorithm.
-func countingSort(arr []int32) []int32 {
-	counters := make([]int32, 100)
-
+func countingSort(arr []int64) []int64 {
+	counters := make([]int64, 100)
 	for _, v := range arr {
 		counters[v]++
 	}

@@ -16,9 +16,6 @@ package main
 // MAX Constant to generate the first 15 prime numbers.
 const MAX int = 15
 
-// primes Cache to store prime numbers.
-var primes = make([]int64, 0)
-
 // isPrime Validates if the given x is prime or not.
 func isPrime(x int64) bool {
 	for i := int64(2); i*i <= x; i++ {
@@ -30,33 +27,29 @@ func isPrime(x int64) bool {
 }
 
 // generatePrimes Generate primes in order to create cache values to improve performance.
-func generatePrimes() {
-
-	var prime = int64(2)
+func generatePrimes() []int64 {
+	primes := make([]int64, 0)
+	prime := int64(2)
 
 	for i := 0; i < MAX; i++ {
 		for !isPrime(prime) {
 			prime++
 		}
-
 		primes = append(primes, prime)
 		prime++
 	}
+
+	return primes
 }
 
 // primeCount Count the number of primes that are present inside the range 0 to n.
-func primeCount(n int64) int32 {
-
-	if len(primes) == 0 {
-		generatePrimes()
-	}
-
+func primeCount(n int64, primes []int64) int32 {
 	result := int32(0)
 	marker := int64(1)
 
 	for i := 0; i < len(primes) && marker*primes[i] <= n; i++ {
+		marker *= primes[i]
 		result++
-		marker = marker * primes[i]
 	}
 
 	return result

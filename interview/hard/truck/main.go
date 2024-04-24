@@ -38,20 +38,17 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	var pumps [][]int32
+	var pumps [][]int64
 	for i := 0; i < int(n); i++ {
 		pumpsRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
-		var pumpsRow []int32
-
+		var pumpsRow []int64
 		for _, pumpsRowItem := range pumpsRowTemp {
-			pumpsItemTemp, err := strconv.ParseInt(pumpsRowItem, 10, 64)
+			pumpsItem, err := strconv.ParseInt(pumpsRowItem, 10, 64)
 			checkError(err)
-			pumpsItem := int32(pumpsItemTemp)
 			pumpsRow = append(pumpsRow, pumpsItem)
 		}
 
@@ -65,7 +62,6 @@ func main() {
 	result := truckTour(pumps)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

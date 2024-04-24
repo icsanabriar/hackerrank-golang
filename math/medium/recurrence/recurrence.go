@@ -92,7 +92,7 @@ func multiplyMatrix(a [][]int64, b [][]int64) [][]int64 {
 }
 
 // transitionState build transition state matrix of X and Y using start values.
-func transitionState(a int32, b int32, c int32, d int32, e int32, f int32, g int32, h int32) [][]int64 {
+func transitionState(a int64, b int64, c int64, d int64, e int64, f int64, g int64, h int64) [][]int64 {
 	matrix := make([][]int64, 22)
 
 	for i := range matrix {
@@ -108,10 +108,9 @@ func transitionState(a int32, b int32, c int32, d int32, e int32, f int32, g int
 		matrix[i-1][i] = 1
 	}
 
-	matrix[9][9] = int64(d)
-	matrix[10][9] = int64(d)
-
-	matrix[10][10] = int64(d)
+	matrix[9][9] = d
+	matrix[10][9] = d
+	matrix[10][10] = d
 
 	matrix[e+10][11] = 1
 	matrix[f-1][11]++
@@ -122,10 +121,9 @@ func transitionState(a int32, b int32, c int32, d int32, e int32, f int32, g int
 		matrix[i-1][i] = 1
 	}
 
-	matrix[20][20] = int64(h)
-	matrix[21][20] = int64(h)
-
-	matrix[21][21] = int64(h)
+	matrix[20][20] = h
+	matrix[21][20] = h
+	matrix[21][21] = h
 
 	return matrix
 }
@@ -148,7 +146,7 @@ func bootstrap() []int64 {
 }
 
 // recurrence calculates the value of Xi and Yi based on the given parameters and value of n.
-func recurrence(a int32, b int32, c int32, d int32, e int32, f int32, g int32, h int32, n int64) []int64 {
+func recurrence(a int64, b int64, c int64, d int64, e int64, f int64, g int64, h int64, n int64) []int64 {
 	initial := bootstrap()
 	transition := transitionState(a, b, c, d, e, f, g, h)
 	state := multiplyVectors(initial, powMatrix(transition, n+1))

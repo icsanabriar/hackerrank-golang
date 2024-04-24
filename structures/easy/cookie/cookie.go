@@ -25,8 +25,8 @@ type Item struct {
 type PriorityQueue []*Item
 
 // Len return the length of the priority queue.
-func (pq PriorityQueue) Len() int {
-	return len(pq)
+func (pq *PriorityQueue) Len() int {
+	return len(*pq)
 }
 
 // Less return a boolean based on the comparison between items on index i,j.
@@ -66,12 +66,12 @@ func (pq PriorityQueue) Swap(i, j int) {
 }
 
 // cookies estimates the number of operations required to create a special cookie.
-func cookies(k int64, A []int32) int64 {
-	pq := make(PriorityQueue, len(A))
+func cookies(k int64, arr []int64) int64 {
+	pq := make(PriorityQueue, len(arr))
 
-	for i, item := range A {
+	for i, item := range arr {
 		pq[i] = &Item{
-			priority: int64(item),
+			priority: item,
 			index:    i,
 		}
 	}
@@ -97,7 +97,7 @@ func cookies(k int64, A []int32) int64 {
 
 	if lessSweet.priority >= k {
 		return operations
-	} else {
-		return -1
 	}
+
+	return -1
 }

@@ -14,21 +14,19 @@
 package main
 
 // miniMaxSum find the min and maximum sum of the given array.
-func miniMaxSum(arr []int32) (int64, int64) {
-
+func miniMaxSum(arr []int64) (int64, int64) {
 	var minSum, maxSum, currentSum int64
 
-	minSum = int64(arr[0])
-	maxSum = int64(arr[0])
+	minSum = arr[0]
+	maxSum = arr[0]
 
 	for _, val := range arr {
-		currentSum += int64(val)
-
-		if int64(val) < minSum {
-			minSum = int64(val)
+		currentSum += val
+		if val < minSum {
+			minSum = val
 		}
-		if int64(val) > maxSum {
-			maxSum = int64(val)
+		if val > maxSum {
+			maxSum = val
 		}
 	}
 

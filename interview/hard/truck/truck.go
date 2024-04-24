@@ -14,16 +14,15 @@
 package main
 
 // truckTour calculates the starting pump the truck could take a full tour.
-func truckTour(pumps [][]int32) int32 {
-
-	var start, fuel, distance int32
+func truckTour(pumps [][]int64) int64 {
+	var start, fuel, distance int64
 
 	for i := 0; i < len(pumps); i++ {
 		fuel += pumps[i][0] - pumps[i][1]
 		distance += pumps[i][0] - pumps[i][1]
 
 		if fuel < 0 {
-			start = int32(i) + 1
+			start = int64(i) + 1
 			fuel = 0
 		}
 	}

@@ -38,11 +38,9 @@ func main() {
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
 	s := readLine(reader)
-
 	result := timeConversion(s)
 
 	_, _ = fmt.Fprintf(writer, "%s\n", result)
-
 	_ = writer.Flush()
 }
 

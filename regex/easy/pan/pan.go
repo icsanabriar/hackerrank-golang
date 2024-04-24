@@ -21,7 +21,6 @@ import (
 
 // validate function check that the given line complies with pan standard.
 func validate(w io.Writer, line string) {
-
 	re := regexp.MustCompile(`[A-Z]{5}[0-9]{4}[A-Z]`)
 
 	if re.MatchString(line) {

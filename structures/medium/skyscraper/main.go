@@ -43,19 +43,16 @@ func main() {
 
 	arrTemp := strings.Split(readLine(reader), " ")
 
-	var arr []int32
-
+	var arr []int64
 	for arrItr := 0; arrItr < len(arrTemp); arrItr++ {
-		arrItemTemp, err := strconv.ParseInt(arrTemp[arrItr], 10, 64)
+		arrItem, err := strconv.ParseInt(arrTemp[arrItr], 10, 64)
 		checkError(err)
-		arrItem := int32(arrItemTemp)
 		arr = append(arr, arrItem)
 	}
 
 	result := solveFlyRoute(arr)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

@@ -19,8 +19,8 @@ import (
 )
 
 // fizzBuzz function that print series fizz buzz based on the number n.
-func fizzBuzz(w io.Writer, n int32) {
-	for i := int32(1); i <= n; i++ {
+func fizzBuzz(w io.Writer, n int64) {
+	for i := int64(1); i <= n; i++ {
 		if i%3 == 0 && i%5 == 0 {
 			_, _ = fmt.Fprintln(w, "FizzBuzz")
 		} else {

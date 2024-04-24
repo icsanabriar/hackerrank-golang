@@ -14,12 +14,10 @@
 package main
 
 // makeRange build a range between a and b including them. a > b otherwise the function panic.
-func makeRange(a, b int32) []int32 {
-
-	arr := make([]int32, b-a)
-
+func makeRange(a, b int64) []int64 {
+	arr := make([]int64, b-a)
 	for i := range arr {
-		arr[i] = a + int32(i)
+		arr[i] = a + int64(i)
 	}
 
 	return arr
@@ -27,8 +25,7 @@ func makeRange(a, b int32) []int32 {
 
 // reverse exchange the order of the elements of the given arr in reverse mode.
 // Example: [1,2,3,4] -> [4,3,2,1].
-func reverse(arr []int32) []int32 {
-
+func reverse(arr []int64) []int64 {
 	for i := len(arr)/2 - 1; i >= 0; i-- {
 		opp := len(arr) - 1 - i
 		arr[i], arr[opp] = arr[opp], arr[i]
@@ -39,19 +36,16 @@ func reverse(arr []int32) []int32 {
 
 // buildIndexes calculates the near element that is higher than arr[i]. Depending on the value of indexes
 // it goes to the right or left direction.
-func buildIndexes(arr, indexes []int32) []int32 {
-
-	nearest := make([]int32, len(arr))
-	temp := make([]int32, 0)
+func buildIndexes(arr, indexes []int64) []int64 {
+	nearest := make([]int64, len(arr))
+	temp := make([]int64, 0)
 
 	for e := range indexes {
-
 		for len(temp) > 0 && arr[indexes[e]] >= arr[temp[len(temp)-1]] {
 			temp = temp[:len(temp)-1]
 		}
 
-		nearest[indexes[e]] = int32(0)
-
+		nearest[indexes[e]] = int64(0)
 		if len(temp) > 0 {
 			nearest[indexes[e]] = temp[len(temp)-1] + 1
 		}
@@ -63,19 +57,14 @@ func buildIndexes(arr, indexes []int32) []int32 {
 }
 
 // solve calculates the maximum index product of the given array.
-func solve(arr []int32) int64 {
-
-	indexes := makeRange(0, int32(len(arr)))
+func solve(arr []int64) int64 {
+	indexes := makeRange(0, int64(len(arr)))
 	leftIndex := buildIndexes(arr, indexes)
 	rightIndex := buildIndexes(arr, reverse(indexes))
 
 	maximum := int64(0)
-
 	for i := 0; i < len(arr); i++ {
-
-		// Casting is required before product for large values.
-		product := int64(leftIndex[i]) * int64(rightIndex[i])
-
+		product := leftIndex[i] * rightIndex[i]
 		if product > maximum {
 			maximum = product
 		}

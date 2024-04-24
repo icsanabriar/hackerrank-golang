@@ -17,8 +17,7 @@ import "testing"
 
 // TestRectangleFirstGivenCase implements the test given as first example on hackerrank.
 func TestRectangleFirstGivenCase(t *testing.T) {
-
-	input := []int32{1, 2, 3, 4, 5}
+	input := []int64{1, 2, 3, 4, 5}
 	expected := int64(9)
 
 	result := largestRectangle(input)
@@ -30,8 +29,7 @@ func TestRectangleFirstGivenCase(t *testing.T) {
 
 // TestRectangleSecondGivenCase implements the test given as second example on hackerrank.
 func TestRectangleSecondGivenCase(t *testing.T) {
-
-	input := []int32{1, 3, 5, 9, 11}
+	input := []int64{1, 3, 5, 9, 11}
 	expected := int64(18)
 
 	result := largestRectangle(input)
@@ -43,8 +41,7 @@ func TestRectangleSecondGivenCase(t *testing.T) {
 
 // TestRectangleThirdGivenCase implements the test given as third example on hackerrank.
 func TestRectangleThirdGivenCase(t *testing.T) {
-
-	input := []int32{11, 11, 10, 10, 10}
+	input := []int64{11, 11, 10, 10, 10}
 	expected := int64(50)
 
 	result := largestRectangle(input)

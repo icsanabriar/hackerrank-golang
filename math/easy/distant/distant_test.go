@@ -20,8 +20,7 @@ import (
 
 // TestMostDistantFirstGivenCase implements the test given as first example on hackerrank.
 func TestMostDistantFirstGivenCase(t *testing.T) {
-
-	input := [][]int32{{-1, 0}, {1, 0}, {0, 1}, {0, -1}}
+	input := [][]int64{{-1, 0}, {1, 0}, {0, 1}, {0, -1}}
 	expected := float64(2)
 
 	solution := solve(input)
@@ -35,8 +34,7 @@ func TestMostDistantFirstGivenCase(t *testing.T) {
 
 // TestMostDistantSecondGivenCase implements the test given as second example on hackerrank.
 func TestMostDistantSecondGivenCase(t *testing.T) {
-
-	input := [][]int32{{0, -5}, {-7, 0}, {0, -6}, {-4, 0}, {0, 0}}
+	input := [][]int64{{0, -5}, {-7, 0}, {0, -6}, {-4, 0}, {0, 0}}
 	expected := 9.219544457292887
 
 	solution := solve(input)
@@ -50,8 +48,7 @@ func TestMostDistantSecondGivenCase(t *testing.T) {
 
 // TestMostDistantEdgeXCase implements the test given as edge x example on hackerrank.
 func TestMostDistantEdgeXCase(t *testing.T) {
-
-	input := [][]int32{{0, 0}, {1, 0}, {20, 0}, {3, 0}, {4, 0}}
+	input := [][]int64{{0, 0}, {1, 0}, {20, 0}, {3, 0}, {4, 0}}
 	expected := 20.0
 
 	solution := solve(input)
@@ -65,8 +62,7 @@ func TestMostDistantEdgeXCase(t *testing.T) {
 
 // TestMostDistantEdgeYCase implements the test given as edge y example on hackerrank.
 func TestMostDistantEdgeYCase(t *testing.T) {
-
-	input := [][]int32{{0, 0}, {0, 1}, {0, 2}, {0, 3}, {0, 9}}
+	input := [][]int64{{0, 0}, {0, 1}, {0, 2}, {0, 3}, {0, 9}}
 	expected := 9.0
 
 	solution := solve(input)
@@ -80,8 +76,7 @@ func TestMostDistantEdgeYCase(t *testing.T) {
 
 // TestMostDistantEdgeCase implements the test given as edge example on hackerrank.
 func TestMostDistantEdgeCase(t *testing.T) {
-
-	input := [][]int32{{2, 0}, {0, 2}, {-2, 0}, {0, -2}, {9, 0}}
+	input := [][]int64{{2, 0}, {0, 2}, {-2, 0}, {0, -2}, {9, 0}}
 	expected := 11.0
 
 	solution := solve(input)

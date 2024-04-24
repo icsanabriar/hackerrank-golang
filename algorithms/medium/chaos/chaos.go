@@ -16,10 +16,10 @@ package main
 import "strconv"
 
 // maxBribes defines maximum constant of maximum bribes allowed.
-const maxBribes = int32(2)
+const maxBribes = int64(2)
 
-// max returns the largest of a or b.
-func max(a, b int32) int32 {
+// maximum returns the largest of a or b.
+func maximum(a, b int64) int64 {
 	if a < b {
 		return b
 	}
@@ -27,19 +27,16 @@ func max(a, b int32) int32 {
 }
 
 // minimumBribes calculate the number of bribes necessary to get q in the order that is given as parameter.
-func minimumBribes(q []int32) string {
-
-	numberBribes := int32(0)
-
+func minimumBribes(q []int64) string {
+	numberBribes := int64(0)
 	for i := len(q) - 1; i >= 0; i-- {
-		marker := int32(i + 1)
-
+		marker := int64(i + 1)
 		if q[i]-marker > maxBribes {
 			return "Too chaotic"
 		}
 
-		lowerBound := max(q[i]-2, 0)
-		upperBound := max(int32(i-1), 0)
+		lowerBound := maximum(q[i]-2, 0)
+		upperBound := maximum(int64(i-1), 0)
 
 		for j := upperBound; j >= lowerBound; j-- {
 			if q[j] > q[i] {
@@ -48,5 +45,5 @@ func minimumBribes(q []int32) string {
 		}
 	}
 
-	return strconv.FormatInt(int64(numberBribes), 10)
+	return strconv.FormatInt(numberBribes, 10)
 }

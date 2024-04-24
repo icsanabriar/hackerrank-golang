@@ -16,17 +16,15 @@ package main
 import "math"
 
 // diagonalDifference calculates the difference between the diagonals of the given matrix.
-func diagonalDifference(arr [][]int32) int32 {
-
-	var sumPrimaryDiagonal int32
-	var sumSecondaryDiagonal int32
+func diagonalDifference(arr [][]int64) int64 {
+	var sumPrimaryDiagonal int64
+	var sumSecondaryDiagonal int64
 
 	n := len(arr)
-
 	for i := 0; i < n; i++ {
 		sumPrimaryDiagonal += arr[i][i]
 		sumSecondaryDiagonal += arr[i][n-1-i]
 	}
 
-	return int32(math.Abs(float64(sumPrimaryDiagonal - sumSecondaryDiagonal)))
+	return int64(math.Abs(float64(sumPrimaryDiagonal - sumSecondaryDiagonal)))
 }

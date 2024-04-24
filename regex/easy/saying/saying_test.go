@@ -23,8 +23,12 @@ import (
 
 // TestSayingHiGivenCase implements the test given as first example on hackerrank.
 func TestSayingHiGivenCase(t *testing.T) {
-
-	input := []string{"Hi Alex how are you doing", "hI dave how are you doing", "Good by Alex", "hidden agenda", "Alex greeted Martha by saying Hi Martha"}
+	input := []string{
+		"Hi Alex how are you doing",
+		"hI dave how are you doing",
+		"Good by Alex", "hidden agenda",
+		"Alex greeted Martha by saying Hi Martha",
+	}
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
 
@@ -41,7 +45,6 @@ func TestSayingHiGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

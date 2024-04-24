@@ -23,9 +23,8 @@ import (
 
 // TestDetectHtmlTagsGivenCase implements the test given as first example on hackerrank.
 func TestDetectHtmlTagsGivenCase(t *testing.T) {
-
-	input := []string{"<p><a href=\"http://www.quackit.com/html/tutorial/html_links.cfm\">Example Link</a></p>",
-		"<div class=\"more-info\"><a href=\"http://www.quackit.com/html/examples/html_links_examples.cfm\">More Link Examples...</a></div>"}
+	input := []string{`<p><a href="http://www.quackit.com/html/tutorial/html_links.cfm">Example Link</a></p>`,
+		`<div class="more-info"><a href="http://www.quackit.com/html/examples/html_links_examples.cfm">More Link Examples...</a></div>`}
 
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -43,7 +42,6 @@ func TestDetectHtmlTagsGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

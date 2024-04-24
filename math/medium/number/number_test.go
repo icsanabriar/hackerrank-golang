@@ -17,11 +17,10 @@ import "testing"
 
 // TestClosestNumberFirstGivenCase implements the test given as first example on hackerrank.
 func TestClosestNumberFirstGivenCase(t *testing.T) {
-
-	a := int32(349)
-	b := int32(1)
-	x := int32(4)
-	expected := int32(348)
+	a := int64(349)
+	b := int64(1)
+	x := int64(4)
+	expected := int64(348)
 
 	result := closestNumber(a, b, x)
 
@@ -32,11 +31,10 @@ func TestClosestNumberFirstGivenCase(t *testing.T) {
 
 // TestClosestNumberSecondGivenCase implements the test given as second example on hackerrank.
 func TestClosestNumberSecondGivenCase(t *testing.T) {
-
-	a := int32(395)
-	b := int32(1)
-	x := int32(7)
-	expected := int32(392)
+	a := int64(395)
+	b := int64(1)
+	x := int64(7)
+	expected := int64(392)
 
 	result := closestNumber(a, b, x)
 
@@ -47,11 +45,10 @@ func TestClosestNumberSecondGivenCase(t *testing.T) {
 
 // TestClosestNumberThirdGivenCase implements the test given as third example on hackerrank.
 func TestClosestNumberThirdGivenCase(t *testing.T) {
-
-	a := int32(4)
-	b := int32(-2)
-	x := int32(2)
-	expected := int32(0)
+	a := int64(4)
+	b := int64(-2)
+	x := int64(2)
+	expected := int64(0)
 
 	result := closestNumber(a, b, x)
 
@@ -62,11 +59,10 @@ func TestClosestNumberThirdGivenCase(t *testing.T) {
 
 // TestClosestNumberEdgeCase implements the test given as edge case to increase coverage.
 func TestClosestNumberEdgeCase(t *testing.T) {
-
-	a := int32(1)
-	b := int32(0)
-	x := int32(2)
-	expected := int32(0)
+	a := int64(1)
+	b := int64(0)
+	x := int64(2)
+	expected := int64(0)
 
 	result := closestNumber(a, b, x)
 
@@ -77,11 +73,10 @@ func TestClosestNumberEdgeCase(t *testing.T) {
 
 // TestClosestNumberHiddenCase implements the test given as hidden case to increase coverage.
 func TestClosestNumberHiddenCase(t *testing.T) {
-
-	a := int32(1)
-	b := int32(973594325)
-	x := int32(1)
-	expected := int32(1)
+	a := int64(1)
+	b := int64(973594325)
+	x := int64(1)
+	expected := int64(1)
 
 	result := closestNumber(a, b, x)
 

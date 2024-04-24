@@ -14,29 +14,25 @@
 package main
 
 // hourglassSum calculate the maximum hourglass sum in the given arr.
-func hourglassSum(arr [][]int32) int32 {
-
-	maximum := int32(-64)
+func hourglassSum(arr [][]int64) int64 {
+	maximum := int64(-64)
 	var i, j int
-	var sum int32
+	var sum int64
 
 	// Iterate over rows of arr.
 	for i = 0; i < 4; i++ {
 		for j = 0; j < 4; j++ {
-
 			// First row of the glass.
 			sum = arr[i][j]
 			sum += arr[i][j+1]
 			sum += arr[i][j+2]
-
 			// Second row of the glass.
 			sum += arr[i+1][j+1]
-
 			// Third row of the glass.
 			sum += arr[i+2][j]
 			sum += arr[i+2][j+1]
 			sum += arr[i+2][j+2]
-
+			// Check maximum of the glass.
 			if maximum < sum {
 				maximum = sum
 			}

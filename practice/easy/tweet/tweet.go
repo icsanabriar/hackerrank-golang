@@ -21,11 +21,9 @@ import (
 
 // validate function check that the given lines contains tweet identifiers of hackerrank.
 func validate(w io.Writer, lines []string) {
-
 	re := regexp.MustCompile("(?i)hackerrank")
 
 	counter := 0
-
 	for i := 0; i < len(lines); i++ {
 		if re.MatchString(lines[i]) {
 			counter++

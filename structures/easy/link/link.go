@@ -15,7 +15,7 @@ package main
 
 // SinglyLinkedListNode structure to simulate linked list node.
 type SinglyLinkedListNode struct {
-	data int32
+	data int64
 	next *SinglyLinkedListNode
 }
 
@@ -26,7 +26,7 @@ type SinglyLinkedList struct {
 }
 
 // insertNodeIntoSinglyLinkedList insert a node into the list.
-func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeData int32) {
+func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeData int64) {
 	node := &SinglyLinkedListNode{
 		next: nil,
 		data: nodeData,
@@ -42,18 +42,18 @@ func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeDat
 }
 
 // getNode retrieves the data using the head and given position from tail.
-func getNode(llist *SinglyLinkedListNode, positionFromTail int32) int32 {
-	temp := llist
-	maxIndex := int32(0)
+func getNode(list *SinglyLinkedListNode, positionFromTail int64) int64 {
+	temp := list
+	maxIndex := int64(0)
 
 	for temp.next != nil {
 		maxIndex++
 		temp = temp.next
 	}
 
-	temp = llist
+	temp = list
 
-	for i := int32(0); i < (maxIndex - positionFromTail); i++ {
+	for i := int64(0); i < (maxIndex - positionFromTail); i++ {
 		temp = temp.next
 	}
 

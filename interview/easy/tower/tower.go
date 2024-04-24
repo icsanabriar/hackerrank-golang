@@ -14,11 +14,9 @@
 package main
 
 // towerBreakers calculate the winner player with the given number of towers and altitudes.
-func towerBreakers(n int32, m int32) int32 {
-
+func towerBreakers(n int64, m int64) int64 {
 	if n%2 == 0 || m == 1 {
 		return 2
-	} else {
-		return 1
 	}
+	return 1
 }

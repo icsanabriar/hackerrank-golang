@@ -38,13 +38,11 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	tTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	t, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	// Build cache to increase performance.
 	cache := make([]int64, 100)
-
 	for i := range cache {
 		cache[i] = -1
 	}
@@ -54,7 +52,6 @@ func main() {
 		checkError(err)
 
 		result := solveIsFibo(n, cache)
-
 		_, _ = fmt.Fprintf(writer, "%s\n", result)
 	}
 

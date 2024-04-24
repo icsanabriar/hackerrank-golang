@@ -21,19 +21,19 @@ import (
 
 // find function to validate if the given strings starts, ends or both with hackerrank term.
 func find(w io.Writer, a []string) {
-
 	reb := regexp.MustCompile(`^hackerrank$`)
 	res := regexp.MustCompile(`^hackerrank`)
 	ree := regexp.MustCompile(`hackerrank$`)
 
 	for i := 0; i < len(a); i++ {
-		if reb.MatchString(a[i]) {
+		switch {
+		case reb.MatchString(a[i]):
 			_, _ = fmt.Fprintf(w, "0\n")
-		} else if res.MatchString(a[i]) {
+		case res.MatchString(a[i]):
 			_, _ = fmt.Fprintf(w, "1\n")
-		} else if ree.MatchString(a[i]) {
+		case ree.MatchString(a[i]):
 			_, _ = fmt.Fprintf(w, "2\n")
-		} else {
+		default:
 			_, _ = fmt.Fprintf(w, "-1\n")
 		}
 	}

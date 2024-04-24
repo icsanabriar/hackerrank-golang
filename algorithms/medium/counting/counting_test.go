@@ -24,8 +24,7 @@ import (
 
 // TestFullCountingSortFirstGivenCase implements the test given as first example on hackerrank.
 func TestFullCountingSortFirstGivenCase(t *testing.T) {
-
-	n := int32(4)
+	n := int64(4)
 	systemIn := "0 a\n1 b\n0 c\n1 d\n"
 	reader := bufio.NewReader(strings.NewReader(systemIn))
 
@@ -44,8 +43,7 @@ func TestFullCountingSortFirstGivenCase(t *testing.T) {
 
 // TestFullCountingSortSecondGivenCase implements the test given as second example on hackerrank.
 func TestFullCountingSortSecondGivenCase(t *testing.T) {
-
-	n := int32(20)
+	n := int64(20)
 	systemIn := "0 ab\n6 cd\n0 ef\n6 gh\n4 ij\n0 ab\n6 cd\n0 ef\n6 gh\n0 ij\n4 that\n3 be\n0 to\n1 be\n5 question\n1 or\n2 not\n4 is\n2 to\n4 the"
 	reader := bufio.NewReader(strings.NewReader(systemIn))
 
@@ -64,8 +62,7 @@ func TestFullCountingSortSecondGivenCase(t *testing.T) {
 
 // TestFullCountingSortHiddenGivenCase implements the test given as hidden example on hackerrank.
 func TestFullCountingSortHiddenGivenCase(t *testing.T) {
-
-	n := int32(1000)
+	n := int64(1000)
 	systemIn := "24 oz\n36 xr\n43 cu\n44 oq\n55 qf\n2 oz\n96 bk\n1 tv\n2 jy\n27 wy\n30 kj\n11 mn\n85 mp\n3 wu\n" +
 		"54 zq\n80 ee\n29 rv\n46 wi\n13 zu\n37 rv\n29 sc\n59 on\n76 ts\n86 wf\n49 gg\n9 yc\n2 gr\n46 ny\n56 ws\n" +
 		"15 jr\n74 lc\n50 ag\n77 vk\n16 er\n84 cf\n82 dn\n12 ss\n4 pe\n35 pm\n28 qo\n47 ym\n54 lr\n34 bx\n18 jm\n" +
@@ -174,7 +171,6 @@ func TestFullCountingSortHiddenGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

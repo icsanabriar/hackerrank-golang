@@ -15,7 +15,7 @@ package main
 
 // SinglyLinkedListNode provided on hackerrank.
 type SinglyLinkedListNode struct {
-	data int32
+	data int64
 	next *SinglyLinkedListNode
 }
 
@@ -26,7 +26,7 @@ type SinglyLinkedList struct {
 }
 
 // insertNodeIntoSinglyLinkedList provided on hackerrank.
-func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeData int32) {
+func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeData int64) {
 	node := &SinglyLinkedListNode{
 		next: nil,
 		data: nodeData,
@@ -42,14 +42,12 @@ func (singlyLinkedList *SinglyLinkedList) insertNodeIntoSinglyLinkedList(nodeDat
 }
 
 // deleteNode returns the node is being deleted from the given structure.
-func deleteNode(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNode {
-
+func deleteNode(list *SinglyLinkedListNode, position int64) *SinglyLinkedListNode {
 	tempHead := SinglyLinkedListNode{
-		next: llist,
+		next: list,
 	}
 
 	temp := &tempHead
-
 	for i := 0; i < int(position); i++ {
 		temp = temp.next
 	}

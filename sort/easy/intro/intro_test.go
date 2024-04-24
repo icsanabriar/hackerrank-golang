@@ -17,7 +17,6 @@ import "testing"
 
 // TestIntroTutorialGivenCase implements the test given as first example on hackerrank.
 func TestIntroTutorialGivenCase(t *testing.T) {
-
 	v := 4
 	arr := []int{1, 4, 5, 7, 9, 12}
 	expected := 1

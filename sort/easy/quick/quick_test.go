@@ -20,9 +20,8 @@ import (
 
 // TestQuickSortGivenCase implements the test given as first example on hackerrank.
 func TestQuickSortGivenCase(t *testing.T) {
-
-	arr := []int32{4, 5, 3, 7, 2}
-	expected := []int32{3, 2, 4, 5, 7}
+	arr := []int64{4, 5, 3, 7, 2}
+	expected := []int64{3, 2, 4, 5, 7}
 
 	result := quickSort(arr)
 

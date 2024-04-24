@@ -16,19 +16,16 @@ package main
 import "math"
 
 // findMaxDistance calculates distances using the min and max points over X and Y axes to return the maximum value.
-func findMaxDistance(minX, maxX, minY, maxY int32) float64 {
-
+func findMaxDistance(minX, maxX, minY, maxY int64) float64 {
 	dx := float64(maxX - minX)
 	dy := float64(maxY - minY)
 
 	maxAbs := math.Abs(float64(minX))
-
 	if maxAbs < float64(maxX) {
 		maxAbs = float64(maxX)
 	}
 
 	mayAbs := math.Abs(float64(minY))
-
 	if mayAbs < float64(maxY) {
 		mayAbs = float64(maxY)
 	}
@@ -49,11 +46,11 @@ func findMaxDistance(minX, maxX, minY, maxY int32) float64 {
 }
 
 // solve calculates the maximum distance of the given set of coordinates.
-func solve(coordinates [][]int32) float64 {
-	minX := int32(0)
-	maxX := int32(0)
-	minY := int32(0)
-	maxY := int32(0)
+func solve(coordinates [][]int64) float64 {
+	minX := int64(0)
+	maxX := int64(0)
+	minY := int64(0)
+	maxY := int64(0)
 
 	for i := 0; i < len(coordinates); i++ {
 		x := coordinates[i][0]

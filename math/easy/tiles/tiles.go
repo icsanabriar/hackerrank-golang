@@ -16,10 +16,8 @@ package main
 import "math"
 
 // movingTiles calculates the area of intersection square between two tiles.
-func movingTiles(l int32, s1 int32, s2 int32, queries []int64) []float64 {
-
+func movingTiles(l int64, s1 int64, s2 int64, queries []int64) []float64 {
 	results := make([]float64, 0)
-
 	for i := range queries {
 		q := (float64(l)*math.Sqrt2 - math.Sqrt(float64(queries[i]))*math.Sqrt2) / math.Abs(float64(s1)-float64(s2))
 		results = append(results, q)

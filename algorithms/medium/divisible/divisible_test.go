@@ -17,10 +17,9 @@ import "testing"
 
 // TestNoDivisibleSubsetFirstGivenCase implements the test given as first example on hackerrank.
 func TestNoDivisibleSubsetFirstGivenCase(t *testing.T) {
-
-	k := int32(3)
-	s := []int32{1, 7, 2, 4}
-	expected := int32(3)
+	k := int64(3)
+	s := []int64{1, 7, 2, 4}
+	expected := int64(3)
 
 	result := nonDivisibleSubset(k, s)
 
@@ -31,10 +30,9 @@ func TestNoDivisibleSubsetFirstGivenCase(t *testing.T) {
 
 // TestNoDivisibleSubsetSecondGivenCase implements the test given as second example on hackerrank.
 func TestNoDivisibleSubsetSecondGivenCase(t *testing.T) {
-
-	k := int32(4)
-	s := []int32{19, 10, 12, 10, 24, 25, 22}
-	expected := int32(3)
+	k := int64(4)
+	s := []int64{19, 10, 12, 10, 24, 25, 22}
+	expected := int64(3)
 
 	result := nonDivisibleSubset(k, s)
 
@@ -45,10 +43,9 @@ func TestNoDivisibleSubsetSecondGivenCase(t *testing.T) {
 
 // TestNoDivisibleSubsetThirdGivenCase implements the test given as third example on hackerrank.
 func TestNoDivisibleSubsetThirdGivenCase(t *testing.T) {
-
-	k := int32(7)
-	s := []int32{278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436}
-	expected := int32(11)
+	k := int64(7)
+	s := []int64{278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436}
+	expected := int64(11)
 
 	result := nonDivisibleSubset(k, s)
 

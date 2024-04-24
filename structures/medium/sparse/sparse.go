@@ -15,12 +15,9 @@ package main
 
 // matchingStrings count the given queries on the string arrays. The query and string should be the same.
 func matchingStrings(strings []string, queries []string) []int32 {
-
 	cache := make(map[string]int32)
-
 	// Count the number of strings and store in a map.
 	for _, e := range strings {
-
 		if val, ok := cache[e]; ok {
 			cache[e] = val + 1
 		} else {
@@ -29,7 +26,6 @@ func matchingStrings(strings []string, queries []string) []int32 {
 	}
 
 	result := make([]int32, 0)
-
 	// Find matches of queries.
 	for _, e := range queries {
 		result = append(result, cache[e])

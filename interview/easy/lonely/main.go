@@ -38,25 +38,21 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
 	aTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var a []int32
-
+	var a []int64
 	for i := 0; i < int(n); i++ {
-		aItemTemp, err := strconv.ParseInt(aTemp[i], 10, 64)
+		aItem, err := strconv.ParseInt(aTemp[i], 10, 64)
 		checkError(err)
-		aItem := int32(aItemTemp)
 		a = append(a, aItem)
 	}
 
 	result := lonelyInteger(a)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

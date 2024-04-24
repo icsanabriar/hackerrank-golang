@@ -21,7 +21,6 @@ import (
 
 // validate function check that the given lines comply with hackerrank supported languages.
 func validate(w io.Writer, lines []string) {
-
 	re := regexp.MustCompile(`\d+ (C|CPP|JAVA|PYTHON|PERL|PHP|RUBY|CSHARP|HASKELL|CLOJURE|BASH|SCALA|ERLANG|CLISP|LUA|BRAINFUCK|JAVASCRIPT|GO|D|OCAML|R|PASCAL|SBCL|DART|GROOVY|OBJECTIVEC)$`)
 
 	for i := 0; i < len(lines); i++ {

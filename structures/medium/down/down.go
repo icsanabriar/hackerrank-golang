@@ -16,11 +16,8 @@ package main
 // maxN is the maximum value of N.
 const maxN = int32(1000000)
 
-// cache is a map to cache steps to 0.
-var cache = buildCache()
-
-// min returns the minor of a or b.
-func min(a, b int32) int32 {
+// minimum returns the minor of a or b.
+func minimum(a, b int32) int32 {
 	if a > b {
 		return b
 	}
@@ -29,16 +26,13 @@ func min(a, b int32) int32 {
 
 // buildCache generates an array to memorize the steps required to down to 0 specific index of the array.
 func buildCache() []int32 {
-
 	temp := make([]int32, maxN+1)
-
 	for i := int32(1); i < maxN; i++ {
 		temp[i] = temp[i-1] + 1
 
 		for j := int32(2); j*j <= i; j++ {
-
 			if i%j == 0 {
-				temp[i] = min(temp[i], temp[i/j]+1)
+				temp[i] = minimum(temp[i], temp[i/j]+1)
 			}
 		}
 	}
@@ -47,6 +41,6 @@ func buildCache() []int32 {
 }
 
 // downToZero reads the given n value from cache and return it.
-func downToZero(n int32) int32 {
+func downToZero(n int64, cache []int32) int32 {
 	return cache[n]
 }

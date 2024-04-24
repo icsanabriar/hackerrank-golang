@@ -19,25 +19,24 @@ import (
 )
 
 // prime calculates the i-th prime using a starting int.
-func prime(previous int32) int32 {
+func prime(previous int64) int64 {
 	for i := previous + 1; ; i++ {
-		if big.NewInt(int64(i)).ProbablyPrime(0) {
+		if big.NewInt(i).ProbablyPrime(0) {
 			return i
 		}
 	}
 }
 
 // waiter separates the given array of plates (number) into Ai Bi piles doing q iterations.
-// Returns an array of int with the order of the piles B0, B1, .. Bi, Ai taking into account
+// Returns an array of int with the order of the piles B0, B1, ... Bi, Ai taking into account
 // the TOP element which is the last one of the pile.
-func waiter(number []int32, q int) []int32 {
-
-	a := make(map[int][]int32)
-	b := make(map[int][]int32)
-	p := int32(2)
+func waiter(number []int64, q int64) []int64 {
+	a := make(map[int][]int64)
+	b := make(map[int][]int64)
+	p := int64(2)
 
 	// Build piles from ai.
-	for i := 1; i <= q; i++ {
+	for i := 1; i <= int(q); i++ {
 		for j := len(number) - 1; j >= 0; j-- {
 			e := number[j]
 			if e%p == 0 {
@@ -54,19 +53,18 @@ func waiter(number []int32, q int) []int32 {
 	return buildPiles(number, b)
 }
 
-// appendValueToArray append the given value to the map using the given key
-func appendValueToArray(m map[int][]int32, k int, v int32) {
+// appendValueToArray append the given value to the map using the given key.
+func appendValueToArray(m map[int][]int64, k int, v int64) {
 	if val, ok := m[k]; ok {
 		m[k] = append(val, v)
 	} else {
-		m[k] = []int32{v}
+		m[k] = []int64{v}
 	}
 }
 
 // buildPiles append the results of the piles using the given number and indexes.
-func buildPiles(number []int32, b map[int][]int32) []int32 {
-	result := make([]int32, 0)
-
+func buildPiles(number []int64, b map[int][]int64) []int64 {
+	result := make([]int64, 0)
 	// Sort keys of b.
 	keys := make([]int, 0, len(b))
 	for k := range b {

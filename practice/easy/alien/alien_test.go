@@ -23,7 +23,6 @@ import (
 
 // TestAlienUsernameGivenCase implements the test given as first example on hackerrank.
 func TestAlienUsernameGivenCase(t *testing.T) {
-
 	input := []string{"_0898989811abced_", "_abce", "_09090909abcD0"}
 	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
 	checkError(err)
@@ -41,7 +40,6 @@ func TestAlienUsernameGivenCase(t *testing.T) {
 
 // readTestFile is responsible for reading the output of the program written in the given writer.
 func readTestFile() string {
-
 	text := ""
 
 	file, err := os.Open(os.Getenv("OUTPUT_PATH"))

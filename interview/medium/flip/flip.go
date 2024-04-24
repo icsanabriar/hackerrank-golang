@@ -14,17 +14,14 @@
 package main
 
 // flippingMatrix calculates the maximum sum of the upper left quadrant.
-func flippingMatrix(matrix [][]int32) int32 {
-
+func flippingMatrix(matrix [][]int64) int64 {
 	n := len(matrix)
 	m := len(matrix[0])
 
-	var maxScore int32 = 0
+	var maxScore int64
 
 	for j := 0; j < n/2; j++ {
-
 		for k := 0; k < m/2; k++ {
-
 			a := matrix[j][k]
 			b := matrix[j][m-1-k]
 			c := matrix[n-1-j][k]
@@ -34,11 +31,9 @@ func flippingMatrix(matrix [][]int32) int32 {
 			if b > currentScore {
 				currentScore = b
 			}
-
 			if c > currentScore {
 				currentScore = c
 			}
-
 			if d > currentScore {
 				currentScore = d
 			}

@@ -22,7 +22,6 @@ func estimate(n int64, operations [][]int64) int64 {
 		a := operations[i][0]
 		b := operations[i][1]
 		k := operations[i][2]
-
 		result += (b - a + 1) * k
 	}
 

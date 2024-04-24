@@ -38,19 +38,17 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	n, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	var coordinates [][]int32
+	var coordinates [][]int64
 	for coordinatesRowItr := 0; coordinatesRowItr < int(n); coordinatesRowItr++ {
 		coordinatesRowTemp := strings.Split(readLine(reader), " ")
 
-		var coordinatesRow []int32
+		var coordinatesRow []int64
 		for _, coordinatesRowItem := range coordinatesRowTemp {
-			coordinatesItemTemp, err := strconv.ParseInt(coordinatesRowItem, 10, 64)
+			coordinatesItem, err := strconv.ParseInt(coordinatesRowItem, 10, 64)
 			checkError(err)
-			coordinatesItem := int32(coordinatesItemTemp)
 			coordinatesRow = append(coordinatesRow, coordinatesItem)
 		}
 
@@ -64,7 +62,6 @@ func main() {
 	result := solve(coordinates)
 
 	_, _ = fmt.Fprintf(writer, "%f\n", result)
-
 	_ = writer.Flush()
 }
 

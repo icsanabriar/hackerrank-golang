@@ -49,19 +49,16 @@ func main() {
 	aTemp := strings.Split(readLine(reader), " ")
 
 	var a []int64
-
 	for i := 0; i < len(aTemp); i++ {
 		aItem, err := strconv.ParseInt(aTemp[i], 10, 64)
 		checkError(err)
 		a = append(a, aItem)
 	}
 
-	var queries []int32
-
+	var queries []int64
 	for i := 0; i < int(q); i++ {
-		queriesItemTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+		queriesItem, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
-		queriesItem := int32(queriesItemTemp)
 		queries = append(queries, queriesItem)
 	}
 
@@ -76,7 +73,6 @@ func main() {
 	}
 
 	_, _ = fmt.Fprintf(writer, "\n")
-
 	_ = writer.Flush()
 }
 

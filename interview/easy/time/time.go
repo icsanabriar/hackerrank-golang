@@ -21,7 +21,6 @@ import (
 
 // timeConversion format the given time into 24 hours.
 func timeConversion(s string) string {
-
 	hour, _ := strconv.Atoi(s[0:2])
 
 	if strings.HasSuffix(s, "PM") && hour != 12 {

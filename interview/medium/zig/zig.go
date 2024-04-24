@@ -16,28 +16,22 @@ package main
 import "sort"
 
 // zigZagSequence generates zig zag array using the given parameter.
-func zigZagSequence(arr []int32) []int32 {
-
+func zigZagSequence(arr []int64) []int64 {
 	n := len(arr)
-
 	sort.Slice(arr, func(i, j int) bool {
 		return arr[i] < arr[j]
 	})
 
 	mid := (n+1)/2 - 1
-	temp := arr[mid]
-	arr[mid] = arr[n-1]
-	arr[n-1] = temp
+	arr[mid], arr[n-1] = arr[n-1], arr[mid]
 
 	st := mid + 1
 	ed := n - 2
 
 	for st <= ed {
-		temp = arr[st]
-		arr[st] = arr[ed]
-		arr[ed] = temp
-		st = st + 1
-		ed = ed - 1
+		arr[st], arr[ed] = arr[ed], arr[st]
+		st++
+		ed--
 	}
 
 	return arr

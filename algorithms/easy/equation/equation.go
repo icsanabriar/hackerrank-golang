@@ -14,14 +14,12 @@
 package main
 
 // permutationEquation return an array with the values of p(p(y)) base on the values stored given on p.
-func permutationEquation(p []int32) []int32 {
-
-	result := make([]int32, len(p))
-
+func permutationEquation(p []int64) []int64 {
+	result := make([]int64, len(p))
 	for i := range p {
 		for j := range result {
-			if p[p[j]-1] == int32(i+1) {
-				result[i] = int32(j + 1)
+			if p[p[j]-1] == int64(i+1) {
+				result[i] = int64(j + 1)
 				break
 			}
 		}

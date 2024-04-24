@@ -17,7 +17,6 @@ import "testing"
 
 // TestCounterFirstGivenCase implements the test given as first example on hackerrank.
 func TestCounterFirstGivenCase(t *testing.T) {
-
 	input := int64(4)
 	expected := int64(6)
 
@@ -30,7 +29,6 @@ func TestCounterFirstGivenCase(t *testing.T) {
 
 // TestCounterSecondGivenCase implements the test given as second example on hackerrank.
 func TestCounterSecondGivenCase(t *testing.T) {
-
 	input := int64(14)
 	expected := int64(8)
 

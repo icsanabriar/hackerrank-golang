@@ -16,7 +16,6 @@ package main
 // fibonacci return the sequence of Fibonacci with the given length n. Cache is map used to memorize the sequence
 // that is already estimated on previous loops of recursion in order to increase performance of the function.
 func fibonacci(n int64, cache []int64) int64 {
-
 	if n == 0 || n == 1 {
 		return n
 	}
@@ -30,18 +29,15 @@ func fibonacci(n int64, cache []int64) int64 {
 
 // solveIsFibo defines if the given n is a number part of Fibonacci sequence or not.
 func solveIsFibo(n int64, cache []int64) string {
-
 	// Memorize first 99 fibonacci numbers.
 	_ = fibonacci(99, cache)
 
 	// Iterate in order to optimize search.
 	for _, fib := range cache {
-
 		// Current Fibonacci value is higher than given number than break.
 		if n < fib {
 			break
 		}
-
 		// Is Fibonacci return value.
 		if n == fib {
 			return "IsFibo"

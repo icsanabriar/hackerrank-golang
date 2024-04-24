@@ -21,7 +21,6 @@ import (
 
 // timeConversion converts the given string that contains time in 12-hour AM/PM format to military 24-hour time.
 func timeConversion(s string) string {
-
 	// Split by Colon.
 	colon := ":"
 	split := strings.Split(s, colon)
@@ -30,19 +29,15 @@ func timeConversion(s string) string {
 	hour, _ := strconv.Atoi(split[0])
 
 	if strings.HasSuffix(split[2], "AM") {
-
 		// Update Midnight hour.
 		if hour == 12 {
 			split[0] = "00"
 		}
-
 	} else {
-
 		// Add 12 hours to time.
 		if hour != 12 {
-			hour = hour + 12
+			hour += 12
 		}
-
 		split[0] = fmt.Sprintf("%02d", hour)
 	}
 

@@ -40,29 +40,24 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	dTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	d, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	d := int32(dTemp)
 
 	expenditureTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var expenditure []int32
-
+	var expenditure []int64
 	for i := 0; i < int(n); i++ {
-		expenditureItemTemp, err := strconv.ParseInt(expenditureTemp[i], 10, 64)
+		expenditureItem, err := strconv.ParseInt(expenditureTemp[i], 10, 64)
 		checkError(err)
-		expenditureItem := int32(expenditureItemTemp)
 		expenditure = append(expenditure, expenditureItem)
 	}
 
 	result := activityNotifications(expenditure, d)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

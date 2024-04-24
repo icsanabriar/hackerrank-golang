@@ -20,8 +20,7 @@ import (
 
 // TestPlusMinusFirstGivenCase implements the test given as first example on hackerrank.
 func TestPlusMinusFirstGivenCase(t *testing.T) {
-
-	arr := []int32{-4, 3, -9, 0, 4, 1}
+	arr := []int64{-4, 3, -9, 0, 4, 1}
 	expected := []string{"0.500000", "0.333333", "0.166667"}
 
 	result := plusMinus(arr)

@@ -28,9 +28,8 @@ func printSinglyLinkedList(node *SinglyLinkedListNode, sep string, writer *bufio
 		_, _ = fmt.Fprintf(writer, "%d", node.data)
 
 		node = node.next
-
 		if node != nil {
-			_, _ = fmt.Fprintf(writer, sep)
+			_, _ = fmt.Fprint(writer, sep)
 		}
 	}
 }
@@ -51,24 +50,22 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	llistCount, err := strconv.ParseInt(readLine(reader), 10, 64)
+	listCount, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
 
-	llist := SinglyLinkedList{}
-	for i := 0; i < int(llistCount); i++ {
-		llistItemTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	list := SinglyLinkedList{}
+	for i := 0; i < int(listCount); i++ {
+		listItem, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
-		llistItem := int32(llistItemTemp)
-		llist.insertNodeIntoSinglyLinkedList(llistItem)
+		list.insertNodeIntoSinglyLinkedList(listItem)
 	}
 
-	positionTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	position, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
-	position := int32(positionTemp)
 
-	llist1 := deleteNode(llist.head, position)
+	list1 := deleteNode(list.head, position)
 
-	printSinglyLinkedList(llist1, " ", writer)
+	printSinglyLinkedList(list1, " ", writer)
 	_, _ = fmt.Fprintf(writer, "\n")
 
 	_ = writer.Flush()

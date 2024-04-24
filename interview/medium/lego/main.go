@@ -38,9 +38,8 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	tTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	t, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	for tItr := 0; tItr < int(t); tItr++ {
 		firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
@@ -52,7 +51,6 @@ func main() {
 		checkError(err)
 
 		result := legoBlocks(int(n), int(m))
-
 		_, _ = fmt.Fprintf(writer, "%d\n", result)
 	}
 

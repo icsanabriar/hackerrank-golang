@@ -1,6 +1,6 @@
 # Hacker Rank Solutions
 
-version 1.2.0 - 16/01/2023
+version 1.3.0 - 24/04/2024
 
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build](https://img.shields.io/github/actions/workflow/status/icsanabriar/hackerrank-golang/main.yml)](https://github.com/icsanabriar/hackerrank-golang/actions/workflows/main.yml)
@@ -19,27 +19,27 @@ assessments.
 
 ## Requirements
 
-- Golang 1.17.x
+- Golang 1.22.x or higher
 
 ## Check Application Test Coverage
 
 To verify test coverage on terminal:
 
-1. Verify the version of Go - 1.17.x or higher.
+1. Verify the version of Go - 1.22.x or higher.
 2. Download the source code from repository.
 3. Open a terminal.
 4. Go to the root location of the source code.
 5. Execute the commands:
 
 ```bash
-    make test
+    make unit-test
 ```
 
 ## List Dependency Licenses
 
 To generate list of dependency licenses on terminal:
 
-1. Verify the version of Go - 1.17.x or higher.
+1. Verify the version of Go - 1.22.x or higher.
 2. Download the source code from repository.
 3. Open a terminal.
 4. Go to the root location of the source code.
@@ -47,6 +47,20 @@ To generate list of dependency licenses on terminal:
 
 ```bash
     make licenses
+```
+
+## List Possible Vulnerabilities
+
+To generate list of vulnerabilities on terminal:
+
+1. Verify the version of Go - 1.22.x or higher.
+2. Download the source code from repository.
+3. Open a terminal.
+4. Go to the root location of the source code.
+5. Execute the commands:
+
+```bash
+    make vulnerabilities
 ```
 
 # Contact Information

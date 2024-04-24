@@ -40,18 +40,15 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	mTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	m, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	m := int32(mTemp)
 
 	result := gameWithCells(n, m)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

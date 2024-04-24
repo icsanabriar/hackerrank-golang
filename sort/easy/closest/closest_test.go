@@ -20,9 +20,8 @@ import (
 
 // TestClosestNumbersGivenCase implements the test given as first example on hackerrank.
 func TestClosestNumbersGivenCase(t *testing.T) {
-
-	arr := []int32{5, 4, 3, 2}
-	expected := []int32{2, 3, 3, 4, 4, 5}
+	arr := []int64{5, 4, 3, 2}
+	expected := []int64{2, 3, 3, 4, 4, 5}
 
 	result := closestNumbers(arr)
 

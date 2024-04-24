@@ -14,32 +14,26 @@
 package main
 
 // findDigits return an integer representing the number of digits of d that are divisor of given n.
-func findDigits(n int32) int {
-
+func findDigits(n int64) int {
 	divisorDigit := false
 	counter := 0
 	originalN := n
-	previousDigit := make(map[int32]bool)
+	previousDigit := make(map[int64]bool)
 
 	for n > 0 {
 		currentDigit := n % 10
-
 		if currentDigit != 0 {
 			if val, ok := previousDigit[currentDigit]; !ok {
-
 				divisorDigit = (originalN % currentDigit) == 0
 				previousDigit[currentDigit] = divisorDigit
-
 				if divisorDigit {
-					counter += 1
+					counter++
 				}
-
 			} else if val {
-				counter += 1
+				counter++
 			}
 		}
-
-		n = n / 10
+		n /= 10
 	}
 
 	return counter

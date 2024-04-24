@@ -19,10 +19,9 @@ import (
 
 // TestEasyGcdFirstGivenCase implements the test given as first example on hackerrank.
 func TestEasyGcdFirstGivenCase(t *testing.T) {
-
-	k := int32(5)
-	arr := []int32{2, 6, 4}
-	expected := int32(4)
+	k := int64(5)
+	arr := []int64{2, 6, 4}
+	expected := int64(4)
 
 	result := easyGcd(k, arr)
 
@@ -33,10 +32,9 @@ func TestEasyGcdFirstGivenCase(t *testing.T) {
 
 // TestEasyGcdSecondGivenCase implements the test given as second example on hackerrank.
 func TestEasyGcdSecondGivenCase(t *testing.T) {
-
-	k := int32(5)
-	arr := []int32{7}
-	expected := int32(0)
+	k := int64(5)
+	arr := []int64{7}
+	expected := int64(0)
 
 	result := easyGcd(k, arr)
 
@@ -47,10 +45,9 @@ func TestEasyGcdSecondGivenCase(t *testing.T) {
 
 // TestEasyGcdHiddenCase implements the test given as hidden example on hackerrank.
 func TestEasyGcdHiddenCase(t *testing.T) {
-
-	k := int32(999999999)
-	arr := []int32{1000000000, 1000000000}
-	expected := int32(999999998)
+	k := int64(999999999)
+	arr := []int64{1000000000, 1000000000}
+	expected := int64(999999998)
 
 	result := easyGcd(k, arr)
 

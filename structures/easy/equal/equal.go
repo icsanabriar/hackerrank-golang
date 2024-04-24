@@ -14,36 +14,36 @@
 package main
 
 // Sum the values of the given array.
-func sumHeights(h []int32) int64 {
+func sumHeights(h []int64) int64 {
 	total := int64(0)
-
 	for i := 0; i < len(h); i++ {
-		total = total + int64(h[i])
+		total += h[i]
 	}
 
 	return total
 }
 
 // Poll element from array.
-func pollElement(h1 *[]int32, h2 *[]int32, h3 *[]int32, index int) int64 {
-	element := int32(0)
+func pollElement(h1 *[]int64, h2 *[]int64, h3 *[]int64, index int) int64 {
+	element := int64(0)
 
-	if index == 0 && len(*h1) > 0 {
+	switch {
+	case index == 0 && len(*h1) > 0:
 		element = (*h1)[0]
 		*h1 = (*h1)[1:]
-	} else if index == 1 && len(*h2) > 0 {
+	case index == 1 && len(*h2) > 0:
 		element = (*h2)[0]
 		*h2 = (*h2)[1:]
-	} else if index == 2 && len(*h3) > 0 {
+	default:
 		element = (*h3)[0]
 		*h3 = (*h3)[1:]
 	}
 
-	return int64(element)
+	return element
 }
 
 // equalStacks calculate the maximum height the three given stacks could be equal.
-func equalStacks(h1 []int32, h2 []int32, h3 []int32) int64 {
+func equalStacks(h1 []int64, h2 []int64, h3 []int64) int64 {
 	cache := make([]int64, 0)
 
 	cache = append(cache, sumHeights(h1))
@@ -57,7 +57,7 @@ func equalStacks(h1 []int32, h2 []int32, h3 []int32) int64 {
 				maxHeightIndex = i
 			}
 		}
-		cache[maxHeightIndex] = cache[maxHeightIndex] - pollElement(&h1, &h2, &h3, maxHeightIndex)
+		cache[maxHeightIndex] -= pollElement(&h1, &h2, &h3, maxHeightIndex)
 	}
 
 	return cache[0]

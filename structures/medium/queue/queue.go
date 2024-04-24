@@ -15,12 +15,12 @@ package main
 
 // queue structure compose by two stacks.
 type queue struct {
-	recipient []int32
-	messenger []int32
+	recipient []int64
+	messenger []int64
 }
 
 // queueElement is responsible of queuing the given x into recipient stack.
-func (q *queue) queueElement(x int32) {
+func (q *queue) queueElement(x int64) {
 	q.recipient = append(q.recipient, x)
 }
 
@@ -41,12 +41,12 @@ func (q *queue) dequeueElement() {
 }
 
 // firstElement is responsible for getting the first element of the queue.
-func (q *queue) firstElement() int32 {
+func (q *queue) firstElement() int64 {
 	q.transferElements()
 	return q.messenger[len(q.messenger)-1]
 }
 
-// length is responsible for getting the size of the stack.
-func (q *queue) length() int {
+// Length is responsible for getting the size of the stack.
+func (q *queue) Length() int {
 	return len(q.recipient) + len(q.messenger)
 }

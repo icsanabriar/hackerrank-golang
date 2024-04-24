@@ -42,7 +42,6 @@ func main() {
 	result := isValid(s)
 
 	_, _ = fmt.Fprintf(writer, "%s\n", result)
-
 	_ = writer.Flush()
 }
 

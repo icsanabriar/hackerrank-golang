@@ -13,12 +13,13 @@
 // limitations under the License.
 package main
 
-import "fmt"
+import (
+	"strconv"
+)
 
 // superDigit calculate the sum of the given digits embedded on the string.
 func superDigit(s string) int {
 	sum := 0
-
 	for _, r := range s {
 		sum += int(r - '0')
 	}
@@ -27,5 +28,5 @@ func superDigit(s string) int {
 		return sum
 	}
 
-	return superDigit(fmt.Sprintf("%d", sum))
+	return superDigit(strconv.Itoa(sum))
 }

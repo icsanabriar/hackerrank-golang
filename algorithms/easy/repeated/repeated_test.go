@@ -17,7 +17,6 @@ import "testing"
 
 // TestRepeatedFirstGivenCase implements the test given as first example on hackerrank.
 func TestRepeatedFirstGivenCase(t *testing.T) {
-
 	input := "aba"
 	n := int64(10)
 
@@ -32,7 +31,6 @@ func TestRepeatedFirstGivenCase(t *testing.T) {
 
 // TestRepeatedSecondGivenCase implements the test given as second example on hackerrank.
 func TestRepeatedSecondGivenCase(t *testing.T) {
-
 	input := "a"
 	n := int64(1000000000000)
 
@@ -47,7 +45,6 @@ func TestRepeatedSecondGivenCase(t *testing.T) {
 
 // TestRepeatedThirdGivenCase implements the test given as third example on hackerrank.
 func TestRepeatedThirdGivenCase(t *testing.T) {
-
 	input := "epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq"
 	n := int64(549382313570)
 

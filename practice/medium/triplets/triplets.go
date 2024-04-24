@@ -15,14 +15,11 @@ package main
 
 // solve count the number of ascending triplets present in the given array and ratio.
 func countTriplets(arr []int64, r int64) int64 {
-
 	countMap := make(map[int64]int64)
 	pairsMap := make(map[int64]int64)
 
 	var count int64
-
 	for _, num := range arr {
-
 		if pairsMap[num] > 0 {
 			count += pairsMap[num]
 		}

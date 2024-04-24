@@ -20,7 +20,6 @@ import (
 
 // TestContactsFirstGivenCase implements the test given as first example on hackerrank.
 func TestContactsFirstGivenCase(t *testing.T) {
-
 	input := [][]string{{"add", "hack"},
 		{"add", "hackerrank"},
 		{"find", "hac"},
@@ -37,7 +36,6 @@ func TestContactsFirstGivenCase(t *testing.T) {
 
 // TestContactsSecondGivenCase implements the test given as second example on hackerrank.
 func TestContactsSecondGivenCase(t *testing.T) {
-
 	input := [][]string{{"add", "s"},
 		{"add", "ss"},
 		{"add", "sss"},

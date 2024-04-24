@@ -38,12 +38,10 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
 	var grid []string
-
 	for i := 0; i < int(n); i++ {
 		gridItem := readLine(reader)
 		grid = append(grid, gridItem)
@@ -51,34 +49,28 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	startXTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	startX, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	startX := int32(startXTemp)
 
-	startYTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	startY, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	startY := int32(startYTemp)
 
-	goalXTemp, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+	goalX, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
 	checkError(err)
-	goalX := int32(goalXTemp)
 
-	goalYTemp, err := strconv.ParseInt(firstMultipleInput[3], 10, 64)
+	goalY, err := strconv.ParseInt(firstMultipleInput[3], 10, 64)
 	checkError(err)
-	goalY := int32(goalYTemp)
 
-	var parsed [][]string
-
+	parsed := make([][]string, 0, len(grid))
 	for i := range grid {
 		row := strings.Split(grid[i], "")
 		parsed = append(parsed, row)
 	}
 
-	visited := make(map[Cell]bool, 0)
+	visited := make(map[Cell]bool)
 	result := minimumMoves(parsed, startX, startY, goalX, goalY, visited, n)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

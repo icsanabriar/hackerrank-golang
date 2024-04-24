@@ -13,16 +13,16 @@
 // limitations under the License.
 package main
 
-// min retrieves the minimum value of the given values.
-func min(a, b int32) int32 {
+// minimum retrieves the min value of the given values.
+func minimum(a, b int32) int32 {
 	if a > b {
 		return b
 	}
 	return a
 }
 
-// max retrieves the maximum value of the given values.
-func max(a, b int32) int32 {
+// maximum retrieves the max value of the given values.
+func maximum(a, b int32) int32 {
 	if a < b {
 		return b
 	}
@@ -31,8 +31,33 @@ func max(a, b int32) int32 {
 
 // isValid validates that the given string contains the same amount of characters, or maximum 1 delta.
 func isValid(s string) string {
-	cache := make(map[string]int32)
+	reduce := make(map[int32]int32)
+	minKey := int32(2147483647)
+	maxKey := int32(0)
 
+	cache := initCache(s)
+	for _, v := range cache {
+		if value, ok := reduce[v]; ok {
+			reduce[v] = value + 1
+		} else {
+			reduce[v] = 1
+		}
+		minKey = minimum(minKey, v)
+		maxKey = maximum(maxKey, v)
+	}
+
+	if len(reduce) == 1 ||
+		(maxKey-minKey == 1) && (reduce[maxKey] == 1 || reduce[minKey] == 1) ||
+		(len(reduce) == 2 && minKey == 1 && reduce[minKey] == 1) {
+		return "YES"
+	}
+
+	return "NO"
+}
+
+// initCache initializes the cache based on the given string.
+func initCache(s string) map[string]int32 {
+	cache := make(map[string]int32)
 	for i := range s {
 		key := string(s[i])
 		if value, ok := cache[key]; ok {
@@ -42,33 +67,5 @@ func isValid(s string) string {
 		}
 	}
 
-	reduce := make(map[int32]int32)
-	minKey := int32(2147483647)
-	maxKey := int32(0)
-
-	for _, v := range cache {
-		if value, ok := reduce[v]; ok {
-			reduce[v] = value + 1
-		} else {
-			reduce[v] = 1
-		}
-		minKey = min(minKey, v)
-		maxKey = max(maxKey, v)
-	}
-
-	length := len(reduce)
-
-	if length == 1 {
-		return "YES"
-	}
-
-	if (maxKey-minKey == 1) && (reduce[maxKey] == 1 || reduce[minKey] == 1) {
-		return "YES"
-	}
-
-	if length == 2 && minKey == 1 && reduce[minKey] == 1 {
-		return "YES"
-	}
-
-	return "NO"
+	return cache
 }

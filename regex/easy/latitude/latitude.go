@@ -21,7 +21,6 @@ import (
 
 // validate function check that the given coordinate comply with specify latitude and longitude.
 func validate(w io.Writer, lines []string) {
-
 	re := regexp.MustCompile(`\([+-]?((90(\.0+)?)|((\d|[1-8]\d)(\.\d+)?)), [+-]?((180(\.0+)?)|((\d?\d|1[0-7]\d)(\.\d+)?))\)`)
 
 	for i := 0; i < len(lines); i++ {

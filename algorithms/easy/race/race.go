@@ -14,19 +14,17 @@
 package main
 
 // hurdleRace return an integer representing the minimum number of doses required to jump all the hurdle.
-func hurdleRace(k int32, height []int32) int32 {
-
-	max := height[0]
-
+func hurdleRace(k int64, height []int64) int64 {
+	maximum := height[0]
 	for _, value := range height {
-		if value > max {
-			max = value
+		if value > maximum {
+			maximum = value
 		}
 	}
 
-	if (max - k) < 0 {
+	if (maximum - k) < 0 {
 		return 0
 	}
 
-	return max - k
+	return maximum - k
 }

@@ -17,7 +17,6 @@ import "testing"
 
 // TestCloudyDayGivenCase implements the test given as first example on hackerrank.
 func TestCloudyDayGivenCase(t *testing.T) {
-
 	p := []int64{10, 100}
 	x := []int64{5, 100}
 	y := []int64{4}
@@ -33,7 +32,6 @@ func TestCloudyDayGivenCase(t *testing.T) {
 
 // TestCloudyDayHiddenCase implements the test given as hidden example on hackerrank.
 func TestCloudyDayHiddenCase(t *testing.T) {
-
 	p := []int64{10, 1, 8, 3}
 	x := []int64{4, 5, 7, 2}
 	y := []int64{3, 9, 3, 5}

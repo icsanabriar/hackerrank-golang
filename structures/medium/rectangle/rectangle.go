@@ -15,34 +15,28 @@ package main
 
 // largestRectangle return an integer representing the largest rectangle that can be formed within the bounds of
 // consecutive buildings given the heights on array h.
-func largestRectangle(h []int32) int64 {
-
+func largestRectangle(h []int64) int64 {
 	largest := int64(0)
-	var nearest int32
+	var nearest int64
 
 	for i, hi := range h {
 		nearest = 1
-
 		// Go to the right and check nearest.
 		for j := i + 1; j < len(h); j++ {
 			if hi > h[j] {
 				break
-			} else {
-				nearest += 1
 			}
+			nearest++
 		}
-
 		// Go to the left and check nearest.
 		for j := i - 1; j >= 0; j-- {
 			if hi > h[j] {
 				break
-			} else {
-				nearest += 1
 			}
+			nearest++
 		}
-
-		area := int64(hi * nearest)
-
+		// Calculate the area.
+		area := hi * nearest
 		if area > largest {
 			largest = area
 		}

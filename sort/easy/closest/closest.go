@@ -19,26 +19,24 @@ import (
 )
 
 // closestNumbers find the closest pairs of the given array.
-func closestNumbers(arr []int32) []int32 {
-
+func closestNumbers(arr []int64) []int64 {
 	sort.Slice(arr, func(i, j int) bool { return arr[i] < arr[j] })
 
-	min := int32(math.MaxInt32)
-	indexes := make([]int32, 0)
+	minimum := int64(math.MaxInt32)
+	indexes := make([]int64, 0)
 
 	for i := 0; i < len(arr)-1; i++ {
 		diff := arr[i+1] - arr[i]
-		if diff < min {
-			min = diff
-			indexes = make([]int32, 0)
-			indexes = append(indexes, int32(i))
-		} else if diff == min {
-			indexes = append(indexes, int32(i))
+		if diff < minimum {
+			minimum = diff
+			indexes = make([]int64, 0)
+			indexes = append(indexes, int64(i))
+		} else if diff == minimum {
+			indexes = append(indexes, int64(i))
 		}
 	}
 
-	results := make([]int32, 0)
-
+	results := make([]int64, 0)
 	for i := 0; i < len(indexes); i++ {
 		results = append(results, arr[indexes[i]], arr[indexes[i]+1])
 	}

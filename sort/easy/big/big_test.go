@@ -20,7 +20,6 @@ import (
 
 // TestBigSortingGivenCase implements the test given as first example on hackerrank.
 func TestBigSortingGivenCase(t *testing.T) {
-
 	arr := []string{"31415926535897932384626433832795", "1", "3", "10", "3", "5"}
 	expected := []string{"1", "3", "3", "5", "10", "31415926535897932384626433832795"}
 

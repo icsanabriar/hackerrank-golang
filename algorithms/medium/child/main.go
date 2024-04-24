@@ -43,7 +43,6 @@ func main() {
 	result := commonChild(s1, s2)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

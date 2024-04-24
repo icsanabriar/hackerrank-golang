@@ -40,27 +40,23 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	mTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	m, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	m := int32(mTemp)
 
-	kTemp, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+	k, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
 	checkError(err)
-	k := int32(kTemp)
 
-	var track [][]int32
+	var track [][]int64
 	for i := 0; i < int(k); i++ {
 		trackRowTemp := strings.Split(strings.TrimRight(readLine(reader), " \t\r\n"), " ")
 
-		var trackRow []int32
+		var trackRow []int64
 		for _, trackRowItem := range trackRowTemp {
-			trackItemTemp, err := strconv.ParseInt(trackRowItem, 10, 64)
+			trackItem, err := strconv.ParseInt(trackRowItem, 10, 64)
 			checkError(err)
-			trackItem := int32(trackItemTemp)
 			trackRow = append(trackRow, trackItem)
 		}
 
@@ -74,7 +70,6 @@ func main() {
 	result := gridlandMetro(n, m, track)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

@@ -14,8 +14,8 @@
 package main
 
 // minFactor calculates the given n could be decomposed.
-func minFactor(n int32) int32 {
-	for i := int32(2); i*i <= n; i++ {
+func minFactor(n int64) int64 {
+	for i := int64(2); i*i <= n; i++ {
 		if n%i == 0 {
 			return i
 		}
@@ -24,23 +24,21 @@ func minFactor(n int32) int32 {
 }
 
 // gcd calculate the great common divisor of given a,b.
-func gcd(a int32, b int32) int32 {
+func gcd(a int64, b int64) int64 {
 	if b == 0 {
 		return a
-	} else {
-		return gcd(b, a%b)
 	}
+	return gcd(b, a%b)
 }
 
 // easyGcd Finds the maximum number that could be part of the arr given the k boundary.
-func easyGcd(k int32, arr []int32) int32 {
+func easyGcd(k int64, arr []int64) int64 {
 	g := arr[0]
-
 	for i := 1; i < len(arr); i++ {
 		g = gcd(g, arr[i])
 	}
 
-	min := minFactor(g)
+	minfact := minFactor(g)
 
-	return k / min * min
+	return k / minfact * minfact
 }

@@ -42,7 +42,6 @@ func main() {
 	checkError(err)
 
 	var array []string
-
 	for i := 0; i < int(stringsCount); i++ {
 		stringsItem := readLine(reader)
 		array = append(array, stringsItem)
@@ -52,7 +51,6 @@ func main() {
 	checkError(err)
 
 	var queries []string
-
 	for i := 0; i < int(queriesCount); i++ {
 		queriesItem := readLine(reader)
 		queries = append(queries, queriesItem)
@@ -69,7 +67,6 @@ func main() {
 	}
 
 	_, _ = fmt.Fprintf(writer, "\n")
-
 	_ = writer.Flush()
 }
 

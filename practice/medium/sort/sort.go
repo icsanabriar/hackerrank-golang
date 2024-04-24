@@ -14,10 +14,10 @@
 package main
 
 // generateRange retrieves the range to count first indexes.
-func generateRange(min int32, max int32, expenditure []int32, d int32) []int32 {
-	a := make([]int32, max-min+1)
+func generateRange(min int64, max int64, expenditure []int64, d int64) []int64 {
+	a := make([]int64, max-min+1)
 
-	for i := int32(0); i < d; i++ {
+	for i := int64(0); i < d; i++ {
 		a[expenditure[i]]++
 	}
 
@@ -25,24 +25,24 @@ func generateRange(min int32, max int32, expenditure []int32, d int32) []int32 {
 }
 
 // activityNotifications validates that the expenditure is not more than double of the median given series of size d.
-func activityNotifications(expenditure []int32, d int32) int32 {
-	counter := int32(0)
+func activityNotifications(expenditure []int64, d int64) int64 {
+	counter := int64(0)
 	counts := generateRange(0, 200, expenditure, d)
 
-	for i := d; i < int32(len(expenditure)); i++ {
-		lower := int32(0)
-		left := int32(0)
+	for i := d; i < int64(len(expenditure)); i++ {
+		lower := int64(0)
+		left := int64(0)
 
 		for ((left + counts[lower]) * 2) <= d {
-			left = left + counts[lower]
+			left += counts[lower]
 			lower++
 		}
 
-		upper := int32(len(counts) - 1)
-		right := int32(0)
+		upper := int64(len(counts) - 1)
+		right := int64(0)
 
 		for ((right + counts[upper]) * 2) <= d {
-			right = right + counts[upper]
+			right += counts[upper]
 			upper--
 		}
 

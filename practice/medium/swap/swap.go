@@ -13,29 +13,22 @@
 // limitations under the License.
 package main
 
-// swap elements from the given array using the given indexes.
-func swap(arr []int32, i int32, j int32) {
-	temp := arr[i]
-	arr[i] = arr[j]
-	arr[j] = temp
-}
-
 // minimumSwaps count the min swaps required to sort the given array.
-func minimumSwaps(arr []int32) int32 {
-	cache := map[int32]int32{}
+func minimumSwaps(arr []int64) int64 {
+	cache := map[int64]int64{}
 
-	for i := int32(0); i < int32(len(arr)); i++ {
+	for i := int64(0); i < int64(len(arr)); i++ {
 		cache[arr[i]] = i
 	}
 
-	counter := int32(0)
+	counter := int64(0)
 
-	for j := int32(0); j < int32(len(arr)); j++ {
+	for j := int64(0); j < int64(len(arr)); j++ {
 		if arr[j] != j+1 {
 			index := cache[j+1]
 			cache[arr[j]] = index
 			cache[j+1] = j
-			swap(arr, j, index)
+			arr[index], arr[j] = arr[j], arr[index]
 			counter++
 		}
 	}

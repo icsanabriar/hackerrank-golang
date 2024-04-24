@@ -17,9 +17,8 @@ import "testing"
 
 // TestWordsFirstGivenCase implements the test given as first example on hackerrank.
 func TestWordsFirstGivenCase(t *testing.T) {
-
-	h := int32(5)
-	m := int32(47)
+	h := int64(5)
+	m := int64(47)
 	expected := "thirteen minutes to six"
 
 	result := timeInWords(h, m)
@@ -31,9 +30,8 @@ func TestWordsFirstGivenCase(t *testing.T) {
 
 // TestWordsSecondGivenCase implements the test given as second example on hackerrank.
 func TestWordsSecondGivenCase(t *testing.T) {
-
-	h := int32(3)
-	m := int32(0)
+	h := int64(3)
+	m := int64(0)
 	expected := "three o' clock"
 
 	result := timeInWords(h, m)
@@ -45,9 +43,8 @@ func TestWordsSecondGivenCase(t *testing.T) {
 
 // TestWordsThirdGivenCase implements the test given as third example on hackerrank.
 func TestWordsThirdGivenCase(t *testing.T) {
-
-	h := int32(1)
-	m := int32(1)
+	h := int64(1)
+	m := int64(1)
 	expected := "one minute past one"
 
 	result := timeInWords(h, m)

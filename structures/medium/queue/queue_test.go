@@ -17,10 +17,9 @@ import "testing"
 
 // TestQueueGivenCase implements the test given as first example on hackerrank.
 func TestQueueGivenCase(t *testing.T) {
-
 	var q = queue{}
 
-	var input = int32(42)
+	var input = int64(42)
 	q.queueElement(input)
 
 	if input != q.firstElement() {
@@ -29,11 +28,11 @@ func TestQueueGivenCase(t *testing.T) {
 
 	q.dequeueElement()
 
-	if 0 != q.length() {
-		t.Errorf("Dequeue element second input was incorrect, got: %v, want: %v.", q.length(), 0)
+	if q.Length() != 0 {
+		t.Errorf("Dequeue element second input was incorrect, got: %v, want: %v.", q.Length(), 0)
 	}
 
-	input = int32(14)
+	input = int64(14)
 	q.queueElement(input)
 
 	if input != q.firstElement() {
@@ -41,49 +40,49 @@ func TestQueueGivenCase(t *testing.T) {
 	}
 
 	first := q.firstElement()
-	expected := int32(14)
+	expected := int64(14)
 
 	if expected != first {
 		t.Errorf("First element fourth input was incorrect, got: %v, want: %v.", first, expected)
 	}
 
-	input = int32(28)
+	input = int64(28)
 	q.queueElement(input)
 
-	if 2 != q.length() {
-		t.Errorf("Queue element fifth input was incorrect, got: %v, want: %v.", q.length(), 2)
+	if q.Length() != 2 {
+		t.Errorf("Queue element fifth input was incorrect, got: %v, want: %v.", q.Length(), 2)
 	}
 
 	first = q.firstElement()
-	expected = int32(14)
+	expected = int64(14)
 
 	if expected != first {
 		t.Errorf("First element sixth input was incorrect, got: %v, want: %v.", first, expected)
 	}
 
-	input = int32(60)
+	input = int64(60)
 	q.queueElement(input)
 
-	if 3 != q.length() {
-		t.Errorf("Queue element seventh input was incorrect, got: %v, want: %v.", q.length(), 2)
+	if q.Length() != 3 {
+		t.Errorf("Queue element seventh input was incorrect, got: %v, want: %v.", q.Length(), 2)
 	}
 
-	input = int32(78)
+	input = int64(78)
 	q.queueElement(input)
 
-	if 4 != q.length() {
-		t.Errorf("Queue element eigth input was incorrect, got: %v, want: %v.", q.length(), 2)
+	if q.Length() != 4 {
+		t.Errorf("Queue element eigth input was incorrect, got: %v, want: %v.", q.Length(), 2)
 	}
 
 	q.dequeueElement()
 
-	if 3 != q.length() {
-		t.Errorf("Dequeue element ninth input was incorrect, got: %v, want: %v.", q.length(), 3)
+	if q.Length() != 3 {
+		t.Errorf("Dequeue element ninth input was incorrect, got: %v, want: %v.", q.Length(), 3)
 	}
 
 	q.dequeueElement()
 
-	if 2 != q.length() {
-		t.Errorf("Dequeue element ninth input was incorrect, got: %v, want: %v.", q.length(), 2)
+	if q.Length() != 2 {
+		t.Errorf("Dequeue element ninth input was incorrect, got: %v, want: %v.", q.Length(), 2)
 	}
 }

@@ -31,23 +31,23 @@ func maximumPeople(p []int64, x []int64, y []int64, r []int64) int64 {
 	free := int64(0)
 	events := generateCache(p, x, y, r)
 
-	sum := make(map[int64]int64, 0)
-	clouds := make(map[int64]bool, 0)
+	sum := make(map[int64]int64)
+	clouds := make(map[int64]bool)
 
 	for _, e := range events {
-		if e.t == 0 {
+		switch {
+		case e.t == 0:
 			clouds[e.idx] = true
-		} else if e.t == 1 {
+		case e.t == 1:
 			if len(clouds) == 0 {
 				free += e.p
-			} else {
-				if len(clouds) == 1 {
-					for k := range clouds {
-						sum[k] = sum[k] + e.p
-					}
+			}
+			if len(clouds) == 1 {
+				for k := range clouds {
+					sum[k] += e.p
 				}
 			}
-		} else {
+		default:
 			delete(clouds, e.idx)
 		}
 	}
@@ -103,9 +103,9 @@ func generateCache(p []int64, x []int64, y []int64, r []int64) []event {
 // findMax find the maximum value form the given map.
 func findMax(sum map[int64]int64) int64 {
 	dx := int64(0)
-
 	for _, v := range sum {
 		dx = int64(math.Max(float64(dx), float64(v)))
 	}
+
 	return dx
 }

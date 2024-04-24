@@ -17,8 +17,7 @@ import "testing"
 
 // TestJimJokesFirstGivenCase implements the test given as first example on hackerrank.
 func TestJimJokesFirstGivenCase(t *testing.T) {
-
-	a := [][]int32{{10, 25}, {8, 31}}
+	a := [][]int64{{10, 25}, {8, 31}}
 	expected := int64(1)
 
 	result := solve(a)
@@ -30,8 +29,7 @@ func TestJimJokesFirstGivenCase(t *testing.T) {
 
 // TestJimJokesSecondGivenCase implements the test given as second example on hackerrank.
 func TestJimJokesSecondGivenCase(t *testing.T) {
-
-	a := [][]int32{{2, 25}, {2, 25}}
+	a := [][]int64{{2, 25}, {2, 25}}
 	expected := int64(0)
 
 	result := solve(a)
@@ -43,8 +41,7 @@ func TestJimJokesSecondGivenCase(t *testing.T) {
 
 // TestJimJokesThirdGivenCase implements the test given as third example on hackerrank.
 func TestJimJokesThirdGivenCase(t *testing.T) {
-
-	a := [][]int32{{11, 10}, {10, 11}}
+	a := [][]int64{{11, 10}, {10, 11}}
 	expected := int64(1)
 
 	result := solve(a)

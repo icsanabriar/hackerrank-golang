@@ -40,55 +40,45 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	n1Temp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n1, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	n1 := int32(n1Temp)
 
-	n2Temp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	n2, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	n2 := int32(n2Temp)
 
-	n3Temp, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
+	n3, err := strconv.ParseInt(firstMultipleInput[2], 10, 64)
 	checkError(err)
-	n3 := int32(n3Temp)
 
 	h1Temp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var h1 []int32
-
+	var h1 []int64
 	for i := 0; i < int(n1); i++ {
-		h1ItemTemp, err := strconv.ParseInt(h1Temp[i], 10, 64)
+		h1Item, err := strconv.ParseInt(h1Temp[i], 10, 64)
 		checkError(err)
-		h1Item := int32(h1ItemTemp)
 		h1 = append(h1, h1Item)
 	}
 
 	h2Temp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var h2 []int32
-
+	var h2 []int64
 	for i := 0; i < int(n2); i++ {
-		h2ItemTemp, err := strconv.ParseInt(h2Temp[i], 10, 64)
+		h2Item, err := strconv.ParseInt(h2Temp[i], 10, 64)
 		checkError(err)
-		h2Item := int32(h2ItemTemp)
 		h2 = append(h2, h2Item)
 	}
 
 	h3Temp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var h3 []int32
-
+	var h3 []int64
 	for i := 0; i < int(n3); i++ {
-		h3ItemTemp, err := strconv.ParseInt(h3Temp[i], 10, 64)
+		h3Item, err := strconv.ParseInt(h3Temp[i], 10, 64)
 		checkError(err)
-		h3Item := int32(h3ItemTemp)
 		h3 = append(h3, h3Item)
 	}
 
 	result := equalStacks(h1, h2, h3)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

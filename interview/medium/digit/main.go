@@ -47,10 +47,9 @@ func main() {
 	checkError(err)
 
 	result := digitSum * k
-	finalResult := superDigit(fmt.Sprintf("%d", result))
+	finalResult := superDigit(strconv.FormatInt(result, 10))
 
 	_, _ = fmt.Fprintf(writer, "%d\n", finalResult)
-
 	_ = writer.Flush()
 }
 

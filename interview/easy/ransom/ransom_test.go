@@ -17,7 +17,6 @@ import "testing"
 
 // TestRansomNoteFirstGivenCase implements the test given as first example on hackerrank.
 func TestRansomNoteFirstGivenCase(t *testing.T) {
-
 	magazine := []string{"give", "me", "one", "grand", "today", "night"}
 	note := []string{"give", "one", "grand", "today"}
 	expected := "Yes"
@@ -31,7 +30,6 @@ func TestRansomNoteFirstGivenCase(t *testing.T) {
 
 // TestRansomNoteSecondGivenCase implements the test given as second example on hackerrank.
 func TestRansomNoteSecondGivenCase(t *testing.T) {
-
 	magazine := []string{"two", "times", "three", "is", "not", "four"}
 	note := []string{"two", "times", "two", "is", "four"}
 	expected := "No"
@@ -45,7 +43,6 @@ func TestRansomNoteSecondGivenCase(t *testing.T) {
 
 // TestRansomNoteThirdGivenCase implements the test given as third example on hackerrank.
 func TestRansomNoteThirdGivenCase(t *testing.T) {
-
 	magazine := []string{"ive", "got", "a", "lovely", "bunch", "of", "coconuts"}
 	note := []string{"ive", "got", "some", "coconuts"}
 	expected := "No"
@@ -59,7 +56,6 @@ func TestRansomNoteThirdGivenCase(t *testing.T) {
 
 // TestRansomNoteHiddenCase implements the test given as hidden example on hackerrank.
 func TestRansomNoteHiddenCase(t *testing.T) {
-
 	magazine := []string{"avtq", "ekpvq", "z", "rdvzf", "m", "zu", "bof", "pfkzl", "ekpvq", "pfkzl", "bof", "zu", "ekpvq", "ekpvq", "ekpvq", "ekpvq", "z"}
 	note := []string{"m", "z", "z", "avtq", "zu", "bof", "pfkzl", "pfkzl", "pfkzl", "rdvzf", "rdvzf", "avtq", "ekpvq", "rdvzf", "avtq"}
 	expected := "No"

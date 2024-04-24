@@ -17,9 +17,8 @@ import "sort"
 
 // pickingNumbers return the maximum number of integers you can select from the array that the absolute difference
 // between any two of the chosen integers is less than or equal to 1.
-func pickingNumbers(a []int32) int32 {
-
-	m := make(map[int32]int32, 0)
+func pickingNumbers(a []int64) int64 {
+	m := make(map[int64]int64)
 
 	// Memorize array in order and count the number of each int.
 	for i := range a {
@@ -28,10 +27,10 @@ func pickingNumbers(a []int32) int32 {
 
 	// Basic case when there is one element.
 	if len(m) == 1 {
-		return int32(len(a))
+		return int64(len(a))
 	}
 
-	keys := make([]int32, 0, len(m))
+	keys := make([]int64, 0, len(m))
 
 	for k := range m {
 		keys = append(keys, k)
@@ -44,7 +43,7 @@ func pickingNumbers(a []int32) int32 {
 }
 
 // maxLength Iterate over map looking for integers which absolute difference is less or equal to 1.
-func maxLength(m map[int32]int32, keys []int32) int32 {
+func maxLength(m map[int64]int64, keys []int64) int64 {
 	maximumLength := m[keys[0]]
 
 	for i := 0; i < (len(keys) - 1); i++ {

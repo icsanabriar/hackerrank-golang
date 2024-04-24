@@ -19,8 +19,6 @@ const module = 1000000007
 // summingSeries calculates the sum of specific series when the nth term is n2 - (n-1)2.
 // Simplifying the expression it is the sum of nth odd numbers which is equal a n2.
 func summingSeries(n int64) int64 {
-
 	n %= module
-
 	return n * n % module
 }

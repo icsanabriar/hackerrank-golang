@@ -16,7 +16,7 @@ package main
 import "sort"
 
 // findMedian return the median of the given array.
-func findMedian(arr []int32) int32 {
+func findMedian(arr []int64) int64 {
 	sort.Slice(arr, func(i, j int) bool { return arr[i] < arr[j] })
 	return arr[len(arr)/2]
 }

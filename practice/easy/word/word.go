@@ -21,14 +21,13 @@ import (
 
 // validate function check that the given lines contains the given terms.
 func validate(w io.Writer, lines []string, terms []string) {
-
 	for i := 0; i < len(terms); i++ {
 		exp := "[a-zA-Z0-1_]" + terms[i] + "[a-zA-Z0-1_]"
 		re := regexp.MustCompile(exp)
 		counter := 0
 
 		for j := 0; j < len(lines); j++ {
-			counter = counter + len(re.FindAllString(lines[j], -1))
+			counter += len(re.FindAllString(lines[j], -1))
 		}
 
 		_, _ = fmt.Fprintln(w, counter)

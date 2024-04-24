@@ -20,9 +20,8 @@ import (
 
 // TestBusStationGivenCase implements the test given as first example on hackerrank.
 func TestBusStationGivenCase(t *testing.T) {
-
-	a := []int32{1, 2, 1, 1, 1, 2, 1, 3}
-	expected := []int32{3, 4, 6, 12}
+	a := []int64{1, 2, 1, 1, 1, 2, 1, 3}
+	expected := []int64{3, 4, 6, 12}
 
 	result := solve(a)
 
@@ -33,9 +32,8 @@ func TestBusStationGivenCase(t *testing.T) {
 
 // TestBusStationHiddenCase implements the test given as hidden example on hackerrank.
 func TestBusStationHiddenCase(t *testing.T) {
-
-	a := []int32{1, 1, 1, 1}
-	expected := []int32{1, 2, 4}
+	a := []int64{1, 1, 1, 1}
+	expected := []int64{1, 2, 4}
 
 	result := solve(a)
 

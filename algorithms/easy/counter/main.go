@@ -44,7 +44,6 @@ func main() {
 	result := strangeCounter(t)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

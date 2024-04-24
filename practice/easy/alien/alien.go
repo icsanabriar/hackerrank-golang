@@ -21,7 +21,6 @@ import (
 
 // validate function check that the given lines contains a valid alien username.
 func validate(w io.Writer, lines []string) {
-
 	re := regexp.MustCompile(`^[_.][0-9]+[a-zA-Z]*_?$`)
 
 	for i := 0; i < len(lines); i++ {

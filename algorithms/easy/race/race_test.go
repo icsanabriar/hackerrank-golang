@@ -17,10 +17,9 @@ import "testing"
 
 // TestRaceFirstGivenCase implements the test given as first example on hackerrank.
 func TestRaceFirstGivenCase(t *testing.T) {
-
-	k := int32(4)
-	h := []int32{1, 6, 3, 5, 2}
-	expected := int32(2)
+	k := int64(4)
+	h := []int64{1, 6, 3, 5, 2}
+	expected := int64(2)
 
 	result := hurdleRace(k, h)
 
@@ -31,10 +30,9 @@ func TestRaceFirstGivenCase(t *testing.T) {
 
 // TestRaceSecondGivenCase implements the test given as second example on hackerrank.
 func TestRaceSecondGivenCase(t *testing.T) {
-
-	k := int32(7)
-	h := []int32{2, 5, 4, 5, 2}
-	expected := int32(0)
+	k := int64(7)
+	h := []int64{2, 5, 4, 5, 2}
+	expected := int64(0)
 
 	result := hurdleRace(k, h)
 

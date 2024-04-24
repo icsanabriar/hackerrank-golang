@@ -49,7 +49,6 @@ func main() {
 	result := cutPaper(n, m)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

@@ -38,13 +38,11 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 16*1024*1024)
 
-	qTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	q, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	q := int32(qTemp)
 
 	for qItr := 0; qItr < int(q); qItr++ {
 		s := readLine(reader)
-
 		result := palindromeIndex(s)
 
 		_, _ = fmt.Fprintf(writer, "%d\n", result)

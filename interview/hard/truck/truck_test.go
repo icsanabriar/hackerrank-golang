@@ -17,9 +17,8 @@ import "testing"
 
 // TestTruckTourFirstGivenCase implements the test given as first example on hackerrank.
 func TestTruckTourFirstGivenCase(t *testing.T) {
-
-	pump := [][]int32{{1, 5}, {10, 3}, {3, 4}}
-	expected := int32(1)
+	pump := [][]int64{{1, 5}, {10, 3}, {3, 4}}
+	expected := int64(1)
 
 	result := truckTour(pump)
 
@@ -30,9 +29,8 @@ func TestTruckTourFirstGivenCase(t *testing.T) {
 
 // TestTruckTourSecondGivenCase implements the test given as second example on hackerrank.
 func TestTruckTourSecondGivenCase(t *testing.T) {
-
-	pump := [][]int32{{2, 3}, {2, 2}, {1, 10}}
-	expected := int32(-1)
+	pump := [][]int64{{2, 3}, {2, 2}, {1, 10}}
+	expected := int64(-1)
 
 	result := truckTour(pump)
 
@@ -43,9 +41,8 @@ func TestTruckTourSecondGivenCase(t *testing.T) {
 
 // TestTruckTourEdgeCase implements the test given as edge example.
 func TestTruckTourEdgeCase(t *testing.T) {
-
-	pump := [][]int32{{6, 3}, {1, 4}, {1, 1}}
-	expected := int32(-1)
+	pump := [][]int64{{6, 3}, {1, 4}, {1, 1}}
+	expected := int64(-1)
 
 	result := truckTour(pump)
 

@@ -14,7 +14,7 @@
 package main
 
 // rotLeft shifts each element of the array a given d rotations.
-func rotLeft(a []int32, d int32) []int32 {
+func rotLeft(a []int64, d int64) []int64 {
 	// Split array according to d.
 	leftSide := a[d:]
 	rightSide := a[0:d]

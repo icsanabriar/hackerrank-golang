@@ -14,38 +14,33 @@
 package main
 
 // sumDigits return an integer representing the sum of the given n.
-func sumDigits(n int32) int32 {
-	sum := int32(0)
+func sumDigits(n int64) int64 {
+	sum := int64(0)
 
 	for n > 0 {
 		digit := n % 10
-		sum = sum + digit
-		n = n / 10
+		sum += digit
+		n /= 10
 	}
 
 	return sum
 }
 
 // findDivisor return an integer representing the best sum of digits from a divisor of given n.
-func findDivisor(n int32) int32 {
+func findDivisor(n int64) int64 {
+	maximum := int64(0)
+	result := int64(0)
 
-	maximum := int32(0)
-	result := int32(0)
-
-	for i := int32(1); i*i <= n; i++ {
-
+	for i := int64(1); i*i <= n; i++ {
 		// Validate index is a divisor of n.
 		if n%i == 0 {
-
 			di := sumDigits(i)
-
 			if di > maximum || (di == maximum && result > i) {
 				result = i
 				maximum = di
 			}
 
 			dii := sumDigits(n / i)
-
 			if dii > maximum || (dii == maximum && result > n/i) {
 				result = n / i
 				maximum = dii

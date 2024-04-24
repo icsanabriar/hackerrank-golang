@@ -21,7 +21,6 @@ import (
 
 // validate function check that the given lines comply with utopian identification number specification.
 func validate(w io.Writer, lines []string) {
-
 	re := regexp.MustCompile(`^[a-z]{0,3}\d{2,8}[A-Z]{3,}$`)
 
 	for i := 0; i < len(lines); i++ {

@@ -38,16 +38,14 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	var arr [][]int32
-
+	var arr [][]int64
 	for i := 0; i < 6; i++ {
 		arrRowTemp := strings.Split(readLine(reader), " ")
-		var arrRow []int32
+		var arrRow []int64
 
 		for _, arrRowItem := range arrRowTemp {
-			arrItemTemp, err := strconv.ParseInt(arrRowItem, 10, 64)
+			arrItem, err := strconv.ParseInt(arrRowItem, 10, 64)
 			checkError(err)
-			arrItem := int32(arrItemTemp)
 			arrRow = append(arrRow, arrItem)
 		}
 
@@ -61,7 +59,6 @@ func main() {
 	result := hourglassSum(arr)
 
 	_, _ = fmt.Fprintf(writer, "%d\n", result)
-
 	_ = writer.Flush()
 }
 

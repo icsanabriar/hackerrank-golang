@@ -28,27 +28,22 @@ func main() {
 
 	firstMultipleInput := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	nTemp, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
+	n, err := strconv.ParseInt(firstMultipleInput[0], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	kTemp, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
+	k, err := strconv.ParseInt(firstMultipleInput[1], 10, 64)
 	checkError(err)
-	k := int32(kTemp)
 
-	ATemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
+	arrTemp := strings.Split(strings.TrimSpace(readLine(reader)), " ")
 
-	var A []int32
-
+	var arr []int64
 	for i := 0; i < int(n); i++ {
-		AItemTemp, err := strconv.ParseInt(ATemp[i], 10, 64)
+		aItem, err := strconv.ParseInt(arrTemp[i], 10, 64)
 		checkError(err)
-		AItem := int32(AItemTemp)
-		A = append(A, AItem)
+		arr = append(arr, aItem)
 	}
 
-	result := easyGcd(k, A)
-
+	result := easyGcd(k, arr)
 	_, _ = fmt.Fprintf(os.Stdout, "%d\n", result)
 }
 

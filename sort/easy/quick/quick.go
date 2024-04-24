@@ -14,9 +14,9 @@
 package main
 
 // quickSort return sorted values of the given array using the partition specified on the problem.
-func quickSort(arr []int32) []int32 {
-	left := make([]int32, 0)
-	right := make([]int32, 0)
+func quickSort(arr []int64) []int64 {
+	left := make([]int64, 0)
+	right := make([]int64, 0)
 
 	for i := 1; i < len(arr); i++ {
 		if arr[i] < arr[0] {

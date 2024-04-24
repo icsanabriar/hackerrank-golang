@@ -28,18 +28,15 @@ func main() {
 
 	mn := strings.Split(readLine(reader), " ")
 
-	mTemp, err := strconv.ParseInt(mn[0], 10, 64)
+	m, err := strconv.ParseInt(mn[0], 10, 64)
 	checkError(err)
-	m := int32(mTemp)
 
-	nTemp, err := strconv.ParseInt(mn[1], 10, 64)
+	n, err := strconv.ParseInt(mn[1], 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
 	magazineTemp := strings.Split(readLine(reader), " ")
 
 	var magazine []string
-
 	for i := 0; i < int(m); i++ {
 		magazineItem := magazineTemp[i]
 		magazine = append(magazine, magazineItem)
@@ -48,7 +45,6 @@ func main() {
 	noteTemp := strings.Split(readLine(reader), " ")
 
 	var note []string
-
 	for i := 0; i < int(n); i++ {
 		noteItem := noteTemp[i]
 		note = append(note, noteItem)

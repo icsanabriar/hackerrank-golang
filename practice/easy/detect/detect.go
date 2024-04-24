@@ -21,16 +21,16 @@ import (
 
 // validate function check that the given lines contains a valid ip address.
 func validate(w io.Writer, lines []string) {
-
-	re4 := regexp.MustCompile("^((\\d|\\d\\d|1\\d\\d|2[0-4]\\d|25[0-5])\\.){3}(\\d|\\d\\d|1\\d\\d|2[0-4]\\d|25[0-5])$")
-	re6 := regexp.MustCompile("^([0-9a-f]{1,4}:){7}[0-9a-f]{1,4}$")
+	re4 := regexp.MustCompile(`^((\d|\d\d|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d|\d\d|1\d\d|2[0-4]\d|25[0-5])$`)
+	re6 := regexp.MustCompile(`^([0-9a-f]{1,4}:){7}[0-9a-f]{1,4}$`)
 
 	for i := 0; i < len(lines); i++ {
-		if re4.MatchString(lines[i]) {
+		switch {
+		case re4.MatchString(lines[i]):
 			_, _ = fmt.Fprintln(w, "IPv4")
-		} else if re6.MatchString(lines[i]) {
+		case re6.MatchString(lines[i]):
 			_, _ = fmt.Fprintln(w, "IPv6")
-		} else {
+		default:
 			_, _ = fmt.Fprintln(w, "Neither")
 		}
 	}

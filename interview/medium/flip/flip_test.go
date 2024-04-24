@@ -17,9 +17,8 @@ import "testing"
 
 // TestFlippingMatrixFirstGivenCase implements the test given as first example on hackerrank.
 func TestFlippingMatrixFirstGivenCase(t *testing.T) {
-
-	matrix := [][]int32{{112, 42, 83, 119}, {56, 125, 56, 49}, {15, 78, 101, 43}, {62, 98, 114, 108}}
-	expected := int32(414)
+	matrix := [][]int64{{112, 42, 83, 119}, {56, 125, 56, 49}, {15, 78, 101, 43}, {62, 98, 114, 108}}
+	expected := int64(414)
 
 	result := flippingMatrix(matrix)
 
@@ -30,9 +29,8 @@ func TestFlippingMatrixFirstGivenCase(t *testing.T) {
 
 // TestFlippingMatrixSecondGivenCase implements the test given as second example on hackerrank.
 func TestFlippingMatrixSecondGivenCase(t *testing.T) {
-
-	matrix := [][]int32{{107, 54, 128, 15}, {12, 75, 110, 138}, {100, 96, 34, 85}, {75, 15, 28, 112}}
-	expected := int32(488)
+	matrix := [][]int64{{107, 54, 128, 15}, {12, 75, 110, 138}, {100, 96, 34, 85}, {75, 15, 28, 112}}
+	expected := int64(488)
 
 	result := flippingMatrix(matrix)
 

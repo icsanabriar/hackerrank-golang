@@ -19,17 +19,14 @@ import (
 
 // TestDeleteNodeGivenCase implements the test given as first example on hackerrank.
 func TestDeleteNodeGivenCase(t *testing.T) {
+	n := int64(3)
+	array := []int64{20, 6, 2, 19, 7, 4, 15, 9}
+	list := buildList(array)
 
-	n := int32(3)
-	array := []int32{20, 6, 2, 19, 7, 4, 15, 9}
-	llist := buildList(array)
-
-	expected := int32(19)
-
-	result := deleteNode(llist.head, n)
+	expected := int64(19)
+	result := deleteNode(list.head, n)
 
 	for result != nil {
-
 		if expected == result.data {
 			t.Errorf("Delete node first case was incorrect, got: %d expected to be removed.", result.data)
 		}
@@ -39,13 +36,11 @@ func TestDeleteNodeGivenCase(t *testing.T) {
 }
 
 // buildList factory to create a SinglyLinkedList from a given array.
-func buildList(array []int32) SinglyLinkedList {
-
-	llist := SinglyLinkedList{}
-
+func buildList(array []int64) SinglyLinkedList {
+	list := SinglyLinkedList{}
 	for i := 0; i < len(array); i++ {
-		llist.insertNodeIntoSinglyLinkedList(array[i])
+		list.insertNodeIntoSinglyLinkedList(array[i])
 	}
 
-	return llist
+	return list
 }

@@ -19,13 +19,13 @@ import (
 )
 
 // insertionSort print sorted values of the given array.
-func insertionSort(w io.Writer, arr []int32) {
+func insertionSort(w io.Writer, arr []int64) {
 	for i := 1; i < len(arr); i++ {
 		value := arr[i]
 		j := i - 1
 		for j >= 0 && arr[j] > value {
 			arr[j+1] = arr[j]
-			j = j - 1
+			j--
 		}
 		arr[j+1] = value
 	}
@@ -34,7 +34,7 @@ func insertionSort(w io.Writer, arr []int32) {
 }
 
 // printArray prints the given array into the console.
-func printArray(w io.Writer, arr []int32) {
+func printArray(w io.Writer, arr []int64) {
 	for _, v := range arr {
 		_, _ = fmt.Fprintf(w, "%d ", v)
 	}

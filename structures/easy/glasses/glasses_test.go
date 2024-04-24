@@ -17,15 +17,14 @@ import "testing"
 
 // TestGlassesFirstGivenCase implements the test given as first example on hackerrank.
 func TestGlassesFirstGivenCase(t *testing.T) {
-
-	input := [][]int32{{1, 1, 1, 0, 0, 0},
+	input := [][]int64{{1, 1, 1, 0, 0, 0},
 		{0, 1, 0, 0, 0, 0},
 		{1, 1, 1, 0, 0, 0},
 		{0, 0, 2, 4, 4, 0},
 		{0, 0, 0, 2, 0, 0},
 		{0, 0, 1, 2, 4, 0}}
 
-	expected := int32(19)
+	expected := int64(19)
 
 	result := hourglassSum(input)
 
@@ -36,15 +35,14 @@ func TestGlassesFirstGivenCase(t *testing.T) {
 
 // TestGlassesSecondGivenCase implements the test given as second example on hackerrank.
 func TestGlassesSecondGivenCase(t *testing.T) {
-
-	input := [][]int32{{-9, -9, -9, 1, 1, 1},
+	input := [][]int64{{-9, -9, -9, 1, 1, 1},
 		{0, -9, 0, 4, 3, 2},
 		{-9, -9, -9, 1, 2, 3},
 		{0, 0, 8, 6, 6, 0},
 		{0, 0, 0, -2, 0, 0},
 		{0, 0, 1, 2, 4, 0}}
 
-	expected := int32(28)
+	expected := int64(28)
 
 	result := hourglassSum(input)
 

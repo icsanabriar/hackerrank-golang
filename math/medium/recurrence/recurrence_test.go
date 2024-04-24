@@ -20,8 +20,7 @@ import (
 
 // TestMutualRecurrenceFirstGivenCase implements the test given as first example on hackerrank.
 func TestMutualRecurrenceFirstGivenCase(t *testing.T) {
-
-	input := []int32{1, 2, 3, 1, 1, 2, 3, 1}
+	input := []int64{1, 2, 3, 1, 1, 2, 3, 1}
 	n := int64(10)
 	expected := []int64{1910, 1910}
 
@@ -34,8 +33,7 @@ func TestMutualRecurrenceFirstGivenCase(t *testing.T) {
 
 // TestMutualRecurrenceSecondGivenCase implements the test given as second example on hackerrank.
 func TestMutualRecurrenceSecondGivenCase(t *testing.T) {
-
-	input := []int32{1, 2, 3, 2, 2, 1, 1, 4}
+	input := []int64{1, 2, 3, 2, 2, 1, 1, 4}
 	n := int64(10)
 	expected := []int64{909323, 11461521}
 
@@ -48,8 +46,7 @@ func TestMutualRecurrenceSecondGivenCase(t *testing.T) {
 
 // TestMutualRecurrenceThirdGivenCase implements the test given as third example on hackerrank.
 func TestMutualRecurrenceThirdGivenCase(t *testing.T) {
-
-	input := []int32{1, 2, 3, 4, 5, 6, 7, 8}
+	input := []int64{1, 2, 3, 4, 5, 6, 7, 8}
 	n := int64(90)
 	expected := []int64{108676813, 414467031}
 

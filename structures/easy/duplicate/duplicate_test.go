@@ -17,19 +17,18 @@ import "testing"
 
 // TestGetNodeValueGivenCase implements the test given as first example on hackerrank.
 func TestGetNodeValueGivenCase(t *testing.T) {
-
 	list := SinglyLinkedList{}
-	list.insertNodeIntoSinglyLinkedList(int32(3))
-	list.insertNodeIntoSinglyLinkedList(int32(3))
-	list.insertNodeIntoSinglyLinkedList(int32(3))
-	list.insertNodeIntoSinglyLinkedList(int32(4))
-	list.insertNodeIntoSinglyLinkedList(int32(5))
-	list.insertNodeIntoSinglyLinkedList(int32(5))
+	list.insertNodeIntoSinglyLinkedList(int64(3))
+	list.insertNodeIntoSinglyLinkedList(int64(3))
+	list.insertNodeIntoSinglyLinkedList(int64(3))
+	list.insertNodeIntoSinglyLinkedList(int64(4))
+	list.insertNodeIntoSinglyLinkedList(int64(5))
+	list.insertNodeIntoSinglyLinkedList(int64(5))
 
 	expected := &SinglyLinkedList{}
-	expected.insertNodeIntoSinglyLinkedList(int32(3))
-	expected.insertNodeIntoSinglyLinkedList(int32(4))
-	expected.insertNodeIntoSinglyLinkedList(int32(5))
+	expected.insertNodeIntoSinglyLinkedList(int64(3))
+	expected.insertNodeIntoSinglyLinkedList(int64(4))
+	expected.insertNodeIntoSinglyLinkedList(int64(5))
 	node := expected.head
 
 	result := removeDuplicates(list.head)

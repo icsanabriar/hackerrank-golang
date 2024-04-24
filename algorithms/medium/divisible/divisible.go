@@ -13,16 +13,16 @@
 // limitations under the License.
 package main
 
-// min retrieves the minimum value of the given values.
-func min(a, b int32) int32 {
+// minimum retrieves the min value of the given values.
+func minimum(a, b int64) int64 {
 	if a < b {
 		return a
 	}
 	return b
 }
 
-// max retrieves the maximum value of the given values.
-func max(a, b int32) int32 {
+// maximum retrieves the max value of the given values.
+func maximum(a, b int64) int64 {
 	if a < b {
 		return b
 	}
@@ -30,23 +30,19 @@ func max(a, b int32) int32 {
 }
 
 // nonDivisibleSubset find the array S that is not divisible by k.
-func nonDivisibleSubset(k int32, s []int32) int32 {
-
-	modules := make([]int32, k)
-
+func nonDivisibleSubset(k int64, s []int64) int64 {
+	modules := make([]int64, k)
 	for i := range s {
 		modules[s[i]%k]++
 	}
 
-	result := int32(0)
-
-	for i := int32(0); i*2 <= k; i++ {
+	result := int64(0)
+	for i := int64(0); i*2 <= k; i++ {
 		opposite := (k - i) % k
-
 		if i == opposite {
-			result = result + min(modules[i], 1)
+			result += minimum(modules[i], 1)
 		} else {
-			result = result + max(modules[i], modules[opposite])
+			result += maximum(modules[i], modules[opposite])
 		}
 	}
 

@@ -17,10 +17,9 @@ import "testing"
 
 // TestArmyGameGivenCase implements the test given as first example on hackerrank.
 func TestArmyGameGivenCase(t *testing.T) {
-
-	n := int32(3)
-	m := int32(2)
-	expected := int32(2)
+	n := int64(3)
+	m := int64(2)
+	expected := int64(2)
 
 	result := gameWithCells(n, m)
 
@@ -31,10 +30,9 @@ func TestArmyGameGivenCase(t *testing.T) {
 
 // TestArmyGameHiddenCase implements the test given as hidden example on hackerrank.
 func TestArmyGameHiddenCase(t *testing.T) {
-
-	n := int32(39)
-	m := int32(169)
-	expected := int32(1700)
+	n := int64(39)
+	m := int64(169)
+	expected := int64(1700)
 
 	result := gameWithCells(n, m)
 

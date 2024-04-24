@@ -17,9 +17,8 @@ import "testing"
 
 // TestLonelyIntegerFirstGivenCase implements the test given as first example on hackerrank.
 func TestLonelyIntegerFirstGivenCase(t *testing.T) {
-
-	arr := []int32{1, 2, 3, 4, 3, 2, 1}
-	expected := int32(4)
+	arr := []int64{1, 2, 3, 4, 3, 2, 1}
+	expected := int64(4)
 
 	result := lonelyInteger(arr)
 
@@ -30,9 +29,8 @@ func TestLonelyIntegerFirstGivenCase(t *testing.T) {
 
 // TestLonelyIntegerEdgeCase implements the test given as edge example.
 func TestLonelyIntegerEdgeCase(t *testing.T) {
-
-	arr := []int32{1, 2, 3, 4, 3, 2, 1, 4}
-	expected := int32(0)
+	arr := []int64{1, 2, 3, 4, 3, 2, 1, 4}
+	expected := int64(0)
 
 	result := lonelyInteger(arr)
 

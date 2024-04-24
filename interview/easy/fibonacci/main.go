@@ -17,7 +17,6 @@ import "fmt"
 
 // main function provided to execute the code on hacker rank platform.
 func main() {
-
 	var n int
 	_, _ = fmt.Scanf("%d\n", &n)
 
@@ -27,9 +26,7 @@ func main() {
 
 // initCache function provide a cache used to improve performance of Fibonacci sequence generation.
 func initCache(n int) []int {
-
 	cache := make([]int, n+1)
-
 	for i := range cache {
 		cache[i] = -1
 	}

@@ -17,9 +17,8 @@ import "testing"
 
 // TestBestDivisorGivenCase implements the test given as first example on hackerrank.
 func TestBestDivisorGivenCase(t *testing.T) {
-
-	input := int32(12)
-	expected := int32(6)
+	input := int64(12)
+	expected := int64(6)
 
 	result := findDivisor(input)
 

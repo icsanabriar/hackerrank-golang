@@ -17,9 +17,8 @@ import "testing"
 
 // TestOrganizingContainerFirstGivenCase implements the test given as first example on hackerrank.
 func TestOrganizingContainerFirstGivenCase(t *testing.T) {
-
-	size := int32(2)
-	container := [][]int32{{1, 1}, {1, 1}}
+	size := int64(2)
+	container := [][]int64{{1, 1}, {1, 1}}
 	expected := "Possible"
 
 	result := organizingContainers(container, size)
@@ -31,9 +30,8 @@ func TestOrganizingContainerFirstGivenCase(t *testing.T) {
 
 // TestOrganizingContainerSecondGivenCase implements the test given as second example on hackerrank.
 func TestOrganizingContainerSecondGivenCase(t *testing.T) {
-
-	size := int32(2)
-	container := [][]int32{{0, 2}, {1, 1}}
+	size := int64(2)
+	container := [][]int64{{0, 2}, {1, 1}}
 	expected := "Impossible"
 
 	result := organizingContainers(container, size)

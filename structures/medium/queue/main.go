@@ -38,20 +38,16 @@ func main() {
 
 	writer := bufio.NewWriterSize(stdout, 1024*1024)
 
-	nTemp, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	n, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
 	checkError(err)
-	n := int32(nTemp)
 
-	var q = queue{}
-
+	q := queue{}
 	for i := 0; i < int(n); i++ {
 		command := strings.Split(readLine(reader), " ")
-
 		// Command 1 is the only one with parameters.
 		if len(command) == 2 {
-			xTemp, err := strconv.ParseInt(command[1], 10, 64)
+			x, err := strconv.ParseInt(command[1], 10, 64)
 			checkError(err)
-			x := int32(xTemp)
 			// Queue element into recipient stack.
 			q.queueElement(x)
 		} else {

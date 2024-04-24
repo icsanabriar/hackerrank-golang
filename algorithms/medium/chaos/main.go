@@ -26,23 +26,19 @@ import (
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-	tTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	t, err := strconv.ParseInt(readLine(reader), 10, 64)
 	checkError(err)
-	t := int32(tTemp)
 
 	for tItr := 0; tItr < int(t); tItr++ {
-		nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+		n, err := strconv.ParseInt(readLine(reader), 10, 64)
 		checkError(err)
-		n := int32(nTemp)
 
 		qTemp := strings.Split(readLine(reader), " ")
 
-		var q []int32
-
+		var q []int64
 		for i := 0; i < int(n); i++ {
-			qItemTemp, err := strconv.ParseInt(qTemp[i], 10, 64)
+			qItem, err := strconv.ParseInt(qTemp[i], 10, 64)
 			checkError(err)
-			qItem := int32(qItemTemp)
 			q = append(q, qItem)
 		}
 
