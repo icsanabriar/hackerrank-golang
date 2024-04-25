@@ -20,9 +20,9 @@ jobs:
       - name: validate lint
         uses: golangci/golangci-lint-action@v5
         with:
-          version: v1.54
+          version: v1.57
           skip-cache: true
-          args: --timeout=10m --out-format=github-actions-compact
+          args: --timeout=10m --out-format=github-actions
 
   test:
     name: "Unit Tests"
