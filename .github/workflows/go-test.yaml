@@ -18,7 +18,7 @@ jobs:
           go mod tidy
           git diff --exit-code $(git rev-parse HEAD) go.mod
       - name: validate lint
-        uses: golangci/golangci-lint-action@v4
+        uses: golangci/golangci-lint-action@v5
         with:
           version: v1.54
           skip-cache: true
