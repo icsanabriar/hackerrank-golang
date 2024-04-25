@@ -50,6 +50,7 @@ linters:
     - gomoddirectives
     - gomodguard
     - goprintffuncname
+    - gosec
     - gosimple
     - gosmopolitan
     - govet
