@@ -43,7 +43,7 @@ func main() {
 
 	s := readLine(reader)
 
-	k, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 64)
+	k, err := strconv.ParseInt(strings.TrimSpace(readLine(reader)), 10, 32)
 	checkError(err)
 
 	result := caesarCipher(s, int32(k))

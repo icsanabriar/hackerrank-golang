@@ -1,9 +1,9 @@
 # Hacker Rank Solutions
 
-version 1.3.0 - 24/04/2024
+version 1.3.0 - 25/04/2024
 
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build](https://img.shields.io/github/actions/workflow/status/icsanabriar/hackerrank-golang/main.yml)](https://github.com/icsanabriar/hackerrank-golang/actions/workflows/main.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/icsanabriar/hackerrank-golang/go-test.yaml)](https://github.com/icsanabriar/hackerrank-golang/actions/workflows/go-test.yqml)
 [![PR](https://img.shields.io/github/issues-pr/icsanabriar/hackerrank-golang)](https://github.com/icsanabriar/hackerrank-golang/pulls)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=alert_status)](https://sonarcloud.io/project/overview?id=icsanabriar_hackerrank-golang)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=icsanabriar_hackerrank-golang&metric=bugs)](https://sonarcloud.io/project/issues?resolved=false&types=BUG&id=icsanabriar_hackerrank-golang)
