@@ -39,7 +39,7 @@ jobs:
         env:
           OUTPUT_PATH: /home/runner/work/hackerrank-golang/hackerrank-golang/test-output.out
       - name: run sonar analysis
-        uses: sonarsource/sonarcloud-github-action@v2.1.1
+        uses: sonarsource/sonarcloud-github-action@v2.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
